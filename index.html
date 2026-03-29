@@ -701,7 +701,7 @@ function saveState() {
   localStorage.setItem('skillmap_data', JSON.stringify(state.staffList));
 }
 function loadState() {
-  const d = localStorage.getItem('skillmap_data');
+  const d = localStorage.getItem('skillmap_v1_data');
   if (d) state.staffList = JSON.parse(d);
 }
 
@@ -1181,7 +1181,7 @@ function renderGrowthChart(s) {
 }
 
 function deleteEval(staffId, evalId) {
-  if (!confirm('この評価を削除しますか？')) return;
+  if (!confirm('この評価データを削除しますか？元に戻せません。')) return;
   const s = state.staffList.find(x=>x.id===staffId);
   s.evals = s.evals.filter(e=>e.id!==evalId);
   saveState();
