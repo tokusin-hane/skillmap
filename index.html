@@ -197,6 +197,17 @@ main{max-width:1100px;margin:0 auto;padding:28px 20px;}
     <div class="stat-card"><div class="stat-val" id="stat-alert">0</div><div class="stat-label">期限アラート</div></div>
   </div>
   <div class="card">
+    <div class="card-title">データ管理</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+      <button class="btn btn-secondary btn-sm" onclick="exportData()">📥 JSONエクスポート</button>
+      <label class="btn btn-secondary btn-sm" style="cursor:pointer;margin:0;">
+        📤 JSONインポート
+        <input type="file" accept=".json" onchange="importData(event)" style="display:none;">
+      </label>
+      <span style="font-size:11px;color:var(--mid);">※ データのバックアップ・復元用</span>
+    </div>
+  </div>
+  <div class="card">
     <div class="card-title">在留期限アラート</div>
     <div id="alert-list"><div class="empty"><div class="empty-icon">✅</div><p>期限が近いスタッフはいません</p></div></div>
   </div>
@@ -698,10 +709,11 @@ let state = {
 };
 
 function saveState() {
-  localStorage.setItem('skillmap_data', JSON.stringify(state.staffList));
+  localStorage.setItem('skillmap_v1_data', JSON.stringify(state.staffList));
 }
 function loadState() {
-  const d = localStorage.getItem('skillmap_v1_data');
+  // v1キーを優先、旧キーからマイグレーション
+  const d = localStorage.getItem('skillmap_v1_data') || localStorage.getItem('skillmap_data');
   if (d) state.staffList = JSON.parse(d);
 }
 
@@ -787,7 +799,11 @@ function showTab(tab) {
 function deleteStaff(id) {
   const s = state.staffList.find(x=>x.id===id);
   if (!s) return;
-  if (!confirm(`「${s.name}」さんを削除しますか？\n評価データも全て削除されます。`)) return;
+  const evalCount = s.evals.length;
+  const msg = evalCount > 0
+    ? `「${s.name}」さんを削除しますか？\n\n⚠️ 評価データ${evalCount}件も全て削除されます。\nこの操作は元に戻せません。`
+    : `「${s.name}」さんを削除しますか？`;
+  if (!confirm(msg)) return;
   state.staffList = state.staffList.filter(x=>x.id!==id);
   saveState();
   renderAll();
@@ -798,6 +814,66 @@ function deleteStaff(id) {
     document.getElementById('eval-input-area').style.display = 'none';
   }
 }
+
+// ══ エクスポート・インポート ══
+function exportData() {
+  if (!state.staffList.length) { alert('エクスポートするデータがありません'); return; }
+  const data = {
+    version: 1,
+    exportedAt: new Date().toISOString(),
+    exportedBy: 'トクシングループ スキルマップ',
+    staffList: state.staffList,
+  };
+  const json = JSON.stringify(data, null, 2);
+  const blob = new Blob([json], {type: 'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `skillmap_backup_${new Date().toISOString().split('T')[0]}.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  alert(`✅ ${state.staffList.length}名分のデータをエクスポートしました`);
+}
+
+function importData(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    try {
+      const data = JSON.parse(e.target.result);
+      if (!data.staffList || !Array.isArray(data.staffList)) {
+        alert('❌ ファイル形式が正しくありません'); return;
+      }
+      const count = data.staffList.length;
+      const existing = state.staffList.length;
+      const choice = existing > 0
+        ? confirm(`現在${existing}名のデータがあります。
+「OK」→ インポートデータで上書き
+「キャンセル」→ 追加マージ`)
+        : true;
+      if (choice) {
+        state.staffList = data.staffList;
+      } else {
+        // マージ：IDが重複しない場合のみ追加
+        const existingIds = new Set(state.staffList.map(s=>s.id));
+        const newStaff = data.staffList.filter(s=>!existingIds.has(s.id));
+        state.staffList = [...state.staffList, ...newStaff];
+      }
+      saveState();
+      renderAll();
+      alert(`✅ ${count}名分のデータをインポートしました`);
+    } catch(err) {
+      alert('❌ ファイルの読み込みに失敗しました: ' + err.message);
+    }
+    // ファイル選択をリセット
+    event.target.value = '';
+  };
+  reader.readAsText(file);
+}
+
 function registerStaff() {
   const name = document.getElementById('reg-name').value.trim();
   const company = document.getElementById('reg-company').value.trim();
@@ -1181,7 +1257,7 @@ function renderGrowthChart(s) {
 }
 
 function deleteEval(staffId, evalId) {
-  if (!confirm('この評価データを削除しますか？元に戻せません。')) return;
+  if (!confirm('この評価データを削除しますか？\n元に戻せません。')) return;
   const s = state.staffList.find(x=>x.id===staffId);
   s.evals = s.evals.filter(e=>e.id!==evalId);
   saveState();
