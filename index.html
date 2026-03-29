@@ -951,7 +951,7 @@ function showTab(tab) {
 // STAFF REGISTER
 // ══════════════════════════════════════════
 
-function deleteStaff(id) {
+async function deleteStaff(id) {
   const s = state.staffList.find(x=>x.id===id);
   if (!s) return;
   const evalCount = s.evals.length;
@@ -959,14 +959,18 @@ function deleteStaff(id) {
     ? `「${s.name}」さんを削除しますか？\n\n⚠️ 評価データ${evalCount}件も全て削除されます。\nこの操作は元に戻せません。`
     : `「${s.name}」さんを削除しますか？`;
   if (!confirm(msg)) return;
-  state.staffList = state.staffList.filter(x=>x.id!==id);
-  saveState();
-  renderAll();
-  // 評価画面で選択中のスタッフを削除した場合は戻る
-  if (state.selectedStaffId === id) {
-    state.selectedStaffId = null;
-    document.getElementById('eval-select-card').style.display = 'block';
-    document.getElementById('eval-input-area').style.display = 'none';
+  try {
+    const { error } = await sb.from('staff').delete().eq('id', id);
+    if (error) throw error;
+    state.staffList = state.staffList.filter(x=>x.id!==id);
+    saveState(); renderAll();
+    if (state.selectedStaffId === id) {
+      state.selectedStaffId = null;
+      document.getElementById('eval-select-card').style.display = 'block';
+      document.getElementById('eval-input-area').style.display = 'none';
+    }
+  } catch(err) {
+    alert('❌ 削除エラー: ' + err.message);
   }
 }
 
@@ -1029,7 +1033,7 @@ function importData(event) {
   reader.readAsText(file);
 }
 
-function registerStaff() {
+async function registerStaff() {
   const name = document.getElementById('reg-name').value.trim();
   const company = document.getElementById('reg-company').value.trim();
   const industry = document.getElementById('reg-industry').value;
@@ -1038,23 +1042,45 @@ function registerStaff() {
   if (!name || !company || !industry || !visa || !expire) {
     alert('必須項目（*）を入力してください'); return;
   }
-  const staff = {
-    id: Date.now().toString(),
-    name, nameEn: document.getElementById('reg-name-en').value,
-    nationality: document.getElementById('reg-nationality').value,
-    visa, expire, company, industry,
-    process: document.getElementById('reg-process').value,
-    joinDate: document.getElementById('reg-joindate').value,
-    dob: document.getElementById('reg-dob').value,
-    note: document.getElementById('reg-note').value,
-    evals: [],
-  };
-  state.staffList.push(staff);
-  saveState();
-  clearRegForm();
-  renderAll();
-  alert(`✅ ${name} さんを登録しました`);
-  showTab('staff');
+  try {
+    let companyId = null;
+    const { data: existingCo } = await sb.from('companies').select('id').eq('name', company).single();
+    if (existingCo) {
+      companyId = existingCo.id;
+    } else {
+      const { data: newCo, error: coErr } = await sb.from('companies').insert({ name: company }).select('id').single();
+      if (coErr) throw coErr;
+      companyId = newCo.id;
+    }
+    const { data: newStaff, error: staffErr } = await sb.from('staff').insert({
+      name, name_en: document.getElementById('reg-name-en').value,
+      nationality: document.getElementById('reg-nationality').value,
+      visa, expire_date: expire || null, industry,
+      process: document.getElementById('reg-process').value,
+      join_date: document.getElementById('reg-joindate').value || null,
+      dob: document.getElementById('reg-dob').value || null,
+      note: document.getElementById('reg-note').value,
+      company_id: companyId, created_by: state.user?.id,
+    }).select('id').single();
+    if (staffErr) throw staffErr;
+    const staff = {
+      id: newStaff.id, name,
+      nameEn: document.getElementById('reg-name-en').value,
+      nationality: document.getElementById('reg-nationality').value,
+      visa, expire, company, industry,
+      process: document.getElementById('reg-process').value,
+      joinDate: document.getElementById('reg-joindate').value,
+      dob: document.getElementById('reg-dob').value,
+      note: document.getElementById('reg-note').value,
+      companyId, evals: [],
+    };
+    state.staffList.push(staff);
+    saveState(); clearRegForm(); renderAll();
+    alert('✅ ' + name + ' さんを登録しました（DB保存済み）');
+    showTab('staff');
+  } catch(err) {
+    alert('❌ 登録エラー: ' + err.message);
+  }
 }
 
 function clearRegForm() {
@@ -1286,7 +1312,7 @@ function getScores() {
   return scores;
 }
 
-function saveEval() {
+async function saveEval() {
   const s = state.staffList.find(x=>x.id===state.selectedStaffId);
   if (!s) return;
   const timing = document.getElementById('eval-timing').value;
@@ -1296,20 +1322,35 @@ function saveEval() {
   const scores = getScores();
   const vals = Object.values(scores).filter(v=>v>0);
   if (!vals.length) { alert('少なくとも1項目評価してください'); return; }
-  const evalData = {
-    id: Date.now().toString(),
-    timing: timing === 'カスタム' ? customLabel || 'カスタム' : timing,
-    date, evaluator, scores,
-    avg: (vals.reduce((a,b)=>a+b,0)/vals.length).toFixed(2),
-  };
-  s.evals.push(evalData);
-  saveState();
-  setNextTiming(s);
-  renderTimeline(s);
-  renderDashboard();
-  // スキルフォームをリセット（全Lvボタンを未選択に）
-  // 前回のスコアはそのまま残す（変化した項目だけ変更すればOK）
-  alert(`✅ ${s.name} さんの「${evalData.timing}」評価を保存しました`);
+  const timingLabel = timing === 'カスタム' ? customLabel || 'カスタム' : timing;
+  const avg = (vals.reduce((a,b)=>a+b,0)/vals.length).toFixed(2);
+  try {
+    // Supabaseに評価保存
+    const { data: newEval, error: evalErr } = await sb.from('evaluations').insert({
+      staff_id: s.id,
+      timing: timingLabel,
+      eval_date: date,
+      evaluator,
+      scores,
+      avg_score: parseFloat(avg),
+      created_by: state.user?.id,
+    }).select('id').single();
+    if (evalErr) throw evalErr;
+    const evalData = {
+      id: newEval.id,
+      timing: timingLabel,
+      date, evaluator, scores, avg,
+    };
+    s.evals.push(evalData);
+    saveState();
+    setNextTiming(s);
+    renderTimeline(s);
+    renderDashboard();
+    // 前回のスコアはそのまま残す（変化した項目だけ変更すればOK）
+    alert('✅ ' + s.name + ' さんの「' + timingLabel + '」評価をDBに保存しました');
+  } catch(err) {
+    alert('❌ 評価保存エラー: ' + err.message);
+  }
 }
 
 function renderTimeline(s) {
