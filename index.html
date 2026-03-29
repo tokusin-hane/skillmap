@@ -159,10 +159,54 @@ main{max-width:1100px;margin:0 auto;padding:28px 20px;}
   header,.nav-tabs,.btn,.mode-toggle{display:none!important;}
   .cert-wrap{border:1px solid #ccc;box-shadow:none;}
 }
+
+/* ══ LOGIN ══ */
+#login-screen{position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:9999;}
+#login-screen.hidden{display:none;}
+.login-card{background:var(--card);border:1.5px solid var(--border);border-radius:16px;padding:40px;width:100%;max-width:400px;box-shadow:0 8px 32px rgba(0,0,0,.1);}
+.login-title{font-size:20px;font-weight:900;color:var(--blue);margin-bottom:4px;}
+.login-sub{font-size:12px;color:var(--mid);margin-bottom:28px;}
+.login-error{color:var(--red);font-size:12px;margin-top:8px;min-height:18px;}
+.login-footer{text-align:center;font-size:11px;color:var(--light);margin-top:20px;}
+
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL = 'https://ujpgjhbsafhtbubrktrm.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVqcGdqaGJzYWZodGJ1YnJrdHJtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3Nzc4NDMsImV4cCI6MjA5MDM1Mzg0M30.oeV0WrmYTBU_xKSEbmDVHN3SySao0KX7Aqyq-VqI0Lk';
+const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+</script>
+
 </head>
 <body>
+
+
+<!-- ══ LOGIN SCREEN ══ -->
+<div id="login-screen">
+  <div class="login-card">
+    <div class="h-logo" style="margin-bottom:20px;">
+      <div class="logo-badge">T</div>
+      <div>
+        <h1>トクシングループ</h1>
+        <span>スキルマップ管理システム</span>
+      </div>
+    </div>
+    <div class="field">
+      <label>メールアドレス</label>
+      <input type="email" id="login-email" placeholder="example@email.com" autocomplete="email">
+    </div>
+    <div class="field" style="margin-top:12px;">
+      <label>パスワード</label>
+      <input type="password" id="login-password" placeholder="パスワード" autocomplete="current-password">
+    </div>
+    <div class="login-error" id="login-error"></div>
+    <button class="btn btn-primary" style="width:100%;margin-top:16px;justify-content:center;" onclick="doLogin()">
+      🔐 ログイン
+    </button>
+    <div class="login-footer">トクシングループ 外国人材管理ツール</div>
+  </div>
+</div>
 
 <header>
   <div class="h-logo">
@@ -175,6 +219,7 @@ main{max-width:1100px;margin:0 auto;padding:28px 20px;}
   <div class="mode-toggle">
     <button class="mode-btn active" onclick="requireAdminMode()" id="btn-admin">🔐 管理者モード</button>
     <button class="mode-btn" onclick="setMode('client')" id="btn-client">🏢 企業モード</button>
+    <button class="mode-btn" onclick="doLogout()" style="margin-left:8px;">🚪 ログアウト</button>
   </div>
 </header>
 
@@ -711,6 +756,116 @@ let state = {
 function saveState() {
   localStorage.setItem('skillmap_v1_data', JSON.stringify(state.staffList));
 }
+
+// ══ 認証 ══
+async function doLogin() {
+  const email = document.getElementById('login-email').value.trim();
+  const password = document.getElementById('login-password').value;
+  const errEl = document.getElementById('login-error');
+  errEl.textContent = '';
+  if (!email || !password) { errEl.textContent = 'メールとパスワードを入力してください'; return; }
+  const { data, error } = await sb.auth.signInWithPassword({ email, password });
+  if (error) { errEl.textContent = 'ログインに失敗しました: ' + error.message; return; }
+  await onLogin(data.user);
+}
+
+async function onLogin(user) {
+  state.user = user;
+  // profileからロールと企業IDを取得
+  const { data: profile } = await sb.from('profiles').select('*').eq('id', user.id).single();
+  if (profile) {
+    state.userRole = profile.role;
+    state.userCompanyId = profile.company_id;
+    state.mode = profile.role === 'admin' ? 'admin' : 'client';
+    if (profile.company_id) {
+      const { data: company } = await sb.from('companies').select('name').eq('id', profile.company_id).single();
+      state.company = company?.name || '';
+    }
+  } else {
+    state.userRole = 'viewer';
+    state.mode = 'client';
+  }
+  document.getElementById('login-screen').classList.add('hidden');
+  applyRoleUI();
+  loadState();
+  await loadFromSupabase();
+  renderAll();
+}
+
+function applyRoleUI() {
+  // viewerは評価入力ボタンを非表示
+  const isViewer = state.userRole === 'viewer';
+  const isAdmin = state.userRole === 'admin';
+  // ヘッダーのモード切替ボタン
+  document.getElementById('btn-admin').style.display = isAdmin ? '' : 'none';
+  document.getElementById('btn-client').style.display = isAdmin ? '' : 'none';
+  // 登録タブはadminのみ
+  document.getElementById('tab-register').style.display = isAdmin ? '' : 'none';
+}
+
+
+async function loadFromSupabase() {
+  try {
+    const { data: staffData, error } = await sb
+      .from('staff')
+      .select('*, evaluations(*)')
+      .order('created_at');
+    if (error) throw error;
+    if (staffData && staffData.length > 0) {
+      state.staffList = staffData.map(s => ({
+        id: s.id,
+        name: s.name,
+        nameEn: s.name_en || '',
+        nationality: s.nationality || '',
+        visa: s.visa || '',
+        expireDate: s.expire_date || '',
+        industry: s.industry || '',
+        process: s.process || '',
+        joinDate: s.join_date || '',
+        dob: s.dob || '',
+        note: s.note || '',
+        companyId: s.company_id,
+        evals: (s.evaluations || []).map(e => ({
+          id: e.id,
+          timing: e.timing,
+          date: e.eval_date,
+          evaluator: e.evaluator || '',
+          scores: e.scores || {},
+          avg: e.avg_score,
+        })).sort((a,b) => new Date(a.date) - new Date(b.date)),
+      }));
+      saveState();
+      renderAll();
+    }
+  } catch(err) {
+    console.warn('Supabase load error:', err.message);
+  }
+}
+
+async function doLogout() {
+  await sb.auth.signOut();
+  state.user = null;
+  state.userRole = null;
+  state.staffList = [];
+  document.getElementById('login-screen').classList.remove('hidden');
+}
+
+// ══ 起動時の認証確認 ══
+(async () => {
+  const { data: { session } } = await sb.auth.getSession();
+  if (session) {
+    await onLogin(session.user);
+  }
+  // セッション変化を監視
+  sb.auth.onAuthStateChange(async (event, session) => {
+    if (event === 'SIGNED_IN' && session) {
+      await onLogin(session.user);
+    } else if (event === 'SIGNED_OUT') {
+      document.getElementById('login-screen').classList.remove('hidden');
+    }
+  });
+})();
+
 function loadState() {
   // v1キーを優先、旧キーからマイグレーション
   const d = localStorage.getItem('skillmap_v1_data') || localStorage.getItem('skillmap_data');
