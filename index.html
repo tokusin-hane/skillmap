@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>ã¹ã­ã«ãããï½ãã¯ã·ã³ã°ã«ã¼ã</title>
+<title>Ã£ÂÂ¹Ã£ÂÂ­Ã£ÂÂ«Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¯Â½ÂÃ£ÂÂÃ£ÂÂ¯Ã£ÂÂ·Ã£ÂÂ³Ã£ÂÂ°Ã£ÂÂ«Ã£ÂÂ¼Ã£ÂÂ</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=DM+Mono:wght@400;500&display=swap');
 
@@ -21,7 +21,7 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--dark);min-height:100vh;}
 
-/* ââ HEADER ââ */
+/* Ã¢ÂÂÃ¢ÂÂ HEADER Ã¢ÂÂÃ¢ÂÂ */
 header{background:var(--blue);color:white;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.2);}
 .h-logo{display:flex;align-items:center;gap:12px;}
 .logo-badge{background:linear-gradient(135deg,var(--teal),var(--blue));border:1.5px solid rgba(255,255,255,.3);border-radius:8px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;color:white;}
@@ -31,25 +31,25 @@ header{background:var(--blue);color:white;padding:14px 24px;display:flex;align-i
 .mode-btn{padding:6px 14px;border-radius:20px;border:1.5px solid rgba(255,255,255,.35);background:transparent;color:white;font-size:11px;font-family:inherit;cursor:pointer;transition:all .2s;}
 .mode-btn.active{background:white;color:var(--blue);font-weight:700;border-color:white;}
 
-/* ââ NAV TABS ââ */
+/* Ã¢ÂÂÃ¢ÂÂ NAV TABS Ã¢ÂÂÃ¢ÂÂ */
 .nav-tabs{background:white;border-bottom:1.5px solid var(--border);padding:0 24px;display:flex;gap:0;}
 .nav-tab{padding:14px 20px;font-size:13px;font-weight:500;color:var(--mid);border-bottom:2.5px solid transparent;cursor:pointer;transition:all .2s;white-space:nowrap;}
 .nav-tab.active{color:var(--blue);border-bottom-color:var(--blue);font-weight:700;}
 .nav-tab:hover:not(.active){color:var(--dark);}
 
-/* ââ MAIN ââ */
+/* Ã¢ÂÂÃ¢ÂÂ MAIN Ã¢ÂÂÃ¢ÂÂ */
 main{max-width:1100px;margin:0 auto;padding:28px 20px;}
 
-/* ââ SCREEN ââ */
+/* Ã¢ÂÂÃ¢ÂÂ SCREEN Ã¢ÂÂÃ¢ÂÂ */
 .screen{display:none;}
 .screen.active{display:block;}
 
-/* ââ CARD ââ */
+/* Ã¢ÂÂÃ¢ÂÂ CARD Ã¢ÂÂÃ¢ÂÂ */
 .card{background:var(--card);border:1.5px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px;}
 .card-title{font-size:13px;font-weight:700;color:var(--mid);letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
 .card-title::before{content:'';display:block;width:3px;height:14px;background:var(--teal);border-radius:2px;}
 
-/* ââ FORM ââ */
+/* Ã¢ÂÂÃ¢ÂÂ FORM Ã¢ÂÂÃ¢ÂÂ */
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 .form-grid.three{grid-template-columns:1fr 1fr 1fr;}
 @media(max-width:600px){.form-grid,.form-grid.three{grid-template-columns:1fr;}}
@@ -59,7 +59,7 @@ main{max-width:1100px;margin:0 auto;padding:28px 20px;}
 .field input:focus,.field select:focus{outline:none;border-color:var(--teal);background:white;}
 .field.full{grid-column:1/-1;}
 
-/* ââ BTN ââ */
+/* Ã¢ÂÂÃ¢ÂÂ BTN Ã¢ÂÂÃ¢ÂÂ */
 .btn{padding:11px 24px;border-radius:9px;border:none;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px;}
 .btn-primary{background:var(--teal);color:white;}
 .btn-primary:hover{background:#0a5f63;transform:translateY(-1px);}
@@ -71,7 +71,7 @@ main{max-width:1100px;margin:0 auto;padding:28px 20px;}
 .btn-gold:hover{background:#b8841f;}
 .btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;}
 
-/* ââ STAFF LIST ââ */
+/* Ã¢ÂÂÃ¢ÂÂ STAFF LIST Ã¢ÂÂÃ¢ÂÂ */
 .staff-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
 .staff-card{background:var(--card);border:1.5px solid var(--border);border-radius:12px;padding:18px;cursor:pointer;transition:all .2s;position:relative;}
 .staff-card:hover{border-color:var(--teal);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.08);}
@@ -86,13 +86,13 @@ main{max-width:1100px;margin:0 auto;padding:28px 20px;}
 .progress-bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--teal),var(--blue));transition:width .6s;}
 .eval-count{font-size:11px;color:var(--light);margin-top:4px;}
 
-/* ââ ALERT BADGE ââ */
+/* Ã¢ÂÂÃ¢ÂÂ ALERT BADGE Ã¢ÂÂÃ¢ÂÂ */
 .alert-badge{position:absolute;top:14px;right:14px;padding:3px 8px;border-radius:10px;font-size:10px;font-weight:700;}
 .alert-red{background:#fdf0f0;color:var(--red);}
 .alert-orange{background:#fff8e1;color:#b7770d;}
 .alert-green{background:#f0fff4;color:var(--green);}
 
-/* ââ TIMELINE ââ */
+/* Ã¢ÂÂÃ¢ÂÂ TIMELINE Ã¢ÂÂÃ¢ÂÂ */
 .timeline{position:relative;padding-left:24px;}
 .timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--border);}
 .timeline-item{position:relative;margin-bottom:20px;}
@@ -103,7 +103,7 @@ main{max-width:1100px;margin:0 auto;padding:28px 20px;}
 .tl-avg{margin-left:auto;font-size:13px;font-weight:700;color:var(--teal);}
 .tl-actions{display:flex;gap:6px;}
 
-/* ââ SKILL TABLE ââ */
+/* Ã¢ÂÂÃ¢ÂÂ SKILL TABLE Ã¢ÂÂÃ¢ÂÂ */
 .skill-section{margin-bottom:20px;}
 .section-header{background:var(--blue);color:white;padding:8px 14px;border-radius:8px 8px 0 0;font-size:12px;font-weight:700;letter-spacing:.05em;}
 .skill-row{display:grid;grid-template-columns:1fr auto;align-items:center;padding:10px 14px;border:1px solid var(--border);border-top:none;gap:12px;}
@@ -122,11 +122,11 @@ main{max-width:1100px;margin:0 auto;padding:28px 20px;}
 .lv-legend span{display:flex;align-items:center;gap:4px;}
 .lv-dot{width:10px;height:10px;border-radius:3px;}
 
-/* ââ EVAL FORM ââ */
+/* Ã¢ÂÂÃ¢ÂÂ EVAL FORM Ã¢ÂÂÃ¢ÂÂ */
 .eval-form-header{display:flex;gap:12px;align-items:flex-end;margin-bottom:20px;flex-wrap:wrap;}
 .eval-form-header .field{min-width:160px;}
 
-/* ââ CERTIFICATE ââ */
+/* Ã¢ÂÂÃ¢ÂÂ CERTIFICATE Ã¢ÂÂÃ¢ÂÂ */
 .cert-wrap{background:white;border:2px solid var(--blue);border-radius:16px;padding:32px;max-width:700px;margin:0 auto;}
 .cert-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;border-bottom:1px solid var(--border);padding-bottom:20px;}
 .cert-title-en{font-size:22px;font-weight:900;color:var(--blue);letter-spacing:.1em;}
@@ -142,25 +142,25 @@ main{max-width:1100px;margin:0 auto;padding:28px 20px;}
 .cat-score-label{font-size:11px;color:var(--mid);margin-top:4px;}
 .cert-footer{text-align:center;font-size:11px;color:var(--light);padding-top:16px;border-top:1px solid var(--border);}
 
-/* ââ DASHBOARD ââ */
+/* Ã¢ÂÂÃ¢ÂÂ DASHBOARD Ã¢ÂÂÃ¢ÂÂ */
 .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px;}
 @media(max-width:700px){.stats-row{grid-template-columns:1fr 1fr;}}
 .stat-card{background:var(--card);border:1.5px solid var(--border);border-radius:12px;padding:18px;text-align:center;}
 .stat-val{font-size:28px;font-weight:900;color:var(--blue);}
 .stat-label{font-size:11px;color:var(--mid);margin-top:4px;}
 
-/* ââ EMPTY STATE ââ */
+/* Ã¢ÂÂÃ¢ÂÂ EMPTY STATE Ã¢ÂÂÃ¢ÂÂ */
 .empty{text-align:center;padding:48px 20px;color:var(--light);}
 .empty-icon{font-size:36px;margin-bottom:12px;}
 .empty p{font-size:14px;}
 
-/* ââ PRINT ââ */
+/* Ã¢ÂÂÃ¢ÂÂ PRINT Ã¢ÂÂÃ¢ÂÂ */
 @media print{
   header,.nav-tabs,.btn,.mode-toggle{display:none!important;}
   .cert-wrap{border:1px solid #ccc;box-shadow:none;}
 }
 
-/* ââ LOGIN ââ */
+/* Ã¢ÂÂÃ¢ÂÂ LOGIN Ã¢ÂÂÃ¢ÂÂ */
 #login-screen{position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:9999;}
 #login-screen.hidden{display:none;}
 .login-card{background:var(--card);border:1.5px solid var(--border);border-radius:16px;padding:40px;width:100%;max-width:400px;box-shadow:0 8px 32px rgba(0,0,0,.1);}
@@ -170,7 +170,7 @@ main{max-width:1100px;margin:0 auto;padding:28px 20px;}
 .login-footer{text-align:center;font-size:11px;color:var(--light);margin-top:20px;}
 
 
-/* ââ QR MODAL ââ */
+/* Ã¢ÂÂÃ¢ÂÂ QR MODAL Ã¢ÂÂÃ¢ÂÂ */
 .qr-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:200;align-items:center;justify-content:center;}
 .qr-modal.active{display:flex;}
 .qr-box{background:var(--card);border-radius:16px;padding:32px;text-align:center;max-width:360px;width:90%;}
@@ -180,7 +180,7 @@ main{max-width:1100px;margin:0 auto;padding:28px 20px;}
 .qr-url{font-size:11px;color:var(--light);word-break:break-all;margin-bottom:16px;padding:8px;background:var(--bg);border-radius:6px;}
 
 
-/* ââ REPORT ââ */
+/* Ã¢ÂÂÃ¢ÂÂ REPORT Ã¢ÂÂÃ¢ÂÂ */
 .report-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:200;align-items:center;justify-content:center;}
 .report-modal.active{display:flex;}
 .report-box{background:var(--card);border-radius:16px;padding:32px;max-width:700px;width:95%;max-height:85vh;overflow-y:auto;}
@@ -194,7 +194,7 @@ main{max-width:1100px;margin:0 auto;padding:28px 20px;}
 @media print{.report-modal{position:static;background:none;}.report-box{max-height:none;box-shadow:none;}.btn{display:none!important;}}
 
 
-/* ââ ALERT EMAIL ââ */
+/* Ã¢ÂÂÃ¢ÂÂ ALERT EMAIL Ã¢ÂÂÃ¢ÂÂ */
 .alert-email-btn{margin-top:12px;}
 
 </style>
@@ -211,29 +211,29 @@ const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 <body>
 
 
-<!-- ââ LOGIN SCREEN ââ -->
+<!-- Ã¢ÂÂÃ¢ÂÂ LOGIN SCREEN Ã¢ÂÂÃ¢ÂÂ -->
 <div id="login-screen">
   <div class="login-card">
     <div class="h-logo" style="margin-bottom:20px;">
       <div class="logo-badge">T</div>
       <div>
-        <h1>ãã¯ã·ã³ã°ã«ã¼ã</h1>
-        <span>ã¹ã­ã«ãããç®¡çã·ã¹ãã </span>
+        <h1>Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ·Ã£ÂÂ³Ã£ÂÂ°Ã£ÂÂ«Ã£ÂÂ¼Ã£ÂÂ</h1>
+        <span>Ã£ÂÂ¹Ã£ÂÂ­Ã£ÂÂ«Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ§Â®Â¡Ã§ÂÂÃ£ÂÂ·Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ </span>
       </div>
     </div>
     <div class="field">
-      <label>ã¡ã¼ã«ã¢ãã¬ã¹</label>
+      <label>Ã£ÂÂ¡Ã£ÂÂ¼Ã£ÂÂ«Ã£ÂÂ¢Ã£ÂÂÃ£ÂÂ¬Ã£ÂÂ¹</label>
       <input type="email" id="login-email" placeholder="example@email.com" autocomplete="email">
     </div>
     <div class="field" style="margin-top:12px;">
-      <label>ãã¹ã¯ã¼ã</label>
-      <input type="password" id="login-password" placeholder="ãã¹ã¯ã¼ã" autocomplete="current-password">
+      <label>Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¯Ã£ÂÂ¼Ã£ÂÂ</label>
+      <input type="password" id="login-password" placeholder="Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¯Ã£ÂÂ¼Ã£ÂÂ" autocomplete="current-password">
     </div>
     <div class="login-error" id="login-error"></div>
     <button class="btn btn-primary" style="width:100%;margin-top:16px;justify-content:center;" onclick="doLogin()">
-      ð ã­ã°ã¤ã³
+      Ã°ÂÂÂ Ã£ÂÂ­Ã£ÂÂ°Ã£ÂÂ¤Ã£ÂÂ³
     </button>
-    <div class="login-footer">ãã¯ã·ã³ã°ã«ã¼ã å¤å½äººæç®¡çãã¼ã«</div>
+    <div class="login-footer">Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ·Ã£ÂÂ³Ã£ÂÂ°Ã£ÂÂ«Ã£ÂÂ¼Ã£ÂÂ Ã¥Â¤ÂÃ¥ÂÂ½Ã¤ÂºÂºÃ¦ÂÂÃ§Â®Â¡Ã§ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂ«</div>
   </div>
 </div>
 
@@ -241,208 +241,209 @@ const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   <div class="h-logo">
     <div class="logo-badge">T</div>
     <div>
-      <h1>å¤å½äººæ ã¹ã­ã«ããã</h1>
-      <span>ãã¯ã·ã³ã°ã«ã¼ã</span>
+      <h1>Ã¥Â¤ÂÃ¥ÂÂ½Ã¤ÂºÂºÃ¦ÂÂ Ã£ÂÂ¹Ã£ÂÂ­Ã£ÂÂ«Ã£ÂÂÃ£ÂÂÃ£ÂÂ</h1>
+      <span>Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ·Ã£ÂÂ³Ã£ÂÂ°Ã£ÂÂ«Ã£ÂÂ¼Ã£ÂÂ</span>
     </div>
   </div>
   <div class="mode-toggle">
-    <button class="mode-btn active" onclick="requireAdminMode()" id="btn-admin">ð ç®¡çèã¢ã¼ã</button>
-    <button class="mode-btn" onclick="setMode('client')" id="btn-client">ð¢ ä¼æ¥­ã¢ã¼ã</button>
-    <button class="mode-btn" onclick="document.getElementById('helpModal').style.display='flex'" style="margin-left:8px;background:#6c757d;">❓ ヘルプ</button>
-  <button class="mode-btn" onclick="doLogout()" style="margin-left:8px;">ðª ã­ã°ã¢ã¦ã</button>
+    <button class="mode-btn active" onclick="requireAdminMode()" id="btn-admin">Ã°ÂÂÂ Ã§Â®Â¡Ã§ÂÂÃ¨ÂÂÃ£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂ</button>
+    <button class="mode-btn" onclick="setMode('client')" id="btn-client">Ã°ÂÂÂ¢ Ã¤Â¼ÂÃ¦Â¥Â­Ã£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂ</button>
+    <button class="mode-btn" onclick="document.getElementById('helpModal').style.display='flex'" style="margin-left:8px;background:#6c757d;">â ãã«ã</button>
+  <button class="mode-btn" onclick="document.getElementById('helpModal').style.display='flex'" style="background:#6c757d;margin-right:8px;">&#10067; &#12504;&#12523;&#12503;</button>
+    <button class="mode-btn" onclick="doLogout()" style="margin-left:8px;">Ã°ÂÂÂª Ã£ÂÂ­Ã£ÂÂ°Ã£ÂÂ¢Ã£ÂÂ¦Ã£ÂÂ</button>
   </div>
 </header>
 
 <div class="nav-tabs">
-  <div class="nav-tab active" onclick="showTab('dashboard')" id="tab-dashboard">ð ããã·ã¥ãã¼ã</div>
-  <div class="nav-tab" onclick="showTab('staff')" id="tab-staff">ð¥ ã¹ã¿ããä¸è¦§</div>
-  <div class="nav-tab" onclick="requireAdmin('register')" id="tab-register">ï¼ ã¹ã¿ããç»é²</div>
-  <div class="nav-tab" onclick="showTab('eval')" id="tab-eval">ð ã¹ã­ã«è©ä¾¡</div>
-  <div class="nav-tab" onclick="showTab('cert')" id="tab-cert">ð è¨¼ææ¸</div>
+  <div class="nav-tab active" onclick="showTab('dashboard')" id="tab-dashboard">Ã°ÂÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ·Ã£ÂÂ¥Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ</div>
+  <div class="nav-tab" onclick="showTab('staff')" id="tab-staff">Ã°ÂÂÂ¥ Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ¤Â¸ÂÃ¨Â¦Â§</div>
+  <div class="nav-tab" onclick="requireAdmin('register')" id="tab-register">Ã¯Â¼Â Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ§ÂÂ»Ã©ÂÂ²</div>
+  <div class="nav-tab" onclick="showTab('eval')" id="tab-eval">Ã°ÂÂÂ Ã£ÂÂ¹Ã£ÂÂ­Ã£ÂÂ«Ã¨Â©ÂÃ¤Â¾Â¡</div>
+  <div class="nav-tab" onclick="showTab('cert')" id="tab-cert">Ã°ÂÂÂ Ã¨Â¨Â¼Ã¦ÂÂÃ¦ÂÂ¸</div>
 </div>
 
 <main>
 
-<!-- ââ DASHBOARD ââ -->
+<!-- Ã¢ÂÂÃ¢ÂÂ DASHBOARD Ã¢ÂÂÃ¢ÂÂ -->
 <div class="screen active" id="screen-dashboard">
   <div class="stats-row" id="stats-row">
-    <div class="stat-card"><div class="stat-val" id="stat-total">0</div><div class="stat-label" id="stat-total-label">ç»é²ã¹ã¿ããæ°</div></div>
-    <div class="stat-card" id="stat-companies-card"><div class="stat-val" id="stat-companies">0</div><div class="stat-label">åå¥ä¼æ¥­æ°</div></div>
-    <div class="stat-card"><div class="stat-val" id="stat-evals">0</div><div class="stat-label">è©ä¾¡å®æ½åæ°</div></div>
-    <div class="stat-card"><div class="stat-val" id="stat-alert">0</div><div class="stat-label">æéã¢ã©ã¼ã</div></div>
+    <div class="stat-card"><div class="stat-val" id="stat-total">0</div><div class="stat-label" id="stat-total-label">Ã§ÂÂ»Ã©ÂÂ²Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ¦ÂÂ°</div></div>
+    <div class="stat-card" id="stat-companies-card"><div class="stat-val" id="stat-companies">0</div><div class="stat-label">Ã¥ÂÂÃ¥ÂÂ¥Ã¤Â¼ÂÃ¦Â¥Â­Ã¦ÂÂ°</div></div>
+    <div class="stat-card"><div class="stat-val" id="stat-evals">0</div><div class="stat-label">Ã¨Â©ÂÃ¤Â¾Â¡Ã¥Â®ÂÃ¦ÂÂ½Ã¥ÂÂÃ¦ÂÂ°</div></div>
+    <div class="stat-card"><div class="stat-val" id="stat-alert">0</div><div class="stat-label">Ã¦ÂÂÃ©ÂÂÃ£ÂÂ¢Ã£ÂÂ©Ã£ÂÂ¼Ã£ÂÂ</div></div>
   </div>
   <div class="card">
-    <div class="card-title">ãã¼ã¿ç®¡ç</div>
+    <div class="card-title">Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¿Ã§Â®Â¡Ã§ÂÂ</div>
     <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
-      <button class="btn btn-secondary btn-sm" onclick="exportData()">ð¥ JSONã¨ã¯ã¹ãã¼ã</button>
+      <button class="btn btn-secondary btn-sm" onclick="exportData()">Ã°ÂÂÂ¥ JSONÃ£ÂÂ¨Ã£ÂÂ¯Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ</button>
       <label class="btn btn-secondary btn-sm" style="cursor:pointer;margin:0;">
-        ð¤ JSONã¤ã³ãã¼ã
+        Ã°ÂÂÂ¤ JSONÃ£ÂÂ¤Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ
         <input type="file" accept=".json" onchange="importData(event)" style="display:none;">
       </label>
-      <button class="btn btn-secondary btn-sm" onclick="showQR()">ð± QRã³ã¼ã</button>
-      <button class="btn btn-secondary btn-sm" onclick="showReport()">ð ä¼æ¥­å¥ã¬ãã¼ã</button>
-      <span style="font-size:11px;color:var(--mid);">â» ãã¼ã¿ã®ããã¯ã¢ããã»å¾©åç¨</span>
+      <button class="btn btn-secondary btn-sm" onclick="showQR()">Ã°ÂÂÂ± QRÃ£ÂÂ³Ã£ÂÂ¼Ã£ÂÂ</button>
+      <button class="btn btn-secondary btn-sm" onclick="showReport()">Ã°ÂÂÂ Ã¤Â¼ÂÃ¦Â¥Â­Ã¥ÂÂ¥Ã£ÂÂ¬Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ</button>
+      <span style="font-size:11px;color:var(--mid);">Ã¢ÂÂ» Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ®Ã£ÂÂÃ£ÂÂÃ£ÂÂ¯Ã£ÂÂ¢Ã£ÂÂÃ£ÂÂÃ£ÂÂ»Ã¥Â¾Â©Ã¥ÂÂÃ§ÂÂ¨</span>
     </div>
   </div>
   <div class="card">
-    <div class="card-title">å¨çæéã¢ã©ã¼ã</div>
-    <div id="alert-list"><div class="empty"><div class="empty-icon">â</div><p>æéãè¿ãã¹ã¿ããã¯ãã¾ãã</p></div></div>
+    <div class="card-title">Ã¥ÂÂ¨Ã§ÂÂÃ¦ÂÂÃ©ÂÂÃ£ÂÂ¢Ã£ÂÂ©Ã£ÂÂ¼Ã£ÂÂ</div>
+    <div id="alert-list"><div class="empty"><div class="empty-icon">Ã¢ÂÂ</div><p>Ã¦ÂÂÃ©ÂÂÃ£ÂÂÃ¨Â¿ÂÃ£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ£ÂÂ¯Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p></div></div>
     <div class="alert-email-btn">
-      <button class="btn btn-secondary btn-sm" onclick="sendAlertEmail()">ð§ ã¢ã©ã¼ãã¡ã¼ã«ãéä¿¡</button>
+      <button class="btn btn-secondary btn-sm" onclick="sendAlertEmail()">Ã°ÂÂÂ§ Ã£ÂÂ¢Ã£ÂÂ©Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ¡Ã£ÂÂ¼Ã£ÂÂ«Ã£ÂÂÃ©ÂÂÃ¤Â¿Â¡</button>
     </div>
   </div>
   <div class="card">
-    <div class="card-title">æè¿ã®è©ä¾¡</div>
-    <div id="recent-evals"><div class="empty"><div class="empty-icon">ð</div><p>ã¾ã è©ä¾¡ãããã¾ãã</p></div></div>
+    <div class="card-title">Ã¦ÂÂÃ¨Â¿ÂÃ£ÂÂ®Ã¨Â©ÂÃ¤Â¾Â¡</div>
+    <div id="recent-evals"><div class="empty"><div class="empty-icon">Ã°ÂÂÂ</div><p>Ã£ÂÂ¾Ã£ÂÂ Ã¨Â©ÂÃ¤Â¾Â¡Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p></div></div>
   </div>
 </div>
 
-<!-- ââ STAFF LIST ââ -->
+<!-- Ã¢ÂÂÃ¢ÂÂ STAFF LIST Ã¢ÂÂÃ¢ÂÂ -->
 <div class="screen" id="screen-staff">
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:10px;">
     <div style="display:flex;gap:10px;flex-wrap:wrap;">
-      <input type="text" id="search-input" placeholder="ð ååã»ä¼æ¥­åã§æ¤ç´¢" style="padding:9px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;font-family:inherit;width:220px;" oninput="renderStaffList()">
+      <input type="text" id="search-input" placeholder="Ã°ÂÂÂ Ã¥ÂÂÃ¥ÂÂÃ£ÂÂ»Ã¤Â¼ÂÃ¦Â¥Â­Ã¥ÂÂÃ£ÂÂ§Ã¦Â¤ÂÃ§Â´Â¢" style="padding:9px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;font-family:inherit;width:220px;" oninput="renderStaffList()">
       <select id="filter-industry" style="padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;font-family:inherit;" onchange="renderStaffList()">
-        <option value="">å¨æ¥­ç¨®</option>
+        <option value="">Ã¥ÂÂ¨Ã¦Â¥Â­Ã§Â¨Â®</option>
       </select>
     </div>
-    <button class="btn btn-primary btn-sm" onclick="showTab('register')">ï¼ æ°è¦ç»é²</button>
+    <button class="btn btn-primary btn-sm" onclick="showTab('register')">Ã¯Â¼Â Ã¦ÂÂ°Ã¨Â¦ÂÃ§ÂÂ»Ã©ÂÂ²</button>
   </div>
   <div class="staff-grid" id="staff-grid">
-    <div class="empty" style="grid-column:1/-1"><div class="empty-icon">ð¥</div><p>ã¹ã¿ãããç»é²ãã¦ãã ãã</p></div>
+    <div class="empty" style="grid-column:1/-1"><div class="empty-icon">Ã°ÂÂÂ¥</div><p>Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ§ÂÂ»Ã©ÂÂ²Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂ</p></div>
   </div>
 </div>
 
-<!-- ââ REGISTER ââ -->
+<!-- Ã¢ÂÂÃ¢ÂÂ REGISTER Ã¢ÂÂÃ¢ÂÂ -->
 <div class="screen" id="screen-register">
   <div class="card">
-    <div class="card-title">ã¹ã¿ããæå ±ç»é²</div>
+    <div class="card-title">Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ¦ÂÂÃ¥Â Â±Ã§ÂÂ»Ã©ÂÂ²</div>
     <div class="form-grid">
-      <div class="field"><label>æ°åï¼æ¥æ¬èªï¼<span>*</span></label><input type="text" id="reg-name" placeholder="ä¾ï¼ã°ã¨ã³ ãã³ ã¢ã³"></div>
-      <div class="field"><label>æ°åï¼ã­ã¼ãå­ï¼</label><input type="text" id="reg-name-en" placeholder="Nguyen Van An"></div>
-      <div class="field"><label>å½ç±<span>*</span></label>
+      <div class="field"><label>Ã¦Â°ÂÃ¥ÂÂÃ¯Â¼ÂÃ¦ÂÂ¥Ã¦ÂÂ¬Ã¨ÂªÂÃ¯Â¼Â<span>*</span></label><input type="text" id="reg-name" placeholder="Ã¤Â¾ÂÃ¯Â¼ÂÃ£ÂÂ°Ã£ÂÂ¨Ã£ÂÂ³ Ã£ÂÂÃ£ÂÂ³ Ã£ÂÂ¢Ã£ÂÂ³"></div>
+      <div class="field"><label>Ã¦Â°ÂÃ¥ÂÂÃ¯Â¼ÂÃ£ÂÂ­Ã£ÂÂ¼Ã£ÂÂÃ¥Â­ÂÃ¯Â¼Â</label><input type="text" id="reg-name-en" placeholder="Nguyen Van An"></div>
+      <div class="field"><label>Ã¥ÂÂ½Ã§Â±Â<span>*</span></label>
         <select id="reg-nationality">
-          <option value="">é¸æãã¦ãã ãã</option>
-          <option>ãããã </option><option>ã¤ã³ããã·ã¢</option><option>ãã£ãªãã³</option>
-          <option>ãã£ã³ãã¼</option><option>ã¿ã¤</option><option>ä¸­å½</option>
-          <option>ããã¼ã«</option><option>ã«ã³ãã¸ã¢</option><option>ãã®ä»</option>
+          <option value="">Ã©ÂÂ¸Ã¦ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂ</option>
+          <option>Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ </option><option>Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂÃ£ÂÂÃ£ÂÂ·Ã£ÂÂ¢</option><option>Ã£ÂÂÃ£ÂÂ£Ã£ÂÂªÃ£ÂÂÃ£ÂÂ³</option>
+          <option>Ã£ÂÂÃ£ÂÂ£Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¼</option><option>Ã£ÂÂ¿Ã£ÂÂ¤</option><option>Ã¤Â¸Â­Ã¥ÂÂ½</option>
+          <option>Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂ«</option><option>Ã£ÂÂ«Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¸Ã£ÂÂ¢</option><option>Ã£ÂÂÃ£ÂÂ®Ã¤Â»Â</option>
         </select>
       </div>
-      <div class="field"><label>å¨çè³æ ¼<span>*</span></label>
+      <div class="field"><label>Ã¥ÂÂ¨Ã§ÂÂÃ¨Â³ÂÃ¦Â Â¼<span>*</span></label>
         <select id="reg-visa">
-          <option value="">é¸æãã¦ãã ãã</option>
-          <option>ç¹å®æè½1å·</option><option>ç¹å®æè½2å·</option>
-          <option>è²æå°±å´</option><option>æè¡ã»äººæç¥è­ã»å½éæ¥­å</option>
-          <option>æè½å®ç¿ï¼ç§»è¡æéä¸­ï¼</option><option>ãã®ä»</option>
+          <option value="">Ã©ÂÂ¸Ã¦ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂ</option>
+          <option>Ã§ÂÂ¹Ã¥Â®ÂÃ¦ÂÂÃ¨ÂÂ½1Ã¥ÂÂ·</option><option>Ã§ÂÂ¹Ã¥Â®ÂÃ¦ÂÂÃ¨ÂÂ½2Ã¥ÂÂ·</option>
+          <option>Ã¨ÂÂ²Ã¦ÂÂÃ¥Â°Â±Ã¥ÂÂ´</option><option>Ã¦ÂÂÃ¨Â¡ÂÃ£ÂÂ»Ã¤ÂºÂºÃ¦ÂÂÃ§ÂÂ¥Ã¨Â­ÂÃ£ÂÂ»Ã¥ÂÂ½Ã©ÂÂÃ¦Â¥Â­Ã¥ÂÂ</option>
+          <option>Ã¦ÂÂÃ¨ÂÂ½Ã¥Â®ÂÃ§Â¿ÂÃ¯Â¼ÂÃ§Â§Â»Ã¨Â¡ÂÃ¦ÂÂÃ©ÂÂÃ¤Â¸Â­Ã¯Â¼Â</option><option>Ã£ÂÂÃ£ÂÂ®Ã¤Â»Â</option>
         </select>
       </div>
-      <div class="field"><label>å¨çæé<span>*</span></label><input type="date" id="reg-expire"></div>
-      <div class="field"><label>æå±ä¼æ¥­<span>*</span></label><input type="text" id="reg-company" placeholder="ä¾ï¼åé¸è£½é æ ªå¼ä¼ç¤¾"></div>
-      <div class="field"><label>æ¥­ç¨®<span>*</span></label>
+      <div class="field"><label>Ã¥ÂÂ¨Ã§ÂÂÃ¦ÂÂÃ©ÂÂ<span>*</span></label><input type="date" id="reg-expire"></div>
+      <div class="field"><label>Ã¦ÂÂÃ¥Â±ÂÃ¤Â¼ÂÃ¦Â¥Â­<span>*</span></label><input type="text" id="reg-company" placeholder="Ã¤Â¾ÂÃ¯Â¼ÂÃ¥ÂÂÃ©ÂÂ¸Ã¨Â£Â½Ã©ÂÂ Ã¦Â ÂªÃ¥Â¼ÂÃ¤Â¼ÂÃ§Â¤Â¾"></div>
+      <div class="field"><label>Ã¦Â¥Â­Ã§Â¨Â®<span>*</span></label>
         <select id="reg-industry" onchange="updateRegProcess()">
-          <option value="">é¸æãã¦ãã ãã</option>
+          <option value="">Ã©ÂÂ¸Ã¦ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂ</option>
         </select>
       </div>
-      <div class="field"><label>è·ç¨®ã»å·¥ç¨</label><input type="text" id="reg-process" placeholder="ä¾ï¼æ©æ¢°å å·¥ã»æº¶æ¥"></div>
-      <div class="field"><label>å¥ç¤¾æ¥</label><input type="date" id="reg-joindate"></div>
-      <div class="field"><label>çå¹´ææ¥</label><input type="date" id="reg-dob"></div>
-      <div class="field full"><label>åè</label><textarea id="reg-note" rows="2" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;font-family:inherit;resize:vertical;"></textarea></div>
+      <div class="field"><label>Ã¨ÂÂ·Ã§Â¨Â®Ã£ÂÂ»Ã¥Â·Â¥Ã§Â¨Â</label><input type="text" id="reg-process" placeholder="Ã¤Â¾ÂÃ¯Â¼ÂÃ¦Â©ÂÃ¦Â¢Â°Ã¥ÂÂ Ã¥Â·Â¥Ã£ÂÂ»Ã¦ÂºÂ¶Ã¦ÂÂ¥"></div>
+      <div class="field"><label>Ã¥ÂÂ¥Ã§Â¤Â¾Ã¦ÂÂ¥</label><input type="date" id="reg-joindate"></div>
+      <div class="field"><label>Ã§ÂÂÃ¥Â¹Â´Ã¦ÂÂÃ¦ÂÂ¥</label><input type="date" id="reg-dob"></div>
+      <div class="field full"><label>Ã¥ÂÂÃ¨ÂÂ</label><textarea id="reg-note" rows="2" style="width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;font-family:inherit;resize:vertical;"></textarea></div>
     </div>
     <div class="btn-row">
-      <button class="btn btn-primary" onclick="registerStaff()">â ç»é²ãã</button>
-      <button class="btn btn-secondary" onclick="clearRegForm()">ã¯ãªã¢</button>
+      <button class="btn btn-primary" onclick="registerStaff()">Ã¢ÂÂ Ã§ÂÂ»Ã©ÂÂ²Ã£ÂÂÃ£ÂÂ</button>
+      <button class="btn btn-secondary" onclick="clearRegForm()">Ã£ÂÂ¯Ã£ÂÂªÃ£ÂÂ¢</button>
     </div>
   </div>
 </div>
 
-<!-- ââ EVAL ââ -->
+<!-- Ã¢ÂÂÃ¢ÂÂ EVAL Ã¢ÂÂÃ¢ÂÂ -->
 <div class="screen" id="screen-eval">
-  <!-- ã¹ã¿ããé¸æ -->
+  <!-- Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ©ÂÂ¸Ã¦ÂÂ -->
   <div class="card" id="eval-select-card">
-    <div class="card-title">è©ä¾¡ããã¹ã¿ãããé¸æ</div>
+    <div class="card-title">Ã¨Â©ÂÃ¤Â¾Â¡Ã£ÂÂÃ£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ©ÂÂ¸Ã¦ÂÂ</div>
     <div class="staff-grid" id="eval-staff-grid">
-      <div class="empty" style="grid-column:1/-1"><div class="empty-icon">ð¥</div><p>åã«ã¹ã¿ãããç»é²ãã¦ãã ãã</p></div>
+      <div class="empty" style="grid-column:1/-1"><div class="empty-icon">Ã°ÂÂÂ¥</div><p>Ã¥ÂÂÃ£ÂÂ«Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ§ÂÂ»Ã©ÂÂ²Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂ</p></div>
     </div>
   </div>
-  <!-- è©ä¾¡å¥å -->
+  <!-- Ã¨Â©ÂÃ¤Â¾Â¡Ã¥ÂÂ¥Ã¥ÂÂ -->
   <div id="eval-input-area" style="display:none;">
-    <!-- ã¹ã¿ããåãããã¼ -->
+    <!-- Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¼ -->
     <div class="card">
       <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-        <button class="btn btn-secondary btn-sm" onclick="backToEvalSelect()">â æ»ã</button>
+        <button class="btn btn-secondary btn-sm" onclick="backToEvalSelect()">Ã¢ÂÂ Ã¦ÂÂ»Ã£ÂÂ</button>
         <div>
           <div style="font-size:16px;font-weight:700;" id="eval-staff-name-disp">---</div>
           <div style="font-size:12px;color:var(--mid);" id="eval-staff-meta-disp">---</div>
         </div>
       </div>
     </div>
-    <!-- è©ä¾¡å±¥æ­´ï¼ä¸ã«ç§»åï¼ -->
+    <!-- Ã¨Â©ÂÃ¤Â¾Â¡Ã¥Â±Â¥Ã¦Â­Â´Ã¯Â¼ÂÃ¤Â¸ÂÃ£ÂÂ«Ã§Â§Â»Ã¥ÂÂÃ¯Â¼Â -->
     <div class="card" id="timeline-card">
-      <div class="card-title">è©ä¾¡å±¥æ­´</div>
-      <div id="eval-timeline-empty" style="color:var(--light);font-size:13px;padding:4px 0;">ã¾ã è©ä¾¡ãããã¾ãããä¸ã®ãã©ã¼ã ããååè©ä¾¡ãå¥åãã¦ãã ããã</div>
+      <div class="card-title">Ã¨Â©ÂÃ¤Â¾Â¡Ã¥Â±Â¥Ã¦Â­Â´</div>
+      <div id="eval-timeline-empty" style="color:var(--light);font-size:13px;padding:4px 0;">Ã£ÂÂ¾Ã£ÂÂ Ã¨Â©ÂÃ¤Â¾Â¡Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¤Â¸ÂÃ£ÂÂ®Ã£ÂÂÃ£ÂÂ©Ã£ÂÂ¼Ã£ÂÂ Ã£ÂÂÃ£ÂÂÃ¥ÂÂÃ¥ÂÂÃ¨Â©ÂÃ¤Â¾Â¡Ã£ÂÂÃ¥ÂÂ¥Ã¥ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ</div>
       <div class="timeline" id="eval-timeline"></div>
     </div>
-    <!-- è©ä¾¡å¥åãã©ã¼ã  -->
+    <!-- Ã¨Â©ÂÃ¤Â¾Â¡Ã¥ÂÂ¥Ã¥ÂÂÃ£ÂÂÃ£ÂÂ©Ã£ÂÂ¼Ã£ÂÂ  -->
     <div class="card">
-      <div class="card-title">æ°ããè©ä¾¡ãå¥å</div>
+      <div class="card-title">Ã¦ÂÂ°Ã£ÂÂÃ£ÂÂÃ¨Â©ÂÃ¤Â¾Â¡Ã£ÂÂÃ¥ÂÂ¥Ã¥ÂÂ</div>
       <div class="eval-form-header">
         <div class="field">
-          <label>è©ä¾¡ã¿ã¤ãã³ã°<span>*</span></label>
+          <label>Ã¨Â©ÂÃ¤Â¾Â¡Ã£ÂÂ¿Ã£ÂÂ¤Ã£ÂÂÃ£ÂÂ³Ã£ÂÂ°<span>*</span></label>
           <select id="eval-timing">
-            <option value="å¥ç¤¾æ">å¥ç¤¾æ</option>
-            <option value="3ã¶æ">3ã¶æ</option>
-            <option value="6ã¶æ">6ã¶æ</option>
-            <option value="1å¹´">1å¹´</option>
-            <option value="2å¹´">2å¹´</option>
-            <option value="3å¹´">3å¹´</option>
-            <option value="4å¹´">4å¹´</option>
-            <option value="5å¹´">5å¹´</option>
-            <option value="ã«ã¹ã¿ã ">ã«ã¹ã¿ã </option>
+            <option value="Ã¥ÂÂ¥Ã§Â¤Â¾Ã¦ÂÂ">Ã¥ÂÂ¥Ã§Â¤Â¾Ã¦ÂÂ</option>
+            <option value="3Ã£ÂÂ¶Ã¦ÂÂ">3Ã£ÂÂ¶Ã¦ÂÂ</option>
+            <option value="6Ã£ÂÂ¶Ã¦ÂÂ">6Ã£ÂÂ¶Ã¦ÂÂ</option>
+            <option value="1Ã¥Â¹Â´">1Ã¥Â¹Â´</option>
+            <option value="2Ã¥Â¹Â´">2Ã¥Â¹Â´</option>
+            <option value="3Ã¥Â¹Â´">3Ã¥Â¹Â´</option>
+            <option value="4Ã¥Â¹Â´">4Ã¥Â¹Â´</option>
+            <option value="5Ã¥Â¹Â´">5Ã¥Â¹Â´</option>
+            <option value="Ã£ÂÂ«Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ ">Ã£ÂÂ«Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ </option>
           </select>
         </div>
         <div class="field" id="custom-label-wrap" style="display:none;">
-          <label>ã«ã¹ã¿ã ã©ãã«</label>
-          <input type="text" id="eval-custom-label" placeholder="ä¾ï¼ææ ¼å¯©æ»">
+          <label>Ã£ÂÂ«Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ Ã£ÂÂ©Ã£ÂÂÃ£ÂÂ«</label>
+          <input type="text" id="eval-custom-label" placeholder="Ã¤Â¾ÂÃ¯Â¼ÂÃ¦ÂÂÃ¦Â Â¼Ã¥Â¯Â©Ã¦ÂÂ»">
         </div>
         <div class="field">
-          <label>è©ä¾¡æ¥</label>
+          <label>Ã¨Â©ÂÃ¤Â¾Â¡Ã¦ÂÂ¥</label>
           <input type="date" id="eval-date">
         </div>
         <div class="field">
-          <label>è©ä¾¡è</label>
-          <input type="text" id="eval-evaluator" placeholder="æå½èå">
+          <label>Ã¨Â©ÂÃ¤Â¾Â¡Ã¨ÂÂ</label>
+          <input type="text" id="eval-evaluator" placeholder="Ã¦ÂÂÃ¥Â½ÂÃ¨ÂÂÃ¥ÂÂ">
         </div>
       </div>
       <div class="lv-legend">
-        <span><div class="lv-dot" style="background:var(--lv1b)"></div>Lv1 åºç¤ï¼æç¤ºãããã°ã§ããï¼</span>
-        <span><div class="lv-dot" style="background:var(--lv2b)"></div>Lv2 ä¸äººç«ã¡ï¼èªåã§ã§ããï¼</span>
-        <span><div class="lv-dot" style="background:var(--lv3b)"></div>Lv3 æå°å¯ï¼äººã«æããããï¼</span>
-        <span><div class="lv-dot" style="background:var(--lv4b)"></div>Lv4 ã¨ã­ã¹ãã¼ãï¼æ¹åææ¡ã§ããï¼</span>
+        <span><div class="lv-dot" style="background:var(--lv1b)"></div>Lv1 Ã¥ÂÂºÃ§Â¤ÂÃ¯Â¼ÂÃ¦ÂÂÃ§Â¤ÂºÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ°Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¯Â¼Â</span>
+        <span><div class="lv-dot" style="background:var(--lv2b)"></div>Lv2 Ã¤Â¸ÂÃ¤ÂºÂºÃ§Â«ÂÃ£ÂÂ¡Ã¯Â¼ÂÃ¨ÂÂªÃ¥ÂÂÃ£ÂÂ§Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¯Â¼Â</span>
+        <span><div class="lv-dot" style="background:var(--lv3b)"></div>Lv3 Ã¦ÂÂÃ¥Â°ÂÃ¥ÂÂ¯Ã¯Â¼ÂÃ¤ÂºÂºÃ£ÂÂ«Ã¦ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ¯Â¼Â</span>
+        <span><div class="lv-dot" style="background:var(--lv4b)"></div>Lv4 Ã£ÂÂ¨Ã£ÂÂ­Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ¯Â¼ÂÃ¦ÂÂ¹Ã¥ÂÂÃ¦ÂÂÃ¦Â¡ÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¯Â¼Â</span>
       </div>
       <div id="skill-form-body"></div>
       <div class="btn-row">
-        <button class="btn btn-primary" onclick="saveEval()">ð¾ è©ä¾¡ãä¿å­</button>
-        <button class="btn btn-secondary" onclick="backToEvalSelect()">ã­ã£ã³ã»ã«</button>
+        <button class="btn btn-primary" onclick="saveEval()">Ã°ÂÂÂ¾ Ã¨Â©ÂÃ¤Â¾Â¡Ã£ÂÂÃ¤Â¿ÂÃ¥Â­Â</button>
+        <button class="btn btn-secondary" onclick="backToEvalSelect()">Ã£ÂÂ­Ã£ÂÂ£Ã£ÂÂ³Ã£ÂÂ»Ã£ÂÂ«</button>
       </div>
     </div>
-    <!-- æé·ã°ã©ã -->
+    <!-- Ã¦ÂÂÃ©ÂÂ·Ã£ÂÂ°Ã£ÂÂ©Ã£ÂÂ -->
     <div class="card" id="growth-chart-card" style="display:none;">
-      <div class="card-title">æé·ã°ã©ã</div>
+      <div class="card-title">Ã¦ÂÂÃ©ÂÂ·Ã£ÂÂ°Ã£ÂÂ©Ã£ÂÂ</div>
       <canvas id="growth-chart" height="120"></canvas>
     </div>
   </div>
 </div>
 
-<!-- ââ CERT ââ -->
+<!-- Ã¢ÂÂÃ¢ÂÂ CERT Ã¢ÂÂÃ¢ÂÂ -->
 <div class="screen" id="screen-cert">
   <div class="card" style="margin-bottom:20px;">
-    <div class="card-title">ã¹ã¿ãããé¸æ</div>
+    <div class="card-title">Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ©ÂÂ¸Ã¦ÂÂ</div>
     <div class="staff-grid" id="cert-staff-grid"></div>
   </div>
   <div id="cert-output" style="display:none;">
     <div style="display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
-      <button class="btn btn-gold" onclick="window.print()">ð¨ï¸ PDFå°å·</button>
-      <button class="btn btn-secondary" onclick="document.getElementById('cert-output').style.display='none'">â æ»ã</button>
+      <button class="btn btn-gold" onclick="window.print()">Ã°ÂÂÂ¨Ã¯Â¸Â PDFÃ¥ÂÂ°Ã¥ÂÂ·</button>
+      <button class="btn btn-secondary" onclick="document.getElementById('cert-output').style.display='none'">Ã¢ÂÂ Ã¦ÂÂ»Ã£ÂÂ</button>
     </div>
     <div class="cert-wrap" id="cert-content"></div>
   </div>
@@ -452,8 +453,8 @@ const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 <script>
 
-// ââ ç®¡çèãã¹ã¯ã¼ã ââ
-const ADMIN_PASSWORD = 'tokusin2026'; // â ãããå¤æ´ãã¦ãã ãã
+// Ã¢ÂÂÃ¢ÂÂ Ã§Â®Â¡Ã§ÂÂÃ¨ÂÂÃ£ÂÂÃ£ÂÂ¹Ã£ÂÂ¯Ã£ÂÂ¼Ã£ÂÂ Ã¢ÂÂÃ¢ÂÂ
+const ADMIN_PASSWORD = 'tokusin2026'; // Ã¢ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¥Â¤ÂÃ¦ÂÂ´Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂ
 let adminUnlocked = false;
 
 function checkAdminPassword() {
@@ -461,326 +462,326 @@ function checkAdminPassword() {
   let tries = 0;
   while (tries < 3) {
     const pw = prompt(tries === 0
-      ? 'ð ç®¡çèãã¹ã¯ã¼ããå¥åãã¦ãã ãã'
-      : `ð ãã¹ã¯ã¼ããéãã¾ãï¼æ®ã${3 - tries}åï¼`);
-    if (pw === null) return false; // ã­ã£ã³ã»ã« â ä¼æ¥­ã¢ã¼ãã®ã¾ã¾
+      ? 'Ã°ÂÂÂ Ã§Â®Â¡Ã§ÂÂÃ¨ÂÂÃ£ÂÂÃ£ÂÂ¹Ã£ÂÂ¯Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ¥ÂÂ¥Ã¥ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂ'
+      : `Ã°ÂÂÂ Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¯Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ©ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ¯Â¼ÂÃ¦Â®ÂÃ£ÂÂ${3 - tries}Ã¥ÂÂÃ¯Â¼Â`);
+    if (pw === null) return false; // Ã£ÂÂ­Ã£ÂÂ£Ã£ÂÂ³Ã£ÂÂ»Ã£ÂÂ« Ã¢ÂÂ Ã¤Â¼ÂÃ¦Â¥Â­Ã£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ®Ã£ÂÂ¾Ã£ÂÂ¾
     if (pw === ADMIN_PASSWORD) {
       adminUnlocked = true;
       return true;
     }
     tries++;
   }
-  alert('ãã¹ã¯ã¼ãã3åééãã¾ãããä¼æ¥­ã¢ã¼ãã§ç¶ãã¦ãã ããã');
+  alert('Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¯Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ3Ã¥ÂÂÃ©ÂÂÃ©ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ¤Â¼ÂÃ¦Â¥Â­Ã£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ§Ã§Â¶ÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂÃ£ÂÂ');
   setMode('client');
   return false;
 }
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 // SKILL DATA
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 const SKILL_DB = {
   seizo: {
-    label:'è£½é æ¥­', icon:'âï¸',
+    label:'Ã¨Â£Â½Ã©ÂÂ Ã¦Â¥Â­', icon:'Ã¢ÂÂÃ¯Â¸Â',
     sections:[
-      {name:'åºæ¬ä½æ¥­ã»5S', items:[
-        {id:'1-1',name:'5Sï¼æ´çã»æ´é ã»æ¸æã»æ¸æ½ã»èº¾ï¼',imp:'âââ'},
-        {id:'1-2',name:'æ¨æºä½æ¥­ã®éµå®',imp:'âââ'},
-        {id:'1-3',name:'ä½æ¥­æé æ¸ã®èª­è§£ã»æ´»ç¨',imp:'âââ'},
+      {name:'Ã¥ÂÂºÃ¦ÂÂ¬Ã¤Â½ÂÃ¦Â¥Â­Ã£ÂÂ»5S', items:[
+        {id:'1-1',name:'5SÃ¯Â¼ÂÃ¦ÂÂ´Ã§ÂÂÃ£ÂÂ»Ã¦ÂÂ´Ã©Â ÂÃ£ÂÂ»Ã¦Â¸ÂÃ¦ÂÂÃ£ÂÂ»Ã¦Â¸ÂÃ¦Â½ÂÃ£ÂÂ»Ã¨ÂºÂ¾Ã¯Â¼Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-2',name:'Ã¦Â¨ÂÃ¦ÂºÂÃ¤Â½ÂÃ¦Â¥Â­Ã£ÂÂ®Ã©ÂÂµÃ¥Â®Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-3',name:'Ã¤Â½ÂÃ¦Â¥Â­Ã¦ÂÂÃ©Â ÂÃ¦ÂÂ¸Ã£ÂÂ®Ã¨ÂªÂ­Ã¨Â§Â£Ã£ÂÂ»Ã¦Â´Â»Ã§ÂÂ¨',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'åè³ªç®¡ç', items:[
-        {id:'2-1',name:'åè³ªãã§ãã¯ã»æ¤æ»',imp:'âââ'},
-        {id:'2-2',name:'ä¸è¯åã®è­å¥ã»å ±å',imp:'âââ'},
-        {id:'2-3',name:'æ¸¬å®å¨ã»æ¤æ»æ©å¨ã®æä½',imp:'âââ'},
-        {id:'2-4',name:'åè³ªè¨é²ã®ä½æã»ç®¡ç',imp:'âââ'},
+      {name:'Ã¥ÂÂÃ¨Â³ÂªÃ§Â®Â¡Ã§ÂÂ', items:[
+        {id:'2-1',name:'Ã¥ÂÂÃ¨Â³ÂªÃ£ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ»Ã¦Â¤ÂÃ¦ÂÂ»',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-2',name:'Ã¤Â¸ÂÃ¨ÂÂ¯Ã¥ÂÂÃ£ÂÂ®Ã¨Â­ÂÃ¥ÂÂ¥Ã£ÂÂ»Ã¥Â Â±Ã¥ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-3',name:'Ã¦Â¸Â¬Ã¥Â®ÂÃ¥ÂÂ¨Ã£ÂÂ»Ã¦Â¤ÂÃ¦ÂÂ»Ã¦Â©ÂÃ¥ÂÂ¨Ã£ÂÂ®Ã¦ÂÂÃ¤Â½Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-4',name:'Ã¥ÂÂÃ¨Â³ÂªÃ¨Â¨ÂÃ©ÂÂ²Ã£ÂÂ®Ã¤Â½ÂÃ¦ÂÂÃ£ÂÂ»Ã§Â®Â¡Ã§ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'è¨­åã»å®å¨', items:[
-        {id:'3-1',name:'è¨­åã®æ¥å¸¸ç¹æ¤',imp:'âââ'},
-        {id:'3-2',name:'å®å¨ã«ã¼ã«ã®éµå®',imp:'âââ'},
-        {id:'3-3',name:'ç°å¸¸çºçæã®å ±åã»å¯¾å¿',imp:'âââ'},
-        {id:'3-4',name:'å·¥å·ã»æ©æ¢°ã®é©åãªæä½',imp:'âââ'},
+      {name:'Ã¨Â¨Â­Ã¥ÂÂÃ£ÂÂ»Ã¥Â®ÂÃ¥ÂÂ¨', items:[
+        {id:'3-1',name:'Ã¨Â¨Â­Ã¥ÂÂÃ£ÂÂ®Ã¦ÂÂ¥Ã¥Â¸Â¸Ã§ÂÂ¹Ã¦Â¤Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'3-2',name:'Ã¥Â®ÂÃ¥ÂÂ¨Ã£ÂÂ«Ã£ÂÂ¼Ã£ÂÂ«Ã£ÂÂ®Ã©ÂÂµÃ¥Â®Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'3-3',name:'Ã§ÂÂ°Ã¥Â¸Â¸Ã§ÂÂºÃ§ÂÂÃ¦ÂÂÃ£ÂÂ®Ã¥Â Â±Ã¥ÂÂÃ£ÂÂ»Ã¥Â¯Â¾Ã¥Â¿Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'3-4',name:'Ã¥Â·Â¥Ã¥ÂÂ·Ã£ÂÂ»Ã¦Â©ÂÃ¦Â¢Â°Ã£ÂÂ®Ã©ÂÂ©Ã¥ÂÂÃ£ÂÂªÃ¦ÂÂÃ¤Â½Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'å¤è½å·¥ã»æ¹å', items:[
-        {id:'4-1',name:'å¤å·¥ç¨å¯¾å¿ï¼å¤è½å·¥åï¼',imp:'âââ'},
-        {id:'4-2',name:'æ¹åææ¡ï¼ã«ã¤ã¼ã³ï¼',imp:'âââ'},
-        {id:'4-3',name:'å¾è¼©ã»æ°äººã¸ã®æå°',imp:'âââ'},
+      {name:'Ã¥Â¤ÂÃ¨ÂÂ½Ã¥Â·Â¥Ã£ÂÂ»Ã¦ÂÂ¹Ã¥ÂÂ', items:[
+        {id:'4-1',name:'Ã¥Â¤ÂÃ¥Â·Â¥Ã§Â¨ÂÃ¥Â¯Â¾Ã¥Â¿ÂÃ¯Â¼ÂÃ¥Â¤ÂÃ¨ÂÂ½Ã¥Â·Â¥Ã¥ÂÂÃ¯Â¼Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'4-2',name:'Ã¦ÂÂ¹Ã¥ÂÂÃ¦ÂÂÃ¦Â¡ÂÃ¯Â¼ÂÃ£ÂÂ«Ã£ÂÂ¤Ã£ÂÂ¼Ã£ÂÂ³Ã¯Â¼Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'4-3',name:'Ã¥Â¾ÂÃ¨Â¼Â©Ã£ÂÂ»Ã¦ÂÂ°Ã¤ÂºÂºÃ£ÂÂ¸Ã£ÂÂ®Ã¦ÂÂÃ¥Â°Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
     ]
   },
   kensetsu: {
-    label:'å»ºè¨­æ¥­', icon:'ðï¸',
+    label:'Ã¥Â»ÂºÃ¨Â¨Â­Ã¦Â¥Â­', icon:'Ã°ÂÂÂÃ¯Â¸Â',
     sections:[
-      {name:'å®å¨ç®¡ç', items:[
-        {id:'1-1',name:'å®å¨ã«ã¼ã«ã»KYæ´»åã®éµå®',imp:'âââ'},
-        {id:'1-2',name:'ä¿è­·å·ã®æ­£ããçç¨',imp:'âââ'},
-        {id:'1-3',name:'å±éºç®æã®èªè­ã»å ±å',imp:'âââ'},
+      {name:'Ã¥Â®ÂÃ¥ÂÂ¨Ã§Â®Â¡Ã§ÂÂ', items:[
+        {id:'1-1',name:'Ã¥Â®ÂÃ¥ÂÂ¨Ã£ÂÂ«Ã£ÂÂ¼Ã£ÂÂ«Ã£ÂÂ»KYÃ¦Â´Â»Ã¥ÂÂÃ£ÂÂ®Ã©ÂÂµÃ¥Â®Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-2',name:'Ã¤Â¿ÂÃ¨Â­Â·Ã¥ÂÂ·Ã£ÂÂ®Ã¦Â­Â£Ã£ÂÂÃ£ÂÂÃ§ÂÂÃ§ÂÂ¨',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-3',name:'Ã¥ÂÂ±Ã©ÂÂºÃ§Â®ÂÃ¦ÂÂÃ£ÂÂ®Ã¨ÂªÂÃ¨Â­ÂÃ£ÂÂ»Ã¥Â Â±Ã¥ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'æ½å·¥æè¡', items:[
-        {id:'2-1',name:'æ½å·¥å³ã®èª­è§£',imp:'âââ'},
-        {id:'2-2',name:'æ¸¬éã»å¢¨åºã',imp:'âââ'},
-        {id:'2-3',name:'å·¥å·ã»éæ©ã®åºæ¬æä½',imp:'âââ'},
-        {id:'2-4',name:'æ½å·¥ç²¾åº¦ç®¡ç',imp:'âââ'},
+      {name:'Ã¦ÂÂ½Ã¥Â·Â¥Ã¦ÂÂÃ¨Â¡Â', items:[
+        {id:'2-1',name:'Ã¦ÂÂ½Ã¥Â·Â¥Ã¥ÂÂ³Ã£ÂÂ®Ã¨ÂªÂ­Ã¨Â§Â£',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-2',name:'Ã¦Â¸Â¬Ã©ÂÂÃ£ÂÂ»Ã¥Â¢Â¨Ã¥ÂÂºÃ£ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-3',name:'Ã¥Â·Â¥Ã¥ÂÂ·Ã£ÂÂ»Ã©ÂÂÃ¦Â©ÂÃ£ÂÂ®Ã¥ÂÂºÃ¦ÂÂ¬Ã¦ÂÂÃ¤Â½Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-4',name:'Ã¦ÂÂ½Ã¥Â·Â¥Ã§Â²Â¾Ã¥ÂºÂ¦Ã§Â®Â¡Ã§ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'åè³ªã»è¨é²', items:[
-        {id:'3-1',name:'æ½å·¥åè³ªã®ç¢ºèªã»è¨é²',imp:'âââ'},
-        {id:'3-2',name:'åçç®¡çã»å·¥äºè¨é²',imp:'âââ'},
-        {id:'3-3',name:'ææã®æ°éç®¡ç',imp:'âââ'},
+      {name:'Ã¥ÂÂÃ¨Â³ÂªÃ£ÂÂ»Ã¨Â¨ÂÃ©ÂÂ²', items:[
+        {id:'3-1',name:'Ã¦ÂÂ½Ã¥Â·Â¥Ã¥ÂÂÃ¨Â³ÂªÃ£ÂÂ®Ã§Â¢ÂºÃ¨ÂªÂÃ£ÂÂ»Ã¨Â¨ÂÃ©ÂÂ²',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'3-2',name:'Ã¥ÂÂÃ§ÂÂÃ§Â®Â¡Ã§ÂÂÃ£ÂÂ»Ã¥Â·Â¥Ã¤ÂºÂÃ¨Â¨ÂÃ©ÂÂ²',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'3-3',name:'Ã¦ÂÂÃ¦ÂÂÃ£ÂÂ®Ã¦ÂÂ°Ã©ÂÂÃ§Â®Â¡Ã§ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'ãã¼ã ã¯ã¼ã¯', items:[
-        {id:'4-1',name:'è·äººéã®ã³ãã¥ãã±ã¼ã·ã§ã³',imp:'âââ'},
-        {id:'4-2',name:'å¾è¼©ã»æ°äººã¸ã®æå°',imp:'âââ'},
+      {name:'Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ Ã£ÂÂ¯Ã£ÂÂ¼Ã£ÂÂ¯', items:[
+        {id:'4-1',name:'Ã¨ÂÂ·Ã¤ÂºÂºÃ©ÂÂÃ£ÂÂ®Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂÃ£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'4-2',name:'Ã¥Â¾ÂÃ¨Â¼Â©Ã£ÂÂ»Ã¦ÂÂ°Ã¤ÂºÂºÃ£ÂÂ¸Ã£ÂÂ®Ã¦ÂÂÃ¥Â°Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
     ]
   },
   kaigo: {
-    label:'ä»è­·', icon:'ð¤',
+    label:'Ã¤Â»ÂÃ¨Â­Â·', icon:'Ã°ÂÂ¤Â',
     sections:[
-      {name:'èº«ä½ä»å©', items:[
-        {id:'1-1',name:'ç§»ä¹ã»ç§»åä»å©',imp:'âââ'},
-        {id:'1-2',name:'å¥æµ´ä»å©',imp:'âââ'},
-        {id:'1-3',name:'ææ³ä»å©',imp:'âââ'},
-        {id:'1-4',name:'é£äºä»å©',imp:'âââ'},
+      {name:'Ã¨ÂºÂ«Ã¤Â½ÂÃ¤Â»ÂÃ¥ÂÂ©', items:[
+        {id:'1-1',name:'Ã§Â§Â»Ã¤Â¹ÂÃ£ÂÂ»Ã§Â§Â»Ã¥ÂÂÃ¤Â»ÂÃ¥ÂÂ©',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-2',name:'Ã¥ÂÂ¥Ã¦ÂµÂ´Ã¤Â»ÂÃ¥ÂÂ©',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-3',name:'Ã¦ÂÂÃ¦Â³ÂÃ¤Â»ÂÃ¥ÂÂ©',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-4',name:'Ã©Â£ÂÃ¤ÂºÂÃ¤Â»ÂÃ¥ÂÂ©',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'èªç¥çå¯¾å¿', items:[
-        {id:'2-1',name:'èªç¥çã®åºç¤ç¥è­ã»å¯¾å¿',imp:'âââ'},
-        {id:'2-2',name:'å©ç¨èã¸ã®å£°ããã»ã³ãã¥ãã±ã¼ã·ã§ã³',imp:'âââ'},
-        {id:'2-3',name:'BPSDï¼è¡åã»å¿ççç¶ï¼ã¸ã®å¯¾å¿',imp:'âââ'},
+      {name:'Ã¨ÂªÂÃ§ÂÂ¥Ã§ÂÂÃ¥Â¯Â¾Ã¥Â¿Â', items:[
+        {id:'2-1',name:'Ã¨ÂªÂÃ§ÂÂ¥Ã§ÂÂÃ£ÂÂ®Ã¥ÂÂºÃ§Â¤ÂÃ§ÂÂ¥Ã¨Â­ÂÃ£ÂÂ»Ã¥Â¯Â¾Ã¥Â¿Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-2',name:'Ã¥ÂÂ©Ã§ÂÂ¨Ã¨ÂÂÃ£ÂÂ¸Ã£ÂÂ®Ã¥Â£Â°Ã£ÂÂÃ£ÂÂÃ£ÂÂ»Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂÃ£ÂÂ±Ã£ÂÂ¼Ã£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-3',name:'BPSDÃ¯Â¼ÂÃ¨Â¡ÂÃ¥ÂÂÃ£ÂÂ»Ã¥Â¿ÂÃ§ÂÂÃ§ÂÂÃ§ÂÂ¶Ã¯Â¼ÂÃ£ÂÂ¸Ã£ÂÂ®Ã¥Â¯Â¾Ã¥Â¿Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'è¨é²ã»å ±å', items:[
-        {id:'3-1',name:'ä»è­·è¨é²ã®æ­£ç¢ºãªä½æ',imp:'âââ'},
-        {id:'3-2',name:'ç°å¤ã®çºè¦ã»å ±åï¼ãã¤ãªãããï¼',imp:'âââ'},
-        {id:'3-3',name:'ç³ãéãã®å®æ½',imp:'âââ'},
+      {name:'Ã¨Â¨ÂÃ©ÂÂ²Ã£ÂÂ»Ã¥Â Â±Ã¥ÂÂ', items:[
+        {id:'3-1',name:'Ã¤Â»ÂÃ¨Â­Â·Ã¨Â¨ÂÃ©ÂÂ²Ã£ÂÂ®Ã¦Â­Â£Ã§Â¢ÂºÃ£ÂÂªÃ¤Â½ÂÃ¦ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'3-2',name:'Ã§ÂÂ°Ã¥Â¤ÂÃ£ÂÂ®Ã§ÂÂºÃ¨Â¦ÂÃ£ÂÂ»Ã¥Â Â±Ã¥ÂÂÃ¯Â¼ÂÃ£ÂÂÃ£ÂÂ¤Ã£ÂÂªÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ¯Â¼Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'3-3',name:'Ã§ÂÂ³Ã£ÂÂÃ©ÂÂÃ£ÂÂÃ£ÂÂ®Ã¥Â®ÂÃ¦ÂÂ½',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'ææçã»è¡çç®¡ç', items:[
-        {id:'4-1',name:'ææ´ãã»æ¶æ¯ã®å¾¹åº',imp:'âââ'},
-        {id:'4-2',name:'ææçå¯¾ç­ã®å®æ½',imp:'âââ'},
+      {name:'Ã¦ÂÂÃ¦ÂÂÃ§ÂÂÃ£ÂÂ»Ã¨Â¡ÂÃ§ÂÂÃ§Â®Â¡Ã§ÂÂ', items:[
+        {id:'4-1',name:'Ã¦ÂÂÃ¦Â´ÂÃ£ÂÂÃ£ÂÂ»Ã¦Â¶ÂÃ¦Â¯ÂÃ£ÂÂ®Ã¥Â¾Â¹Ã¥ÂºÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'4-2',name:'Ã¦ÂÂÃ¦ÂÂÃ§ÂÂÃ¥Â¯Â¾Ã§Â­ÂÃ£ÂÂ®Ã¥Â®ÂÃ¦ÂÂ½',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
     ]
   },
   shokuhin: {
-    label:'é£åå å·¥', icon:'ð±',
+    label:'Ã©Â£ÂÃ¥ÂÂÃ¥ÂÂ Ã¥Â·Â¥', icon:'Ã°ÂÂÂ±',
     sections:[
-      {name:'è¡çç®¡çï¼HACCPï¼', items:[
-        {id:'1-1',name:'åäººè¡çã®éµå®ï¼ææ´ã»ç½è¡£ç®¡çï¼',imp:'âââ'},
-        {id:'1-2',name:'ä½æ¥­ã¨ãªã¢ã®è¡çç¶­æ',imp:'âââ'},
-        {id:'1-3',name:'HACCPã®åºæ¬ååçè§£',imp:'âââ'},
+      {name:'Ã¨Â¡ÂÃ§ÂÂÃ§Â®Â¡Ã§ÂÂÃ¯Â¼ÂHACCPÃ¯Â¼Â', items:[
+        {id:'1-1',name:'Ã¥ÂÂÃ¤ÂºÂºÃ¨Â¡ÂÃ§ÂÂÃ£ÂÂ®Ã©ÂÂµÃ¥Â®ÂÃ¯Â¼ÂÃ¦ÂÂÃ¦Â´ÂÃ£ÂÂ»Ã§ÂÂ½Ã¨Â¡Â£Ã§Â®Â¡Ã§ÂÂÃ¯Â¼Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-2',name:'Ã¤Â½ÂÃ¦Â¥Â­Ã£ÂÂ¨Ã£ÂÂªÃ£ÂÂ¢Ã£ÂÂ®Ã¨Â¡ÂÃ§ÂÂÃ§Â¶Â­Ã¦ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-3',name:'HACCPÃ£ÂÂ®Ã¥ÂÂºÃ¦ÂÂ¬Ã¥ÂÂÃ¥ÂÂÃ§ÂÂÃ¨Â§Â£',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'è£½é ã»å å·¥', items:[
-        {id:'2-1',name:'ã©ã¤ã³ä½æ¥­ç²¾åº¦ã»ã¹ãã¼ã',imp:'âââ'},
-        {id:'2-2',name:'æ©æ¢°ã»è¨­åã®æä½',imp:'âââ'},
-        {id:'2-3',name:'ç°ç©æ··å¥é²æ­¢å¯¾ç­',imp:'âââ'},
+      {name:'Ã¨Â£Â½Ã©ÂÂ Ã£ÂÂ»Ã¥ÂÂ Ã¥Â·Â¥', items:[
+        {id:'2-1',name:'Ã£ÂÂ©Ã£ÂÂ¤Ã£ÂÂ³Ã¤Â½ÂÃ¦Â¥Â­Ã§Â²Â¾Ã¥ÂºÂ¦Ã£ÂÂ»Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-2',name:'Ã¦Â©ÂÃ¦Â¢Â°Ã£ÂÂ»Ã¨Â¨Â­Ã¥ÂÂÃ£ÂÂ®Ã¦ÂÂÃ¤Â½Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-3',name:'Ã§ÂÂ°Ã§ÂÂ©Ã¦Â·Â·Ã¥ÂÂ¥Ã©ÂÂ²Ã¦Â­Â¢Ã¥Â¯Â¾Ã§Â­Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'åè³ªãã¬ã¼ãµããªãã£', items:[
-        {id:'3-1',name:'åè³ªãã§ãã¯ã»æ¤å',imp:'âââ'},
-        {id:'3-2',name:'è£½é è¨é²ã»ãã¬ã¼ãµããªãã£è¨é²',imp:'âââ'},
-        {id:'3-3',name:'è¦æ ¼ã»åºæºã®çè§£',imp:'âââ'},
+      {name:'Ã¥ÂÂÃ¨Â³ÂªÃ£ÂÂÃ£ÂÂ¬Ã£ÂÂ¼Ã£ÂÂµÃ£ÂÂÃ£ÂÂªÃ£ÂÂÃ£ÂÂ£', items:[
+        {id:'3-1',name:'Ã¥ÂÂÃ¨Â³ÂªÃ£ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ»Ã¦Â¤ÂÃ¥ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'3-2',name:'Ã¨Â£Â½Ã©ÂÂ Ã¨Â¨ÂÃ©ÂÂ²Ã£ÂÂ»Ã£ÂÂÃ£ÂÂ¬Ã£ÂÂ¼Ã£ÂÂµÃ£ÂÂÃ£ÂÂªÃ£ÂÂÃ£ÂÂ£Ã¨Â¨ÂÃ©ÂÂ²',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'3-3',name:'Ã¨Â¦ÂÃ¦Â Â¼Ã£ÂÂ»Ã¥ÂÂºÃ¦ÂºÂÃ£ÂÂ®Ã§ÂÂÃ¨Â§Â£',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'å®å¨', items:[
-        {id:'4-1',name:'åç©ã»æ©æ¢°ã®å®å¨æä½',imp:'âââ'},
-        {id:'4-2',name:'ã¢ã¬ã«ã²ã³ç®¡ç',imp:'âââ'},
+      {name:'Ã¥Â®ÂÃ¥ÂÂ¨', items:[
+        {id:'4-1',name:'Ã¥ÂÂÃ§ÂÂ©Ã£ÂÂ»Ã¦Â©ÂÃ¦Â¢Â°Ã£ÂÂ®Ã¥Â®ÂÃ¥ÂÂ¨Ã¦ÂÂÃ¤Â½Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'4-2',name:'Ã£ÂÂ¢Ã£ÂÂ¬Ã£ÂÂ«Ã£ÂÂ²Ã£ÂÂ³Ã§Â®Â¡Ã§ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
     ]
   },
   zosen: {
-    label:'é è¹ã»è¶ç¨å·¥æ¥­', icon:'ð¢',
+    label:'Ã©ÂÂ Ã¨ÂÂ¹Ã£ÂÂ»Ã¨ÂÂ¶Ã§ÂÂ¨Ã¥Â·Â¥Ã¦Â¥Â­', icon:'Ã°ÂÂÂ¢',
     sections:[
-      {name:'å®å¨ç®¡ç', items:[
-        {id:'1-1',name:'å®å¨ã«ã¼ã«ã»ä¿è­·å·ã®çç¨',imp:'âââ'},
-        {id:'1-2',name:'é«æã»éæä½æ¥­ã®å®å¨ç¢ºèª',imp:'âââ'},
-        {id:'1-3',name:'å±éºç©ã»åå­¦åã®åãæ±ã',imp:'âââ'},
+      {name:'Ã¥Â®ÂÃ¥ÂÂ¨Ã§Â®Â¡Ã§ÂÂ', items:[
+        {id:'1-1',name:'Ã¥Â®ÂÃ¥ÂÂ¨Ã£ÂÂ«Ã£ÂÂ¼Ã£ÂÂ«Ã£ÂÂ»Ã¤Â¿ÂÃ¨Â­Â·Ã¥ÂÂ·Ã£ÂÂ®Ã§ÂÂÃ§ÂÂ¨',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-2',name:'Ã©Â«ÂÃ¦ÂÂÃ£ÂÂ»Ã©ÂÂÃ¦ÂÂÃ¤Â½ÂÃ¦Â¥Â­Ã£ÂÂ®Ã¥Â®ÂÃ¥ÂÂ¨Ã§Â¢ÂºÃ¨ÂªÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-3',name:'Ã¥ÂÂ±Ã©ÂÂºÃ§ÂÂ©Ã£ÂÂ»Ã¥ÂÂÃ¥Â­Â¦Ã¥ÂÂÃ£ÂÂ®Ã¥ÂÂÃ£ÂÂÃ¦ÂÂ±Ã£ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'æº¶æ¥ã»å å·¥æè¡', items:[
-        {id:'2-1',name:'æº¶æ¥ï¼ã¢ã¼ã¯ã»MIGã»TIGï¼',imp:'âââ'},
-        {id:'2-2',name:'éæ¿ã»é¨æã®åæ­ã»æå½¢',imp:'âââ'},
-        {id:'2-3',name:'å³é¢ã®èª­è§£',imp:'âââ'},
+      {name:'Ã¦ÂºÂ¶Ã¦ÂÂ¥Ã£ÂÂ»Ã¥ÂÂ Ã¥Â·Â¥Ã¦ÂÂÃ¨Â¡Â', items:[
+        {id:'2-1',name:'Ã¦ÂºÂ¶Ã¦ÂÂ¥Ã¯Â¼ÂÃ£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂ¯Ã£ÂÂ»MIGÃ£ÂÂ»TIGÃ¯Â¼Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-2',name:'Ã©ÂÂÃ¦ÂÂ¿Ã£ÂÂ»Ã©ÂÂ¨Ã¦ÂÂÃ£ÂÂ®Ã¥ÂÂÃ¦ÂÂ­Ã£ÂÂ»Ã¦ÂÂÃ¥Â½Â¢',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-3',name:'Ã¥ÂÂ³Ã©ÂÂ¢Ã£ÂÂ®Ã¨ÂªÂ­Ã¨Â§Â£',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'åè³ªã»æ¤æ»', items:[
-        {id:'3-1',name:'æº¶æ¥åè³ªã®ç¢ºèªã»è¨é²',imp:'âââ'},
-        {id:'3-2',name:'å¯¸æ³æ¸¬å®ã»ç²¾åº¦ç®¡ç',imp:'âââ'},
+      {name:'Ã¥ÂÂÃ¨Â³ÂªÃ£ÂÂ»Ã¦Â¤ÂÃ¦ÂÂ»', items:[
+        {id:'3-1',name:'Ã¦ÂºÂ¶Ã¦ÂÂ¥Ã¥ÂÂÃ¨Â³ÂªÃ£ÂÂ®Ã§Â¢ÂºÃ¨ÂªÂÃ£ÂÂ»Ã¨Â¨ÂÃ©ÂÂ²',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'3-2',name:'Ã¥Â¯Â¸Ã¦Â³ÂÃ¦Â¸Â¬Ã¥Â®ÂÃ£ÂÂ»Ã§Â²Â¾Ã¥ÂºÂ¦Ã§Â®Â¡Ã§ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
     ]
   },
   nogyo: {
-    label:'è¾²æ¥­', icon:'ð¾',
+    label:'Ã¨Â¾Â²Ã¦Â¥Â­', icon:'Ã°ÂÂÂ¾',
     sections:[
-      {name:'æ ½å¹ã»ä½æ¥­æè¡', items:[
-        {id:'1-1',name:'æ­ç¨®ã»å®æ¤ã»åç©«ä½æ¥­',imp:'âââ'},
-        {id:'1-2',name:'è¾²è¬ã»è¥æã®é©æ­£ä½¿ç¨',imp:'âââ'},
-        {id:'1-3',name:'è¾²æ¥­æ©æ¢°ã®æä½',imp:'âââ'},
+      {name:'Ã¦Â Â½Ã¥ÂÂ¹Ã£ÂÂ»Ã¤Â½ÂÃ¦Â¥Â­Ã¦ÂÂÃ¨Â¡Â', items:[
+        {id:'1-1',name:'Ã¦ÂÂ­Ã§Â¨Â®Ã£ÂÂ»Ã¥Â®ÂÃ¦Â¤ÂÃ£ÂÂ»Ã¥ÂÂÃ§Â©Â«Ã¤Â½ÂÃ¦Â¥Â­',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-2',name:'Ã¨Â¾Â²Ã¨ÂÂ¬Ã£ÂÂ»Ã¨ÂÂ¥Ã¦ÂÂÃ£ÂÂ®Ã©ÂÂ©Ã¦Â­Â£Ã¤Â½Â¿Ã§ÂÂ¨',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-3',name:'Ã¨Â¾Â²Ã¦Â¥Â­Ã¦Â©ÂÃ¦Â¢Â°Ã£ÂÂ®Ã¦ÂÂÃ¤Â½Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'åè³ªã»è¡çç®¡ç', items:[
-        {id:'2-1',name:'é¸å¥ã»åºè·åºæºã®çè§£',imp:'âââ'},
-        {id:'2-2',name:'GAPã»è¡çç®¡çã®éµå®',imp:'âââ'},
+      {name:'Ã¥ÂÂÃ¨Â³ÂªÃ£ÂÂ»Ã¨Â¡ÂÃ§ÂÂÃ§Â®Â¡Ã§ÂÂ', items:[
+        {id:'2-1',name:'Ã©ÂÂ¸Ã¥ÂÂ¥Ã£ÂÂ»Ã¥ÂÂºÃ¨ÂÂ·Ã¥ÂÂºÃ¦ÂºÂÃ£ÂÂ®Ã§ÂÂÃ¨Â§Â£',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-2',name:'GAPÃ£ÂÂ»Ã¨Â¡ÂÃ§ÂÂÃ§Â®Â¡Ã§ÂÂÃ£ÂÂ®Ã©ÂÂµÃ¥Â®Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'ç°å¢ã»å®å¨', items:[
-        {id:'3-1',name:'ç±ä¸­çã»è¾²è¬äºæé²æ­¢',imp:'âââ'},
-        {id:'3-2',name:'è¾²å°ã»æ½è¨­ã®ç®¡ç',imp:'âââ'},
+      {name:'Ã§ÂÂ°Ã¥Â¢ÂÃ£ÂÂ»Ã¥Â®ÂÃ¥ÂÂ¨', items:[
+        {id:'3-1',name:'Ã§ÂÂ±Ã¤Â¸Â­Ã§ÂÂÃ£ÂÂ»Ã¨Â¾Â²Ã¨ÂÂ¬Ã¤ÂºÂÃ¦ÂÂÃ©ÂÂ²Ã¦Â­Â¢',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'3-2',name:'Ã¨Â¾Â²Ã¥ÂÂ°Ã£ÂÂ»Ã¦ÂÂ½Ã¨Â¨Â­Ã£ÂÂ®Ã§Â®Â¡Ã§ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
     ]
   },
   ringyo: {
-    label:'ææ¥­', icon:'ð²',
+    label:'Ã¦ÂÂÃ¦Â¥Â­', icon:'Ã°ÂÂÂ²',
     sections:[
-      {name:'å®å¨ä½æ¥­', items:[
-        {id:'1-1',name:'ãã§ã¼ã³ã½ã¼ã»åææ©ã®å®å¨æä½',imp:'âââ'},
-        {id:'1-2',name:'ä¼æ¨ã»é æä½æ¥­ã®å®å¨ç¢ºèª',imp:'âââ'},
-        {id:'1-3',name:'ä¿è­·å·ã®æ­£ããçç¨',imp:'âââ'},
+      {name:'Ã¥Â®ÂÃ¥ÂÂ¨Ã¤Â½ÂÃ¦Â¥Â­', items:[
+        {id:'1-1',name:'Ã£ÂÂÃ£ÂÂ§Ã£ÂÂ¼Ã£ÂÂ³Ã£ÂÂ½Ã£ÂÂ¼Ã£ÂÂ»Ã¥ÂÂÃ¦ÂÂÃ¦Â©ÂÃ£ÂÂ®Ã¥Â®ÂÃ¥ÂÂ¨Ã¦ÂÂÃ¤Â½Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-2',name:'Ã¤Â¼ÂÃ¦ÂÂ¨Ã£ÂÂ»Ã©ÂÂ Ã¦ÂÂÃ¤Â½ÂÃ¦Â¥Â­Ã£ÂÂ®Ã¥Â®ÂÃ¥ÂÂ¨Ã§Â¢ÂºÃ¨ÂªÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-3',name:'Ã¤Â¿ÂÃ¨Â­Â·Ã¥ÂÂ·Ã£ÂÂ®Ã¦Â­Â£Ã£ÂÂÃ£ÂÂÃ§ÂÂÃ§ÂÂ¨',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'ææ¥­æè¡', items:[
-        {id:'2-1',name:'æ¤æã»ä¸åãã»éä¼ä½æ¥­',imp:'âââ'},
-        {id:'2-2',name:'æ¨æã®æ¬åºã»éæ',imp:'âââ'},
+      {name:'Ã¦ÂÂÃ¦Â¥Â­Ã¦ÂÂÃ¨Â¡Â', items:[
+        {id:'2-1',name:'Ã¦Â¤ÂÃ¦ÂÂÃ£ÂÂ»Ã¤Â¸ÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ»Ã©ÂÂÃ¤Â¼ÂÃ¤Â½ÂÃ¦Â¥Â­',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-2',name:'Ã¦ÂÂ¨Ã¦ÂÂÃ£ÂÂ®Ã¦ÂÂ¬Ã¥ÂÂºÃ£ÂÂ»Ã©ÂÂÃ¦ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
     ]
   },
   gyogyo: {
-    label:'æ¼æ¥­ã»é¤æ®æ¥­', icon:'ð',
+    label:'Ã¦Â¼ÂÃ¦Â¥Â­Ã£ÂÂ»Ã©Â¤ÂÃ¦Â®ÂÃ¦Â¥Â­', icon:'Ã°ÂÂÂ',
     sections:[
-      {name:'æ¼æ¥­ã»é¤æ®æè¡', items:[
-        {id:'1-1',name:'æ¼å·ã»é¤æ®è¨­åã®æä½ã»ç®¡ç',imp:'âââ'},
-        {id:'1-2',name:'æ°´ç£ç©ã®é¸å¥ã»å¦ç',imp:'âââ'},
-        {id:'1-3',name:'é¤ããã»æ°´è³ªç®¡çï¼é¤æ®ï¼',imp:'âââ'},
+      {name:'Ã¦Â¼ÂÃ¦Â¥Â­Ã£ÂÂ»Ã©Â¤ÂÃ¦Â®ÂÃ¦ÂÂÃ¨Â¡Â', items:[
+        {id:'1-1',name:'Ã¦Â¼ÂÃ¥ÂÂ·Ã£ÂÂ»Ã©Â¤ÂÃ¦Â®ÂÃ¨Â¨Â­Ã¥ÂÂÃ£ÂÂ®Ã¦ÂÂÃ¤Â½ÂÃ£ÂÂ»Ã§Â®Â¡Ã§ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-2',name:'Ã¦Â°Â´Ã§ÂÂ£Ã§ÂÂ©Ã£ÂÂ®Ã©ÂÂ¸Ã¥ÂÂ¥Ã£ÂÂ»Ã¥ÂÂ¦Ã§ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-3',name:'Ã©Â¤ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ»Ã¦Â°Â´Ã¨Â³ÂªÃ§Â®Â¡Ã§ÂÂÃ¯Â¼ÂÃ©Â¤ÂÃ¦Â®ÂÃ¯Â¼Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'å®å¨ã»è¡ç', items:[
-        {id:'2-1',name:'è¹ä¸ã»æ°´è¾ºã®å®å¨è¦åéµå®',imp:'âââ'},
-        {id:'2-2',name:'è¡çç®¡çã»é®®åº¦ä¿æ',imp:'âââ'},
+      {name:'Ã¥Â®ÂÃ¥ÂÂ¨Ã£ÂÂ»Ã¨Â¡ÂÃ§ÂÂ', items:[
+        {id:'2-1',name:'Ã¨ÂÂ¹Ã¤Â¸ÂÃ£ÂÂ»Ã¦Â°Â´Ã¨Â¾ÂºÃ£ÂÂ®Ã¥Â®ÂÃ¥ÂÂ¨Ã¨Â¦ÂÃ¥ÂÂÃ©ÂÂµÃ¥Â®Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-2',name:'Ã¨Â¡ÂÃ§ÂÂÃ§Â®Â¡Ã§ÂÂÃ£ÂÂ»Ã©Â®Â®Ã¥ÂºÂ¦Ã¤Â¿ÂÃ¦ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
     ]
   },
   biru: {
-    label:'ãã«ã¯ãªã¼ãã³ã°', icon:'ð§¹',
+    label:'Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ¯Ã£ÂÂªÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ³Ã£ÂÂ°', icon:'Ã°ÂÂ§Â¹',
     sections:[
-      {name:'æ¸ææè¡', items:[
-        {id:'1-1',name:'åºé¢æ¸æï¼ããã»ããªãã·ã£ã¼æä½ï¼',imp:'âââ'},
-        {id:'1-2',name:'ã¬ã©ã¹ã»å¤å£æ¸æ',imp:'âââ'},
-        {id:'1-3',name:'ãã¤ã¬ã»æ°´åãæ¸æ',imp:'âââ'},
+      {name:'Ã¦Â¸ÂÃ¦ÂÂÃ¦ÂÂÃ¨Â¡Â', items:[
+        {id:'1-1',name:'Ã¥ÂºÂÃ©ÂÂ¢Ã¦Â¸ÂÃ¦ÂÂÃ¯Â¼ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ»Ã£ÂÂÃ£ÂÂªÃ£ÂÂÃ£ÂÂ·Ã£ÂÂ£Ã£ÂÂ¼Ã¦ÂÂÃ¤Â½ÂÃ¯Â¼Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-2',name:'Ã£ÂÂ¬Ã£ÂÂ©Ã£ÂÂ¹Ã£ÂÂ»Ã¥Â¤ÂÃ¥Â£ÂÃ¦Â¸ÂÃ¦ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-3',name:'Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂ¬Ã£ÂÂ»Ã¦Â°Â´Ã¥ÂÂÃ£ÂÂÃ¦Â¸ÂÃ¦ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'è¬åã»æ©å¨ç®¡ç', items:[
-        {id:'2-1',name:'æ´å¤ã»è¬åã®é©æ­£ä½¿ç¨',imp:'âââ'},
-        {id:'2-2',name:'æ¸ææ©å¨ã®æä½ã»ä¿ç®¡',imp:'âââ'},
+      {name:'Ã¨ÂÂ¬Ã¥ÂÂÃ£ÂÂ»Ã¦Â©ÂÃ¥ÂÂ¨Ã§Â®Â¡Ã§ÂÂ', items:[
+        {id:'2-1',name:'Ã¦Â´ÂÃ¥ÂÂ¤Ã£ÂÂ»Ã¨ÂÂ¬Ã¥ÂÂÃ£ÂÂ®Ã©ÂÂ©Ã¦Â­Â£Ã¤Â½Â¿Ã§ÂÂ¨',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-2',name:'Ã¦Â¸ÂÃ¦ÂÂÃ¦Â©ÂÃ¥ÂÂ¨Ã£ÂÂ®Ã¦ÂÂÃ¤Â½ÂÃ£ÂÂ»Ã¤Â¿ÂÃ§Â®Â¡',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'å®å¨ã»é¡§å®¢å¯¾å¿', items:[
-        {id:'3-1',name:'ä½æ¥­ä¸­ã®å®å¨ç¢ºä¿ï¼ç«å¥ç¦æ­¢ç­ï¼',imp:'âââ'},
-        {id:'3-2',name:'å©ç¨èã»é¡§å®¢ã¸ã®åºæ¬å¯¾å¿',imp:'âââ'},
+      {name:'Ã¥Â®ÂÃ¥ÂÂ¨Ã£ÂÂ»Ã©Â¡Â§Ã¥Â®Â¢Ã¥Â¯Â¾Ã¥Â¿Â', items:[
+        {id:'3-1',name:'Ã¤Â½ÂÃ¦Â¥Â­Ã¤Â¸Â­Ã£ÂÂ®Ã¥Â®ÂÃ¥ÂÂ¨Ã§Â¢ÂºÃ¤Â¿ÂÃ¯Â¼ÂÃ§Â«ÂÃ¥ÂÂ¥Ã§Â¦ÂÃ¦Â­Â¢Ã§Â­ÂÃ¯Â¼Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'3-2',name:'Ã¥ÂÂ©Ã§ÂÂ¨Ã¨ÂÂÃ£ÂÂ»Ã©Â¡Â§Ã¥Â®Â¢Ã£ÂÂ¸Ã£ÂÂ®Ã¥ÂÂºÃ¦ÂÂ¬Ã¥Â¯Â¾Ã¥Â¿Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
     ]
   },
   jidoseib: {
-    label:'èªåè»æ´åæ¥­', icon:'ð§',
+    label:'Ã¨ÂÂªÃ¥ÂÂÃ¨Â»ÂÃ¦ÂÂ´Ã¥ÂÂÃ¦Â¥Â­', icon:'Ã°ÂÂÂ§',
     sections:[
-      {name:'æ´åæè¡', items:[
-        {id:'1-1',name:'å®æç¹æ¤ã»è»æ¤æ´å',imp:'âââ'},
-        {id:'1-2',name:'ã¨ã³ã¸ã³ã»ãã¬ã¼ã­ç³»çµ±ã®ç¹æ¤',imp:'âââ'},
-        {id:'1-3',name:'é»è£ç³»ã»ã³ã³ãã¥ã¼ã¿è¨ºæ­',imp:'âââ'},
+      {name:'Ã¦ÂÂ´Ã¥ÂÂÃ¦ÂÂÃ¨Â¡Â', items:[
+        {id:'1-1',name:'Ã¥Â®ÂÃ¦ÂÂÃ§ÂÂ¹Ã¦Â¤ÂÃ£ÂÂ»Ã¨Â»ÂÃ¦Â¤ÂÃ¦ÂÂ´Ã¥ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-2',name:'Ã£ÂÂ¨Ã£ÂÂ³Ã£ÂÂ¸Ã£ÂÂ³Ã£ÂÂ»Ã£ÂÂÃ£ÂÂ¬Ã£ÂÂ¼Ã£ÂÂ­Ã§Â³Â»Ã§ÂµÂ±Ã£ÂÂ®Ã§ÂÂ¹Ã¦Â¤Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-3',name:'Ã©ÂÂ»Ã¨Â£ÂÃ§Â³Â»Ã£ÂÂ»Ã£ÂÂ³Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¥Ã£ÂÂ¼Ã£ÂÂ¿Ã¨Â¨ÂºÃ¦ÂÂ­',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'å®å¨ã»è¨é²', items:[
-        {id:'2-1',name:'æ´åè¨é²ã®æ­£ç¢ºãªä½æ',imp:'âââ'},
-        {id:'2-2',name:'å·¥å·ã»ãªããã®å®å¨æä½',imp:'âââ'},
+      {name:'Ã¥Â®ÂÃ¥ÂÂ¨Ã£ÂÂ»Ã¨Â¨ÂÃ©ÂÂ²', items:[
+        {id:'2-1',name:'Ã¦ÂÂ´Ã¥ÂÂÃ¨Â¨ÂÃ©ÂÂ²Ã£ÂÂ®Ã¦Â­Â£Ã§Â¢ÂºÃ£ÂÂªÃ¤Â½ÂÃ¦ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-2',name:'Ã¥Â·Â¥Ã¥ÂÂ·Ã£ÂÂ»Ã£ÂÂªÃ£ÂÂÃ£ÂÂÃ£ÂÂ®Ã¥Â®ÂÃ¥ÂÂ¨Ã¦ÂÂÃ¤Â½Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'é¡§å®¢å¯¾å¿', items:[
-        {id:'3-1',name:'ç¹æ¤çµæã®èª¬æ',imp:'âââ'},
-        {id:'3-2',name:'ç´è»ã»åä»å¯¾å¿',imp:'âââ'},
+      {name:'Ã©Â¡Â§Ã¥Â®Â¢Ã¥Â¯Â¾Ã¥Â¿Â', items:[
+        {id:'3-1',name:'Ã§ÂÂ¹Ã¦Â¤ÂÃ§ÂµÂÃ¦ÂÂÃ£ÂÂ®Ã¨ÂªÂ¬Ã¦ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'3-2',name:'Ã§Â´ÂÃ¨Â»ÂÃ£ÂÂ»Ã¥ÂÂÃ¤Â»ÂÃ¥Â¯Â¾Ã¥Â¿Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
     ]
   },
   koku: {
-    label:'èªç©ºæ¥­', icon:'âï¸',
+    label:'Ã¨ÂÂªÃ§Â©ÂºÃ¦Â¥Â­', icon:'Ã¢ÂÂÃ¯Â¸Â',
     sections:[
-      {name:'å°ä¸æ¥­å', items:[
-        {id:'1-1',name:'æå®¢ã»æè·ç©ãã³ããªã³ã°',imp:'âââ'},
-        {id:'1-2',name:'èªç©ºæ©ã®å°ä¸èªå°ã»ç½å¼',imp:'âââ'},
-        {id:'1-3',name:'çæè£çµ¦ã»æ´åè£å©',imp:'âââ'},
+      {name:'Ã¥ÂÂ°Ã¤Â¸ÂÃ¦Â¥Â­Ã¥ÂÂ', items:[
+        {id:'1-1',name:'Ã¦ÂÂÃ¥Â®Â¢Ã£ÂÂ»Ã¦ÂÂÃ¨ÂÂ·Ã§ÂÂ©Ã£ÂÂÃ£ÂÂ³Ã£ÂÂÃ£ÂÂªÃ£ÂÂ³Ã£ÂÂ°',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-2',name:'Ã¨ÂÂªÃ§Â©ÂºÃ¦Â©ÂÃ£ÂÂ®Ã¥ÂÂ°Ã¤Â¸ÂÃ¨ÂªÂÃ¥Â°ÂÃ£ÂÂ»Ã§ÂÂ½Ã¥Â¼Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-3',name:'Ã§ÂÂÃ¦ÂÂÃ¨Â£ÂÃ§ÂµÂ¦Ã£ÂÂ»Ã¦ÂÂ´Ã¥ÂÂÃ¨Â£ÂÃ¥ÂÂ©',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'å®å¨ã»è¦ç¨éµå®', items:[
-        {id:'2-1',name:'ç©ºæ¸¯ä¿å®è¦ç¨ã®éµå®',imp:'âââ'},
-        {id:'2-2',name:'ç·æ¥æå¯¾å¿æé ',imp:'âââ'},
+      {name:'Ã¥Â®ÂÃ¥ÂÂ¨Ã£ÂÂ»Ã¨Â¦ÂÃ§Â¨ÂÃ©ÂÂµÃ¥Â®Â', items:[
+        {id:'2-1',name:'Ã§Â©ÂºÃ¦Â¸Â¯Ã¤Â¿ÂÃ¥Â®ÂÃ¨Â¦ÂÃ§Â¨ÂÃ£ÂÂ®Ã©ÂÂµÃ¥Â®Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-2',name:'Ã§Â·ÂÃ¦ÂÂ¥Ã¦ÂÂÃ¥Â¯Â¾Ã¥Â¿ÂÃ¦ÂÂÃ©Â Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
     ]
   },
   shukuhaku: {
-    label:'å®¿æ³æ¥­', icon:'ð¨',
+    label:'Ã¥Â®Â¿Ã¦Â³ÂÃ¦Â¥Â­', icon:'Ã°ÂÂÂ¨',
     sections:[
-      {name:'ãã­ã³ãã»æ¥å®¢', items:[
-        {id:'1-1',name:'ãã§ãã¯ã¤ã³ã»ã¢ã¦ãå¯¾å¿',imp:'âââ'},
-        {id:'1-2',name:'é»è©±ã»äºç´å¯¾å¿',imp:'âââ'},
-        {id:'1-3',name:'å¤è¨èªå¯¾å¿ï¼è±èªã»æ¯èªï¼',imp:'âââ'},
+      {name:'Ã£ÂÂÃ£ÂÂ­Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ»Ã¦ÂÂ¥Ã¥Â®Â¢', items:[
+        {id:'1-1',name:'Ã£ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ»Ã£ÂÂ¢Ã£ÂÂ¦Ã£ÂÂÃ¥Â¯Â¾Ã¥Â¿Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-2',name:'Ã©ÂÂ»Ã¨Â©Â±Ã£ÂÂ»Ã¤ÂºÂÃ§Â´ÂÃ¥Â¯Â¾Ã¥Â¿Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-3',name:'Ã¥Â¤ÂÃ¨Â¨ÂÃ¨ÂªÂÃ¥Â¯Â¾Ã¥Â¿ÂÃ¯Â¼ÂÃ¨ÂÂ±Ã¨ÂªÂÃ£ÂÂ»Ã¦Â¯ÂÃ¨ÂªÂÃ¯Â¼Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'å®¢å®¤ã»æ½è¨­ç®¡ç', items:[
-        {id:'2-1',name:'å®¢å®¤æ¸æã»ãããã¡ã¤ã­ã³ã°',imp:'âââ'},
-        {id:'2-2',name:'ã¢ã¡ããã£è£åã»ç¹æ¤',imp:'âââ'},
+      {name:'Ã¥Â®Â¢Ã¥Â®Â¤Ã£ÂÂ»Ã¦ÂÂ½Ã¨Â¨Â­Ã§Â®Â¡Ã§ÂÂ', items:[
+        {id:'2-1',name:'Ã¥Â®Â¢Ã¥Â®Â¤Ã¦Â¸ÂÃ¦ÂÂÃ£ÂÂ»Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¡Ã£ÂÂ¤Ã£ÂÂ­Ã£ÂÂ³Ã£ÂÂ°',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-2',name:'Ã£ÂÂ¢Ã£ÂÂ¡Ã£ÂÂÃ£ÂÂÃ£ÂÂ£Ã¨Â£ÂÃ¥ÂÂÃ£ÂÂ»Ã§ÂÂ¹Ã¦Â¤Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'æé£²ã»ãµã¼ãã¹', items:[
-        {id:'3-1',name:'æé£ã»å®´ä¼ã®ãµã¼ãã¹',imp:'âââ'},
-        {id:'3-2',name:'è¡çç®¡çã»é£ååãæ±ã',imp:'âââ'},
+      {name:'Ã¦ÂÂÃ©Â£Â²Ã£ÂÂ»Ã£ÂÂµÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹', items:[
+        {id:'3-1',name:'Ã¦ÂÂÃ©Â£ÂÃ£ÂÂ»Ã¥Â®Â´Ã¤Â¼ÂÃ£ÂÂ®Ã£ÂÂµÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'3-2',name:'Ã¨Â¡ÂÃ§ÂÂÃ§Â®Â¡Ã§ÂÂÃ£ÂÂ»Ã©Â£ÂÃ¥ÂÂÃ¥ÂÂÃ£ÂÂÃ¦ÂÂ±Ã£ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
     ]
   },
   gaishoku: {
-    label:'å¤é£æ¥­', icon:'ð',
+    label:'Ã¥Â¤ÂÃ©Â£ÂÃ¦Â¥Â­', icon:'Ã°ÂÂÂ',
     sections:[
-      {name:'èª¿çã»ä»è¾¼ã¿', items:[
-        {id:'1-1',name:'é£æã®ä¸å¦çã»ä»è¾¼ã¿',imp:'âââ'},
-        {id:'1-2',name:'èª¿çæ©å¨ã®æä½',imp:'âââ'},
-        {id:'1-3',name:'çãä»ãã»åè³ªç¢ºèª',imp:'âââ'},
+      {name:'Ã¨ÂªÂ¿Ã§ÂÂÃ£ÂÂ»Ã¤Â»ÂÃ¨Â¾Â¼Ã£ÂÂ¿', items:[
+        {id:'1-1',name:'Ã©Â£ÂÃ¦ÂÂÃ£ÂÂ®Ã¤Â¸ÂÃ¥ÂÂ¦Ã§ÂÂÃ£ÂÂ»Ã¤Â»ÂÃ¨Â¾Â¼Ã£ÂÂ¿',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-2',name:'Ã¨ÂªÂ¿Ã§ÂÂÃ¦Â©ÂÃ¥ÂÂ¨Ã£ÂÂ®Ã¦ÂÂÃ¤Â½Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-3',name:'Ã§ÂÂÃ£ÂÂÃ¤Â»ÂÃ£ÂÂÃ£ÂÂ»Ã¥ÂÂÃ¨Â³ÂªÃ§Â¢ÂºÃ¨ÂªÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'è¡çã»é£åå®å¨', items:[
-        {id:'2-1',name:'é£åè¡çæ³ã®éµå®',imp:'âââ'},
-        {id:'2-2',name:'ã¢ã¬ã«ã²ã³ç®¡ç',imp:'âââ'},
-        {id:'2-3',name:'å·èµã»å·åæ¸©åº¦ç®¡ç',imp:'âââ'},
+      {name:'Ã¨Â¡ÂÃ§ÂÂÃ£ÂÂ»Ã©Â£ÂÃ¥ÂÂÃ¥Â®ÂÃ¥ÂÂ¨', items:[
+        {id:'2-1',name:'Ã©Â£ÂÃ¥ÂÂÃ¨Â¡ÂÃ§ÂÂÃ¦Â³ÂÃ£ÂÂ®Ã©ÂÂµÃ¥Â®Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-2',name:'Ã£ÂÂ¢Ã£ÂÂ¬Ã£ÂÂ«Ã£ÂÂ²Ã£ÂÂ³Ã§Â®Â¡Ã§ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-3',name:'Ã¥ÂÂ·Ã¨ÂÂµÃ£ÂÂ»Ã¥ÂÂ·Ã¥ÂÂÃ¦Â¸Â©Ã¥ÂºÂ¦Ã§Â®Â¡Ã§ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'æ¥å®¢ã»ãã¼ã«', items:[
-        {id:'3-1',name:'æ³¨æåä»ã»éè³',imp:'âââ'},
-        {id:'3-2',name:'æ¸æã»éåºä½æ¥­',imp:'âââ'},
+      {name:'Ã¦ÂÂ¥Ã¥Â®Â¢Ã£ÂÂ»Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ«', items:[
+        {id:'3-1',name:'Ã¦Â³Â¨Ã¦ÂÂÃ¥ÂÂÃ¤Â»ÂÃ£ÂÂ»Ã©ÂÂÃ¨ÂÂ³',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'3-2',name:'Ã¦Â¸ÂÃ¦ÂÂÃ£ÂÂ»Ã©ÂÂÃ¥ÂºÂÃ¤Â½ÂÃ¦Â¥Â­',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
     ]
   },
   tetsudo: {
-    label:'éé', icon:'ð',
+    label:'Ã©ÂÂÃ©ÂÂ', icon:'Ã°ÂÂÂ',
     sections:[
-      {name:'æå®¢ãµã¼ãã¹', items:[
-        {id:'1-1',name:'æ¹æ­ã»æ¡åæ¥­å',imp:'âââ'},
-        {id:'1-2',name:'ä¹å®¢ã¸ã®å®å¨èªå°',imp:'âââ'},
+      {name:'Ã¦ÂÂÃ¥Â®Â¢Ã£ÂÂµÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¹', items:[
+        {id:'1-1',name:'Ã¦ÂÂ¹Ã¦ÂÂ­Ã£ÂÂ»Ã¦Â¡ÂÃ¥ÂÂÃ¦Â¥Â­Ã¥ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-2',name:'Ã¤Â¹ÂÃ¥Â®Â¢Ã£ÂÂ¸Ã£ÂÂ®Ã¥Â®ÂÃ¥ÂÂ¨Ã¨ÂªÂÃ¥Â°Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'è¨­åã»ä¿å®', items:[
-        {id:'2-1',name:'ç·è·¯ã»è¨­åã®ç¹æ¤',imp:'âââ'},
-        {id:'2-2',name:'ä¿å®è¦ç¨ã®éµå®',imp:'âââ'},
+      {name:'Ã¨Â¨Â­Ã¥ÂÂÃ£ÂÂ»Ã¤Â¿ÂÃ¥Â®Â', items:[
+        {id:'2-1',name:'Ã§Â·ÂÃ¨Â·Â¯Ã£ÂÂ»Ã¨Â¨Â­Ã¥ÂÂÃ£ÂÂ®Ã§ÂÂ¹Ã¦Â¤Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-2',name:'Ã¤Â¿ÂÃ¥Â®ÂÃ¨Â¦ÂÃ§Â¨ÂÃ£ÂÂ®Ã©ÂÂµÃ¥Â®Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
     ]
   },
   jidounso: {
-    label:'èªåè»ééæ¥­', icon:'ð',
+    label:'Ã¨ÂÂªÃ¥ÂÂÃ¨Â»ÂÃ©ÂÂÃ©ÂÂÃ¦Â¥Â­', icon:'Ã°ÂÂÂ',
     sections:[
-      {name:'éè»¢ã»éé', items:[
-        {id:'1-1',name:'å®å¨éè»¢ã»æ³ä»¤éµå®',imp:'âââ'},
-        {id:'1-2',name:'ç©ã¿éããã»è·æ±ã',imp:'âââ'},
-        {id:'1-3',name:'ééã«ã¼ãã»æéç®¡ç',imp:'âââ'},
+      {name:'Ã©ÂÂÃ¨Â»Â¢Ã£ÂÂ»Ã©ÂÂÃ©ÂÂ', items:[
+        {id:'1-1',name:'Ã¥Â®ÂÃ¥ÂÂ¨Ã©ÂÂÃ¨Â»Â¢Ã£ÂÂ»Ã¦Â³ÂÃ¤Â»Â¤Ã©ÂÂµÃ¥Â®Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-2',name:'Ã§Â©ÂÃ£ÂÂ¿Ã©ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ»Ã¨ÂÂ·Ã¦ÂÂ±Ã£ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'1-3',name:'Ã©ÂÂÃ©ÂÂÃ£ÂÂ«Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ»Ã¦ÂÂÃ©ÂÂÃ§Â®Â¡Ã§ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
-      {name:'è»ä¸¡ç®¡ç', items:[
-        {id:'2-1',name:'æ¥å¸¸ç¹æ¤ã»æ´åç¢ºèª',imp:'âââ'},
-        {id:'2-2',name:'éè¡è¨é²ã®ä½æ',imp:'âââ'},
+      {name:'Ã¨Â»ÂÃ¤Â¸Â¡Ã§Â®Â¡Ã§ÂÂ', items:[
+        {id:'2-1',name:'Ã¦ÂÂ¥Ã¥Â¸Â¸Ã§ÂÂ¹Ã¦Â¤ÂÃ£ÂÂ»Ã¦ÂÂ´Ã¥ÂÂÃ§Â¢ÂºÃ¨ÂªÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+        {id:'2-2',name:'Ã©ÂÂÃ¨Â¡ÂÃ¨Â¨ÂÃ©ÂÂ²Ã£ÂÂ®Ã¤Â½ÂÃ¦ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
       ]},
     ]
   },
 };
 
-// å±éã»ã¯ã·ã§ã³ï¼å¨æ¥­ç¨®å±éï¼
+// Ã¥ÂÂ±Ã©ÂÂÃ£ÂÂ»Ã£ÂÂ¯Ã£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã¯Â¼ÂÃ¥ÂÂ¨Ã¦Â¥Â­Ã§Â¨Â®Ã¥ÂÂ±Ã©ÂÂÃ¯Â¼Â
 const COMMON_SECTIONS = [
-  {name:'æ¥æ¬èªè½å', items:[
-    {id:'5-1',name:'æ¥å¸¸ä¼è©±ã»ãããã¤',imp:'âââ'},
-    {id:'5-2',name:'æ¥­åæç¤ºã®èãåãã»çè§£',imp:'âââ'},
-    {id:'5-3',name:'ãã¦ã¬ã³ã½ã¦ï¼å ±åã»é£çµ¡ã»ç¸è«ï¼',imp:'âââ'},
-    {id:'5-4',name:'ã²ãããªã»ã«ã¿ã«ãã®èª­ã¿æ¸ã',imp:'âââ'},
-    {id:'5-5',name:'æ¼¢å­ã»æ¥­åèªå½ã®çè§£',imp:'âââ'},
+  {name:'Ã¦ÂÂ¥Ã¦ÂÂ¬Ã¨ÂªÂÃ¨ÂÂ½Ã¥ÂÂ', items:[
+    {id:'5-1',name:'Ã¦ÂÂ¥Ã¥Â¸Â¸Ã¤Â¼ÂÃ¨Â©Â±Ã£ÂÂ»Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¤',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+    {id:'5-2',name:'Ã¦Â¥Â­Ã¥ÂÂÃ¦ÂÂÃ§Â¤ÂºÃ£ÂÂ®Ã¨ÂÂÃ£ÂÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂ»Ã§ÂÂÃ¨Â§Â£',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+    {id:'5-3',name:'Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂ¬Ã£ÂÂ³Ã£ÂÂ½Ã£ÂÂ¦Ã¯Â¼ÂÃ¥Â Â±Ã¥ÂÂÃ£ÂÂ»Ã©ÂÂ£Ã§ÂµÂ¡Ã£ÂÂ»Ã§ÂÂ¸Ã¨Â«ÂÃ¯Â¼Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+    {id:'5-4',name:'Ã£ÂÂ²Ã£ÂÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂ»Ã£ÂÂ«Ã£ÂÂ¿Ã£ÂÂ«Ã£ÂÂÃ£ÂÂ®Ã¨ÂªÂ­Ã£ÂÂ¿Ã¦ÂÂ¸Ã£ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+    {id:'5-5',name:'Ã¦Â¼Â¢Ã¥Â­ÂÃ£ÂÂ»Ã¦Â¥Â­Ã¥ÂÂÃ¨ÂªÂÃ¥Â½ÂÃ£ÂÂ®Ã§ÂÂÃ¨Â§Â£',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
   ]},
-  {name:'ç¤¾ä¼äººåºç¤å', items:[
-    {id:'6-1',name:'æéå³å®ã»åºå¤ç®¡ç',imp:'âââ'},
-    {id:'6-2',name:'èº«ã ããªã¿ã»æè£è¦å®ã®éµå®',imp:'âââ'},
-    {id:'6-3',name:'ãã¼ã ã¯ã¼ã¯ã»åèª¿æ§',imp:'âââ'},
-    {id:'6-4',name:'ä¸»ä½æ§ã»ç©æ¥µæ§',imp:'âââ'},
-    {id:'6-5',name:'ã«ã¼ã«ã»æ³ä»¤ã®éµå®',imp:'âââ'},
+  {name:'Ã§Â¤Â¾Ã¤Â¼ÂÃ¤ÂºÂºÃ¥ÂÂºÃ§Â¤ÂÃ¥ÂÂ', items:[
+    {id:'6-1',name:'Ã¦ÂÂÃ©ÂÂÃ¥ÂÂ³Ã¥Â®ÂÃ£ÂÂ»Ã¥ÂÂºÃ¥ÂÂ¤Ã§Â®Â¡Ã§ÂÂ',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+    {id:'6-2',name:'Ã¨ÂºÂ«Ã£ÂÂ Ã£ÂÂÃ£ÂÂªÃ£ÂÂ¿Ã£ÂÂ»Ã¦ÂÂÃ¨Â£ÂÃ¨Â¦ÂÃ¥Â®ÂÃ£ÂÂ®Ã©ÂÂµÃ¥Â®Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+    {id:'6-3',name:'Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ Ã£ÂÂ¯Ã£ÂÂ¼Ã£ÂÂ¯Ã£ÂÂ»Ã¥ÂÂÃ¨ÂªÂ¿Ã¦ÂÂ§',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+    {id:'6-4',name:'Ã¤Â¸Â»Ã¤Â½ÂÃ¦ÂÂ§Ã£ÂÂ»Ã§Â©ÂÃ¦Â¥ÂµÃ¦ÂÂ§',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
+    {id:'6-5',name:'Ã£ÂÂ«Ã£ÂÂ¼Ã£ÂÂ«Ã£ÂÂ»Ã¦Â³ÂÃ¤Â»Â¤Ã£ÂÂ®Ã©ÂÂµÃ¥Â®Â',imp:'Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ'},
   ]},
 ];
 
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 // STATE
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 let state = {
   mode: 'admin',
   staffList: [],
@@ -792,21 +793,21 @@ function saveState() {
   localStorage.setItem('skillmap_v1_data', JSON.stringify(state.staffList));
 }
 
-// ââ èªè¨¼ ââ
+// Ã¢ÂÂÃ¢ÂÂ Ã¨ÂªÂÃ¨Â¨Â¼ Ã¢ÂÂÃ¢ÂÂ
 async function doLogin() {
   const email = document.getElementById('login-email').value.trim();
   const password = document.getElementById('login-password').value;
   const errEl = document.getElementById('login-error');
   errEl.textContent = '';
-  if (!email || !password) { errEl.textContent = 'ã¡ã¼ã«ã¨ãã¹ã¯ã¼ããå¥åãã¦ãã ãã'; return; }
+  if (!email || !password) { errEl.textContent = 'Ã£ÂÂ¡Ã£ÂÂ¼Ã£ÂÂ«Ã£ÂÂ¨Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¯Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ¥ÂÂ¥Ã¥ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂ'; return; }
   const { data, error } = await sb.auth.signInWithPassword({ email, password });
-  if (error) { errEl.textContent = 'ã­ã°ã¤ã³ã«å¤±æãã¾ãã: ' + error.message; return; }
+  if (error) { errEl.textContent = 'Ã£ÂÂ­Ã£ÂÂ°Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂ«Ã¥Â¤Â±Ã¦ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ: ' + error.message; return; }
   await onLogin(data.user);
 }
 
 async function onLogin(user) {
   state.user = user;
-  // profileããã­ã¼ã«ã¨ä¼æ¥­IDãåå¾
+  // profileÃ£ÂÂÃ£ÂÂÃ£ÂÂ­Ã£ÂÂ¼Ã£ÂÂ«Ã£ÂÂ¨Ã¤Â¼ÂÃ¦Â¥Â­IDÃ£ÂÂÃ¥ÂÂÃ¥Â¾Â
   const { data: profile } = await sb.from('profiles').select('*').eq('id', user.id).single();
   if (profile) {
     state.userRole = profile.role;
@@ -832,14 +833,14 @@ function applyRoleUI() {
   const isCompanyAdmin = state.userRole === 'company_admin';
   const isViewer = state.userRole === 'viewer';
 
-  // adminã¯ã¢ã¼ãåæ¿ãã¿ã³ãéè¡¨ç¤ºï¼å¸¸ã«ç®¡çèã¢ã¼ãï¼
+  // adminÃ£ÂÂ¯Ã£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂÃ¥ÂÂÃ¦ÂÂ¿Ã£ÂÂÃ£ÂÂ¿Ã£ÂÂ³Ã£ÂÂÃ©ÂÂÃ¨Â¡Â¨Ã§Â¤ÂºÃ¯Â¼ÂÃ¥Â¸Â¸Ã£ÂÂ«Ã§Â®Â¡Ã§ÂÂÃ¨ÂÂÃ£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂÃ¯Â¼Â
   document.getElementById('btn-admin').style.display = 'none';
   document.getElementById('btn-client').style.display = 'none';
 
-  // ç»é²ã¿ãã¯adminã®ã¿
+  // Ã§ÂÂ»Ã©ÂÂ²Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂ¯adminÃ£ÂÂ®Ã£ÂÂ¿
   document.getElementById('tab-register').style.display = isAdmin ? '' : 'none';
 
-  // adminã¯èªåã§ç®¡çèã¢ã¼ãã«
+  // adminÃ£ÂÂ¯Ã¨ÂÂªÃ¥ÂÂÃ£ÂÂ§Ã§Â®Â¡Ã§ÂÂÃ¨ÂÂÃ£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ«
   if (isAdmin) {
     state.mode = 'admin';
     document.getElementById('btn-admin').classList.add('active');
@@ -893,13 +894,13 @@ async function doLogout() {
   document.getElementById('login-screen').classList.remove('hidden');
 }
 
-// ââ èµ·åæã®èªè¨¼ç¢ºèª ââ
+// Ã¢ÂÂÃ¢ÂÂ Ã¨ÂµÂ·Ã¥ÂÂÃ¦ÂÂÃ£ÂÂ®Ã¨ÂªÂÃ¨Â¨Â¼Ã§Â¢ÂºÃ¨ÂªÂ Ã¢ÂÂÃ¢ÂÂ
 (async () => {
   const { data: { session } } = await sb.auth.getSession();
   if (session) {
     await onLogin(session.user);
   }
-  // ã»ãã·ã§ã³å¤åãç£è¦
+  // Ã£ÂÂ»Ã£ÂÂÃ£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³Ã¥Â¤ÂÃ¥ÂÂÃ£ÂÂÃ§ÂÂ£Ã¨Â¦Â
   sb.auth.onAuthStateChange(async (event, session) => {
     if (event === 'SIGNED_IN' && session) {
       await onLogin(session.user);
@@ -910,24 +911,24 @@ async function doLogout() {
 })();
 
 function loadState() {
-  // v1ã­ã¼ãåªåãæ§ã­ã¼ãããã¤ã°ã¬ã¼ã·ã§ã³
+  // v1Ã£ÂÂ­Ã£ÂÂ¼Ã£ÂÂÃ¥ÂÂªÃ¥ÂÂÃ£ÂÂÃ¦ÂÂ§Ã£ÂÂ­Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¤Ã£ÂÂ°Ã£ÂÂ¬Ã£ÂÂ¼Ã£ÂÂ·Ã£ÂÂ§Ã£ÂÂ³
   const d = localStorage.getItem('skillmap_v1_data') || localStorage.getItem('skillmap_data');
   if (d) state.staffList = JSON.parse(d);
 }
 
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 // INIT
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 function init() {
   loadState();
-  // ããã©ã«ãã¯ä¼æ¥­ã¢ã¼ããURLã«?mode=adminãããã°ç®¡çèã¢ã¼ãèµ·å
+  // Ã£ÂÂÃ£ÂÂÃ£ÂÂ©Ã£ÂÂ«Ã£ÂÂÃ£ÂÂ¯Ã¤Â¼ÂÃ¦Â¥Â­Ã£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂURLÃ£ÂÂ«?mode=adminÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ°Ã§Â®Â¡Ã§ÂÂÃ¨ÂÂÃ£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂÃ¨ÂµÂ·Ã¥ÂÂ
   const params = new URLSearchParams(location.search);
   if (params.get('mode') !== 'admin') {
     setMode('client');
   }
   if (params.get('company')) document.getElementById('reg-company').value = params.get('company');
   if (params.get('company')) {
-    document.querySelector('.h-logo span').textContent = params.get('company') + 'æ§ å°ç¨ãã¼ã¸';
+    document.querySelector('.h-logo span').textContent = params.get('company') + 'Ã¦Â§Â Ã¥Â°ÂÃ§ÂÂ¨Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¸';
   }
   // populate selects
   const indSel = document.getElementById('reg-industry');
@@ -938,7 +939,7 @@ function init() {
   });
   // eval timing toggle
   document.getElementById('eval-timing').addEventListener('change', function(){
-    document.getElementById('custom-label-wrap').style.display = this.value === 'ã«ã¹ã¿ã ' ? 'block' : 'none';
+    document.getElementById('custom-label-wrap').style.display = this.value === 'Ã£ÂÂ«Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ ' ? 'block' : 'none';
   });
   // default eval date
   document.getElementById('eval-date').value = new Date().toISOString().split('T')[0];
@@ -952,9 +953,9 @@ function renderAll() {
   renderCertStaffGrid();
 }
 
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 // MODE
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 
 function requireAdmin(tab) {
   if (checkAdminPassword()) showTab(tab);
@@ -962,7 +963,7 @@ function requireAdmin(tab) {
 
 function requireAdminMode() {
   if (state.mode === 'admin') return;
-  // Supabaseã­ã°ã¤ã³æ¸ã¿ã®adminã¯ãã¹ã¯ã¼ãä¸è¦
+  // SupabaseÃ£ÂÂ­Ã£ÂÂ°Ã£ÂÂ¤Ã£ÂÂ³Ã¦Â¸ÂÃ£ÂÂ¿Ã£ÂÂ®adminÃ£ÂÂ¯Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¯Ã£ÂÂ¼Ã£ÂÂÃ¤Â¸ÂÃ¨Â¦Â
   if (state.userRole === 'admin') {
     setMode('admin');
     return;
@@ -973,18 +974,18 @@ function setMode(m) {
   state.mode = m;
   document.getElementById('btn-admin').classList.toggle('active', m==='admin');
   document.getElementById('btn-client').classList.toggle('active', m==='client');
-  // ç®¡çèã¢ã¼ãã®ã¿ç»é²ã¿ãè¡¨ç¤º
+  // Ã§Â®Â¡Ã§ÂÂÃ¨ÂÂÃ£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ®Ã£ÂÂ¿Ã§ÂÂ»Ã©ÂÂ²Ã£ÂÂ¿Ã£ÂÂÃ¨Â¡Â¨Ã§Â¤Âº
   document.getElementById('tab-register').style.display = m==='admin' ? '' : 'none';
-  // ä¼æ¥­ã¢ã¼ãã§ããã·ã¥ãã¼ãè¡¨ç¤ºä¸­ãªãåæç»ï¼èªç¤¾ãã¼ã¿ã®ã¿è¡¨ç¤ºï¼
+  // Ã¤Â¼ÂÃ¦Â¥Â­Ã£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂÃ£ÂÂ·Ã£ÂÂ¥Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ¨Â¡Â¨Ã§Â¤ÂºÃ¤Â¸Â­Ã£ÂÂªÃ£ÂÂÃ¥ÂÂÃ¦ÂÂÃ§ÂÂ»Ã¯Â¼ÂÃ¨ÂÂªÃ§Â¤Â¾Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ®Ã£ÂÂ¿Ã¨Â¡Â¨Ã§Â¤ÂºÃ¯Â¼Â
   renderDashboard();
   renderStaffList();
   renderEvalStaffGrid();
   renderCertStaffGrid();
 }
 
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 // TABS
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 function showTab(tab) {
   state.currentTab = tab;
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
@@ -995,17 +996,17 @@ function showTab(tab) {
   if (tab === 'cert') renderCertStaffGrid();
 }
 
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 // STAFF REGISTER
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 
 async function deleteStaff(id) {
   const s = state.staffList.find(x=>x.id===id);
   if (!s) return;
   const evalCount = s.evals.length;
   const msg = evalCount > 0
-    ? `ã${s.name}ããããåé¤ãã¾ããï¼\n\nâ ï¸ è©ä¾¡ãã¼ã¿${evalCount}ä»¶ãå¨ã¦åé¤ããã¾ãã\nãã®æä½ã¯åã«æ»ãã¾ããã`
-    : `ã${s.name}ããããåé¤ãã¾ããï¼`;
+    ? `Ã£ÂÂ${s.name}Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ¥ÂÂÃ©ÂÂ¤Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ¯Â¼Â\n\nÃ¢ÂÂ Ã¯Â¸Â Ã¨Â©ÂÃ¤Â¾Â¡Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¿${evalCount}Ã¤Â»Â¶Ã£ÂÂÃ¥ÂÂ¨Ã£ÂÂ¦Ã¥ÂÂÃ©ÂÂ¤Ã£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ\nÃ£ÂÂÃ£ÂÂ®Ã¦ÂÂÃ¤Â½ÂÃ£ÂÂ¯Ã¥ÂÂÃ£ÂÂ«Ã¦ÂÂ»Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂ`
+    : `Ã£ÂÂ${s.name}Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ¥ÂÂÃ©ÂÂ¤Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ¯Â¼Â`;
   if (!confirm(msg)) return;
   try {
     const { error } = await sb.from('staff').delete().eq('id', id);
@@ -1018,14 +1019,14 @@ async function deleteStaff(id) {
       document.getElementById('eval-input-area').style.display = 'none';
     }
   } catch(err) {
-    alert('â åé¤ã¨ã©ã¼: ' + err.message);
+    alert('Ã¢ÂÂ Ã¥ÂÂÃ©ÂÂ¤Ã£ÂÂ¨Ã£ÂÂ©Ã£ÂÂ¼: ' + err.message);
   }
 }
 
 
 
 
-// ââ å¨çæéã¢ã©ã¼ãã¡ã¼ã«éä¿¡ ââ
+// Ã¢ÂÂÃ¢ÂÂ Ã¥ÂÂ¨Ã§ÂÂÃ¦ÂÂÃ©ÂÂÃ£ÂÂ¢Ã£ÂÂ©Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ¡Ã£ÂÂ¼Ã£ÂÂ«Ã©ÂÂÃ¤Â¿Â¡ Ã¢ÂÂÃ¢ÂÂ
 function sendAlertEmail() {
   const today = new Date();
   const alerts = state.staffList.filter(s => {
@@ -1039,45 +1040,45 @@ function sendAlertEmail() {
     return da - db;
   });
   
-  if (!alerts.length) { alert('90æ¥ä»¥åã«æéãæ¥ãã¹ã¿ããã¯ãã¾ãã'); return; }
+  if (!alerts.length) { alert('90Ã¦ÂÂ¥Ã¤Â»Â¥Ã¥ÂÂÃ£ÂÂ«Ã¦ÂÂÃ©ÂÂÃ£ÂÂÃ¦ÂÂ¥Ã£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ£ÂÂ¯Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ'); return; }
   
-  let body = 'å¨çæéã¢ã©ã¼ã\n\n';
-  body += 'ç¢ºèªæ¥ï¼' + today.getFullYear() + 'å¹´' + (today.getMonth()+1) + 'æ' + today.getDate() + 'æ¥\n\n';
+  let body = 'Ã¥ÂÂ¨Ã§ÂÂÃ¦ÂÂÃ©ÂÂÃ£ÂÂ¢Ã£ÂÂ©Ã£ÂÂ¼Ã£ÂÂ\n\n';
+  body += 'Ã§Â¢ÂºÃ¨ÂªÂÃ¦ÂÂ¥Ã¯Â¼Â' + today.getFullYear() + 'Ã¥Â¹Â´' + (today.getMonth()+1) + 'Ã¦ÂÂ' + today.getDate() + 'Ã¦ÂÂ¥\n\n';
   
   alerts.forEach(s => {
     const expire = s.expire || s.expireDate;
     const days = Math.ceil((new Date(expire) - today) / 86400000);
-    const mark = days <= 30 ? 'ð´' : days <= 60 ? 'ð ' : 'ð¡';
+    const mark = days <= 30 ? 'Ã°ÂÂÂ´' : days <= 60 ? 'Ã°ÂÂÂ ' : 'Ã°ÂÂÂ¡';
     body += mark + ' ' + s.name + ' (' + (s.company||'') + ')\n';
-    body += '   å¨çè³æ ¼ï¼' + (s.visa||'') + '\n';
-    body += '   æéï¼' + expire + 'ï¼æ®ã' + days + 'æ¥ï¼\n\n';
+    body += '   Ã¥ÂÂ¨Ã§ÂÂÃ¨Â³ÂÃ¦Â Â¼Ã¯Â¼Â' + (s.visa||'') + '\n';
+    body += '   Ã¦ÂÂÃ©ÂÂÃ¯Â¼Â' + expire + 'Ã¯Â¼ÂÃ¦Â®ÂÃ£ÂÂ' + days + 'Ã¦ÂÂ¥Ã¯Â¼Â\n\n';
   });
   
-  body += '--\nãã¯ã·ã³ã°ã«ã¼ã ã¹ã­ã«ãããã·ã¹ãã ';
+  body += '--\nÃ£ÂÂÃ£ÂÂ¯Ã£ÂÂ·Ã£ÂÂ³Ã£ÂÂ°Ã£ÂÂ«Ã£ÂÂ¼Ã£ÂÂ Ã£ÂÂ¹Ã£ÂÂ­Ã£ÂÂ«Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ·Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ ';
   
-  const subject = 'ãå¨çæéã¢ã©ã¼ãã' + alerts.length + 'åã®ç¢ºèªãå¿è¦ã§ã';
+  const subject = 'Ã£ÂÂÃ¥ÂÂ¨Ã§ÂÂÃ¦ÂÂÃ©ÂÂÃ£ÂÂ¢Ã£ÂÂ©Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ' + alerts.length + 'Ã¥ÂÂÃ£ÂÂ®Ã§Â¢ÂºÃ¨ÂªÂÃ£ÂÂÃ¥Â¿ÂÃ¨Â¦ÂÃ£ÂÂ§Ã£ÂÂ';
   const mailto = 'mailto:?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   window.open(mailto);
 }
 
-// ââ ä¼æ¥­å¥ã¬ãã¼ã ââ
+// Ã¢ÂÂÃ¢ÂÂ Ã¤Â¼ÂÃ¦Â¥Â­Ã¥ÂÂ¥Ã£ÂÂ¬Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ Ã¢ÂÂÃ¢ÂÂ
 function showReport() {
-  if (!state.staffList.length) { alert('ã¹ã¿ãããç»é²ããã¦ãã¾ãã'); return; }
+  if (!state.staffList.length) { alert('Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ§ÂÂ»Ã©ÂÂ²Ã£ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ'); return; }
   
-  // ä¼æ¥­å¥ã«ã°ã«ã¼ãå
+  // Ã¤Â¼ÂÃ¦Â¥Â­Ã¥ÂÂ¥Ã£ÂÂ«Ã£ÂÂ°Ã£ÂÂ«Ã£ÂÂ¼Ã£ÂÂÃ¥ÂÂ
   const companies = {};
   state.staffList.forEach(s => {
-    const co = s.company || s.companyId || 'æªè¨­å®';
+    const co = s.company || s.companyId || 'Ã¦ÂÂªÃ¨Â¨Â­Ã¥Â®Â';
     if (!companies[co]) companies[co] = [];
     companies[co].push(s);
   });
   
   const today = new Date();
-  document.getElementById('report-date').textContent = today.getFullYear() + 'å¹´' + (today.getMonth()+1) + 'æ' + today.getDate() + 'æ¥ ä½æã/ ç»é²ã¹ã¿ãã' + state.staffList.length + 'å';
+  document.getElementById('report-date').textContent = today.getFullYear() + 'Ã¥Â¹Â´' + (today.getMonth()+1) + 'Ã¦ÂÂ' + today.getDate() + 'Ã¦ÂÂ¥ Ã¤Â½ÂÃ¦ÂÂÃ£ÂÂ/ Ã§ÂÂ»Ã©ÂÂ²Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂ' + state.staffList.length + 'Ã¥ÂÂ';
   
   let html = '';
   Object.entries(companies).forEach(([co, staffs]) => {
-    html += '<div class="report-company">ð¢ ' + co + 'ï¼' + staffs.length + 'åï¼</div>';
+    html += '<div class="report-company">Ã°ÂÂÂ¢ ' + co + 'Ã¯Â¼Â' + staffs.length + 'Ã¥ÂÂÃ¯Â¼Â</div>';
     staffs.forEach(s => {
       const expire = s.expire || s.expireDate || '';
       const days = expire ? Math.ceil((new Date(expire) - today) / 86400000) : null;
@@ -1087,10 +1088,10 @@ function showReport() {
       html += '<div class="report-staff-row">' +
         '<div><div class="report-staff-name">' + s.name + (s.nameEn ? ' / ' + s.nameEn : '') + '</div>' +
         '<div class="report-staff-meta">' + (s.nationality||'') + ' / ' + (s.visa||'') + ' / ' + (s.industry||'') + '</div></div>' +
-        '<div style="text-align:center"><div style="font-size:11px;color:var(--mid)">å¨çæé</div>' +
-        '<div class="report-badge ' + alertClass + '">' + (expire || 'æªè¨­å®') + '</div></div>' +
-        '<div style="text-align:center"><div style="font-size:11px;color:var(--mid)">è©ä¾¡</div>' +
-        '<div style="font-size:13px;font-weight:700;color:var(--teal)">' + evalCount + 'å / Lv' + avgLv + '</div></div>' +
+        '<div style="text-align:center"><div style="font-size:11px;color:var(--mid)">Ã¥ÂÂ¨Ã§ÂÂÃ¦ÂÂÃ©ÂÂ</div>' +
+        '<div class="report-badge ' + alertClass + '">' + (expire || 'Ã¦ÂÂªÃ¨Â¨Â­Ã¥Â®Â') + '</div></div>' +
+        '<div style="text-align:center"><div style="font-size:11px;color:var(--mid)">Ã¨Â©ÂÃ¤Â¾Â¡</div>' +
+        '<div style="font-size:13px;font-weight:700;color:var(--teal)">' + evalCount + 'Ã¥ÂÂ / Lv' + avgLv + '</div></div>' +
         '</div>';
     });
     html += '<br>';
@@ -1103,7 +1104,7 @@ function closeReport() {
   document.getElementById('report-modal').classList.remove('active');
 }
 
-// ââ QRã³ã¼ã ââ
+// Ã¢ÂÂÃ¢ÂÂ QRÃ£ÂÂ³Ã£ÂÂ¼Ã£ÂÂ Ã¢ÂÂÃ¢ÂÂ
 function showQR() {
   const modal = document.getElementById('qr-modal');
   const canvas = document.getElementById('qr-canvas');
@@ -1130,13 +1131,13 @@ function downloadQR() {
   a.click();
 }
 
-// ââ ã¨ã¯ã¹ãã¼ãã»ã¤ã³ãã¼ã ââ
+// Ã¢ÂÂÃ¢ÂÂ Ã£ÂÂ¨Ã£ÂÂ¯Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ»Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ Ã¢ÂÂÃ¢ÂÂ
 function exportData() {
-  if (!state.staffList.length) { alert('ã¨ã¯ã¹ãã¼ããããã¼ã¿ãããã¾ãã'); return; }
+  if (!state.staffList.length) { alert('Ã£ÂÂ¨Ã£ÂÂ¯Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ'); return; }
   const data = {
     version: 1,
     exportedAt: new Date().toISOString(),
-    exportedBy: 'ãã¯ã·ã³ã°ã«ã¼ã ã¹ã­ã«ããã',
+    exportedBy: 'Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂ·Ã£ÂÂ³Ã£ÂÂ°Ã£ÂÂ«Ã£ÂÂ¼Ã£ÂÂ Ã£ÂÂ¹Ã£ÂÂ­Ã£ÂÂ«Ã£ÂÂÃ£ÂÂÃ£ÂÂ',
     staffList: state.staffList,
   };
   const json = JSON.stringify(data, null, 2);
@@ -1149,7 +1150,7 @@ function exportData() {
   a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
-  alert(`â ${state.staffList.length}ååã®ãã¼ã¿ãã¨ã¯ã¹ãã¼ããã¾ãã`);
+  alert(`Ã¢ÂÂ ${state.staffList.length}Ã¥ÂÂÃ¥ÂÂÃ£ÂÂ®Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂ¨Ã£ÂÂ¯Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ`);
 }
 
 function importData(event) {
@@ -1160,30 +1161,30 @@ function importData(event) {
     try {
       const data = JSON.parse(e.target.result);
       if (!data.staffList || !Array.isArray(data.staffList)) {
-        alert('â ãã¡ã¤ã«å½¢å¼ãæ­£ããããã¾ãã'); return;
+        alert('Ã¢ÂÂ Ã£ÂÂÃ£ÂÂ¡Ã£ÂÂ¤Ã£ÂÂ«Ã¥Â½Â¢Ã¥Â¼ÂÃ£ÂÂÃ¦Â­Â£Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ'); return;
       }
       const count = data.staffList.length;
       const existing = state.staffList.length;
       const choice = existing > 0
-        ? confirm(`ç¾å¨${existing}åã®ãã¼ã¿ãããã¾ãã
-ãOKãâ ã¤ã³ãã¼ããã¼ã¿ã§ä¸æ¸ã
-ãã­ã£ã³ã»ã«ãâ è¿½å ãã¼ã¸`)
+        ? confirm(`Ã§ÂÂ¾Ã¥ÂÂ¨${existing}Ã¥ÂÂÃ£ÂÂ®Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ
+Ã£ÂÂOKÃ£ÂÂÃ¢ÂÂ Ã£ÂÂ¤Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ§Ã¤Â¸ÂÃ¦ÂÂ¸Ã£ÂÂ
+Ã£ÂÂÃ£ÂÂ­Ã£ÂÂ£Ã£ÂÂ³Ã£ÂÂ»Ã£ÂÂ«Ã£ÂÂÃ¢ÂÂ Ã¨Â¿Â½Ã¥ÂÂ Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¸`)
         : true;
       if (choice) {
         state.staffList = data.staffList;
       } else {
-        // ãã¼ã¸ï¼IDãéè¤ããªãå ´åã®ã¿è¿½å 
+        // Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¸Ã¯Â¼ÂIDÃ£ÂÂÃ©ÂÂÃ¨Â¤ÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂÃ¥Â Â´Ã¥ÂÂÃ£ÂÂ®Ã£ÂÂ¿Ã¨Â¿Â½Ã¥ÂÂ 
         const existingIds = new Set(state.staffList.map(s=>s.id));
         const newStaff = data.staffList.filter(s=>!existingIds.has(s.id));
         state.staffList = [...state.staffList, ...newStaff];
       }
       saveState();
       renderAll();
-      alert(`â ${count}ååã®ãã¼ã¿ãã¤ã³ãã¼ããã¾ãã`);
+      alert(`Ã¢ÂÂ ${count}Ã¥ÂÂÃ¥ÂÂÃ£ÂÂ®Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂ¤Ã£ÂÂ³Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ`);
     } catch(err) {
-      alert('â ãã¡ã¤ã«ã®èª­ã¿è¾¼ã¿ã«å¤±æãã¾ãã: ' + err.message);
+      alert('Ã¢ÂÂ Ã£ÂÂÃ£ÂÂ¡Ã£ÂÂ¤Ã£ÂÂ«Ã£ÂÂ®Ã¨ÂªÂ­Ã£ÂÂ¿Ã¨Â¾Â¼Ã£ÂÂ¿Ã£ÂÂ«Ã¥Â¤Â±Ã¦ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ: ' + err.message);
     }
-    // ãã¡ã¤ã«é¸æããªã»ãã
+    // Ã£ÂÂÃ£ÂÂ¡Ã£ÂÂ¤Ã£ÂÂ«Ã©ÂÂ¸Ã¦ÂÂÃ£ÂÂÃ£ÂÂªÃ£ÂÂ»Ã£ÂÂÃ£ÂÂ
     event.target.value = '';
   };
   reader.readAsText(file);
@@ -1196,7 +1197,7 @@ async function registerStaff() {
   const visa = document.getElementById('reg-visa').value;
   const expire = document.getElementById('reg-expire').value;
   if (!name || !company || !industry || !visa || !expire) {
-    alert('å¿é é ç®ï¼*ï¼ãå¥åãã¦ãã ãã'); return;
+    alert('Ã¥Â¿ÂÃ©Â ÂÃ©Â ÂÃ§ÂÂ®Ã¯Â¼Â*Ã¯Â¼ÂÃ£ÂÂÃ¥ÂÂ¥Ã¥ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂ'); return;
   }
   try {
     let companyId = null;
@@ -1232,10 +1233,10 @@ async function registerStaff() {
     };
     state.staffList.push(staff);
     saveState(); clearRegForm(); renderAll();
-    alert('â ' + name + ' ãããç»é²ãã¾ããï¼DBä¿å­æ¸ã¿ï¼');
+    alert('Ã¢ÂÂ ' + name + ' Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ§ÂÂ»Ã©ÂÂ²Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ¯Â¼ÂDBÃ¤Â¿ÂÃ¥Â­ÂÃ¦Â¸ÂÃ£ÂÂ¿Ã¯Â¼Â');
     showTab('staff');
   } catch(err) {
-    alert('â ç»é²ã¨ã©ã¼: ' + err.message);
+    alert('Ã¢ÂÂ Ã§ÂÂ»Ã©ÂÂ²Ã£ÂÂ¨Ã£ÂÂ©Ã£ÂÂ¼: ' + err.message);
   }
 }
 
@@ -1245,11 +1246,11 @@ function clearRegForm() {
   ['reg-expire','reg-joindate','reg-dob'].forEach(id => document.getElementById(id).value = '');
 }
 
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 // STAFF LIST
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 function getVisibleStaff() {
-  // ä¼æ¥­ã¢ã¼ãã®å ´åã¯URLã®companyãã©ã¡ã¼ã¿ã§çµãè¾¼ã¿
+  // Ã¤Â¼ÂÃ¦Â¥Â­Ã£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ®Ã¥Â Â´Ã¥ÂÂÃ£ÂÂ¯URLÃ£ÂÂ®companyÃ£ÂÂÃ£ÂÂ©Ã£ÂÂ¡Ã£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂ§Ã§ÂµÂÃ£ÂÂÃ¨Â¾Â¼Ã£ÂÂ¿
   const params = new URLSearchParams(location.search);
   const clientCompany = params.get('company');
   if (state.mode === 'client' && clientCompany) {
@@ -1266,7 +1267,7 @@ function renderStaffList() {
     (!ind || s.industry === ind)
   );
   const el = document.getElementById('staff-grid');
-  if (!list.length) { el.innerHTML = '<div class="empty" style="grid-column:1/-1"><div class="empty-icon">ð¥</div><p>è©²å½ããã¹ã¿ããããã¾ãã</p></div>'; return; }
+  if (!list.length) { el.innerHTML = '<div class="empty" style="grid-column:1/-1"><div class="empty-icon">Ã°ÂÂÂ¥</div><p>Ã¨Â©Â²Ã¥Â½ÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p></div>'; return; }
   el.innerHTML = list.map(s => staffCardHTML(s)).join('');
 }
 
@@ -1274,9 +1275,9 @@ function staffCardHTML(s) {
   const ind = SKILL_DB[s.industry];
   const avgLv = calcAvgLv(s);
   const daysLeft = daysUntilExpire(s.expire);
-  const alertHTML = daysLeft < 0 ? '<span class="alert-badge alert-red">æéåã</span>'
-    : daysLeft < 30 ? '<span class="alert-badge alert-red">æ®'+daysLeft+'æ¥</span>'
-    : daysLeft < 90 ? '<span class="alert-badge alert-orange">æ®'+daysLeft+'æ¥</span>'
+  const alertHTML = daysLeft < 0 ? '<span class="alert-badge alert-red">Ã¦ÂÂÃ©ÂÂÃ¥ÂÂÃ£ÂÂ</span>'
+    : daysLeft < 30 ? '<span class="alert-badge alert-red">Ã¦Â®Â'+daysLeft+'Ã¦ÂÂ¥</span>'
+    : daysLeft < 90 ? '<span class="alert-badge alert-orange">Ã¦Â®Â'+daysLeft+'Ã¦ÂÂ¥</span>'
     : '';
   const pct = avgLv ? Math.round((avgLv/4)*100) : 0;
   return `<div class="staff-card" onclick="selectStaffForEval('${s.id}')">
@@ -1287,13 +1288,13 @@ function staffCardHTML(s) {
       <span class="staff-badge badge-company">${s.company}</span>
       <span class="staff-badge badge-industry">${ind ? ind.icon+' '+ind.label : s.industry}</span>
     </div>
-    <div style="font-size:11px;color:var(--mid);margin-bottom:8px;">ð ${s.visa} ï¼ æéï¼${s.expire||'æªè¨­å®'}</div>
+    <div style="font-size:11px;color:var(--mid);margin-bottom:8px;">Ã°ÂÂÂ ${s.visa} Ã¯Â¼Â Ã¦ÂÂÃ©ÂÂÃ¯Â¼Â${s.expire||'Ã¦ÂÂªÃ¨Â¨Â­Ã¥Â®Â'}</div>
     <div class="staff-progress">
       <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:${pct}%"></div></div>
-      <div class="eval-count">è©ä¾¡${s.evals.length}å ${avgLv ? 'ï¼ å¹³å Lv '+avgLv.toFixed(1) : ''}</div>
+      <div class="eval-count">Ã¨Â©ÂÃ¤Â¾Â¡${s.evals.length}Ã¥ÂÂ ${avgLv ? 'Ã¯Â¼Â Ã¥Â¹Â³Ã¥ÂÂ Lv '+avgLv.toFixed(1) : ''}</div>
     </div>
     ${state.mode === 'admin' ? `<div style="margin-top:10px;text-align:right;">
-      <button class="btn btn-danger btn-sm" onclick="event.stopPropagation();deleteStaff('${s.id}')">ð åé¤</button>
+      <button class="btn btn-danger btn-sm" onclick="event.stopPropagation();deleteStaff('${s.id}')">Ã°ÂÂÂ Ã¥ÂÂÃ©ÂÂ¤</button>
     </div>` : ''}
   </div>`;
 }
@@ -1310,9 +1311,9 @@ function daysUntilExpire(dateStr) {
   return Math.floor((new Date(dateStr) - new Date()) / 86400000);
 }
 
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 // DASHBOARD
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 function renderDashboard() {
   const vis = getVisibleStaff();
   const total = vis.length;
@@ -1323,7 +1324,7 @@ function renderDashboard() {
   document.getElementById('stat-companies').textContent = companies;
   document.getElementById('stat-evals').textContent = evals;
   document.getElementById('stat-alert').textContent = alerts;
-  // ä¼æ¥­ã¢ã¼ãã¯ãåå¥ä¼æ¥­æ°ãã«ã¼ããéè¡¨ç¤º
+  // Ã¤Â¼ÂÃ¦Â¥Â­Ã£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ¯Ã£ÂÂÃ¥ÂÂÃ¥ÂÂ¥Ã¤Â¼ÂÃ¦Â¥Â­Ã¦ÂÂ°Ã£ÂÂÃ£ÂÂ«Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ©ÂÂÃ¨Â¡Â¨Ã§Â¤Âº
   const companiesCard = document.getElementById('stat-companies-card');
   if (companiesCard) companiesCard.style.display = state.mode === 'client' ? 'none' : '';
 
@@ -1332,18 +1333,18 @@ function renderDashboard() {
     .sort((a,b)=>daysUntilExpire(a.expire)-daysUntilExpire(b.expire));
   const alertEl = document.getElementById('alert-list');
   if (!alertStaff.length) {
-    alertEl.innerHTML = '<div class="empty"><div class="empty-icon">â</div><p>æéãè¿ãã¹ã¿ããã¯ãã¾ãã</p></div>';
+    alertEl.innerHTML = '<div class="empty"><div class="empty-icon">Ã¢ÂÂ</div><p>Ã¦ÂÂÃ©ÂÂÃ£ÂÂÃ¨Â¿ÂÃ£ÂÂÃ£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ£ÂÂ¯Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p></div>';
   } else {
     alertEl.innerHTML = alertStaff.map(s => {
       const d = daysUntilExpire(s.expire);
       const cls = d < 0 ? 'alert-red' : d < 30 ? 'alert-red' : d < 90 ? 'alert-orange' : '';
       const style = d >= 90 ? 'style="background:#fff8e1;color:#7b6000;"' : '';
-      const txt = d < 0 ? 'â  æéåã' : d < 30 ? 'ð´ æ®'+d+'æ¥' : d < 90 ? 'ð  æ®'+d+'æ¥' : 'ð¡ æ®'+d+'æ¥';
+      const txt = d < 0 ? 'Ã¢ÂÂ  Ã¦ÂÂÃ©ÂÂÃ¥ÂÂÃ£ÂÂ' : d < 30 ? 'Ã°ÂÂÂ´ Ã¦Â®Â'+d+'Ã¦ÂÂ¥' : d < 90 ? 'Ã°ÂÂÂ  Ã¦Â®Â'+d+'Ã¦ÂÂ¥' : 'Ã°ÂÂÂ¡ Ã¦Â®Â'+d+'Ã¦ÂÂ¥';
       return `<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);">
         <span class="alert-badge ${cls}" ${style}>${txt}</span>
         <div><div style="font-size:13px;font-weight:600;">${s.name}</div>
-        <div style="font-size:11px;color:var(--mid)">${s.company} ï¼ ${s.visa} ï¼ ${s.expire}</div></div>
-        <button class="btn btn-sm btn-secondary" style="margin-left:auto;" onclick="selectStaffForEval('${s.id}')">è©³ç´°</button>
+        <div style="font-size:11px;color:var(--mid)">${s.company} Ã¯Â¼Â ${s.visa} Ã¯Â¼Â ${s.expire}</div></div>
+        <button class="btn btn-sm btn-secondary" style="margin-left:auto;" onclick="selectStaffForEval('${s.id}')">Ã¨Â©Â³Ã§Â´Â°</button>
       </div>`;
     }).join('');
   }
@@ -1353,7 +1354,7 @@ function renderDashboard() {
   const allEvals = getVisibleStaff().flatMap(s => s.evals.map(e=>({...e,staffName:s.name,staffId:s.id})))
     .sort((a,b)=>new Date(b.date)-new Date(a.date)).slice(0,5);
   if (!allEvals.length) {
-    recentEl.innerHTML = '<div class="empty"><div class="empty-icon">ð</div><p>ã¾ã è©ä¾¡ãããã¾ãã</p></div>';
+    recentEl.innerHTML = '<div class="empty"><div class="empty-icon">Ã°ÂÂÂ</div><p>Ã£ÂÂ¾Ã£ÂÂ Ã¨Â©ÂÃ¤Â¾Â¡Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ</p></div>';
   } else {
     recentEl.innerHTML = allEvals.map(e => {
       const vals = Object.values(e.scores).filter(v=>v>0);
@@ -1361,20 +1362,20 @@ function renderDashboard() {
       return `<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);">
         <div style="font-size:12px;color:var(--mid);min-width:80px;">${e.date}</div>
         <div><div style="font-size:13px;font-weight:600;">${e.staffName}</div>
-        <div style="font-size:11px;color:var(--mid)">${e.timing}è©ä¾¡ ï¼ è©ä¾¡èï¼${e.evaluator||'-'}</div></div>
+        <div style="font-size:11px;color:var(--mid)">${e.timing}Ã¨Â©ÂÃ¤Â¾Â¡ Ã¯Â¼Â Ã¨Â©ÂÃ¤Â¾Â¡Ã¨ÂÂÃ¯Â¼Â${e.evaluator||'-'}</div></div>
         <div style="margin-left:auto;font-size:16px;font-weight:900;color:var(--teal);">Lv ${avg}</div>
       </div>`;
     }).join('');
   }
 }
 
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 // EVAL
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 function renderEvalStaffGrid() {
   const el = document.getElementById('eval-staff-grid');
   const visibleForEval = getVisibleStaff();
-  if (!visibleForEval.length) { el.innerHTML = '<div class="empty" style="grid-column:1/-1"><div class="empty-icon">ð¥</div><p>åã«ã¹ã¿ãããç»é²ãã¦ãã ãã</p></div>'; return; }
+  if (!visibleForEval.length) { el.innerHTML = '<div class="empty" style="grid-column:1/-1"><div class="empty-icon">Ã°ÂÂÂ¥</div><p>Ã¥ÂÂÃ£ÂÂ«Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ§ÂÂ»Ã©ÂÂ²Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂ</p></div>'; return; }
   el.innerHTML = visibleForEval.map(s => {
     const sel = state.selectedStaffId === s.id;
     return `<div class="staff-card${sel?' selected':''}" onclick="selectStaffForEval('${s.id}')">${staffCardHTML(s).replace(/^<div[^>]*>/,'').replace(/<\/div>$/,'')}</div>`;
@@ -1389,7 +1390,7 @@ function selectStaffForEval(id) {
   document.getElementById('eval-select-card').style.display = 'none';
   document.getElementById('eval-input-area').style.display = 'block';
   document.getElementById('eval-staff-name-disp').textContent = s.name + (s.nameEn ? ' / '+s.nameEn : '');
-  document.getElementById('eval-staff-meta-disp').textContent = `${s.company} ï¼ ${ind?ind.icon+' '+ind.label:s.industry} ï¼ ${s.visa}`;
+  document.getElementById('eval-staff-meta-disp').textContent = `${s.company} Ã¯Â¼Â ${ind?ind.icon+' '+ind.label:s.industry} Ã¯Â¼Â ${s.visa}`;
   renderSkillForm(s.industry);
   setNextTiming(s);
   renderTimeline(s);
@@ -1404,13 +1405,13 @@ function backToEvalSelect() {
 }
 
 
-// è©ä¾¡ã¿ã¤ãã³ã°ã®é åº
-const TIMING_ORDER = ['å¥ç¤¾æ','3ã¶æ','6ã¶æ','1å¹´','2å¹´','3å¹´','4å¹´','5å¹´'];
+// Ã¨Â©ÂÃ¤Â¾Â¡Ã£ÂÂ¿Ã£ÂÂ¤Ã£ÂÂÃ£ÂÂ³Ã£ÂÂ°Ã£ÂÂ®Ã©Â ÂÃ¥ÂºÂ
+const TIMING_ORDER = ['Ã¥ÂÂ¥Ã§Â¤Â¾Ã¦ÂÂ','3Ã£ÂÂ¶Ã¦ÂÂ','6Ã£ÂÂ¶Ã¦ÂÂ','1Ã¥Â¹Â´','2Ã¥Â¹Â´','3Ã¥Â¹Â´','4Ã¥Â¹Â´','5Ã¥Â¹Â´'];
 
 function setNextTiming(s) {
   const sel = document.getElementById('eval-timing');
   if (!s.evals.length) {
-    sel.value = 'å¥ç¤¾æ';
+    sel.value = 'Ã¥ÂÂ¥Ã§Â¤Â¾Ã¦ÂÂ';
     return;
   }
   const lastTiming = s.evals[s.evals.length - 1].timing;
@@ -1418,12 +1419,12 @@ function setNextTiming(s) {
   if (idx >= 0 && idx < TIMING_ORDER.length - 1) {
     sel.value = TIMING_ORDER[idx + 1];
   } else if (idx === TIMING_ORDER.length - 1) {
-    // 5å¹´ä»¥éã¯ã«ã¹ã¿ã 
-    sel.value = 'ã«ã¹ã¿ã ';
+    // 5Ã¥Â¹Â´Ã¤Â»Â¥Ã©ÂÂÃ£ÂÂ¯Ã£ÂÂ«Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ 
+    sel.value = 'Ã£ÂÂ«Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ ';
     document.getElementById('custom-label-wrap').style.display = 'block';
   } else {
-    // ã«ã¹ã¿ã ç­ã®å ´åã¯ãã®ã¾ã¾
-    sel.value = 'ã«ã¹ã¿ã ';
+    // Ã£ÂÂ«Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ Ã§Â­ÂÃ£ÂÂ®Ã¥Â Â´Ã¥ÂÂÃ£ÂÂ¯Ã£ÂÂÃ£ÂÂ®Ã£ÂÂ¾Ã£ÂÂ¾
+    sel.value = 'Ã£ÂÂ«Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ ';
     document.getElementById('custom-label-wrap').style.display = 'block';
   }
 }
@@ -1477,11 +1478,11 @@ async function saveEval() {
   const evaluator = document.getElementById('eval-evaluator').value;
   const scores = getScores();
   const vals = Object.values(scores).filter(v=>v>0);
-  if (!vals.length) { alert('å°ãªãã¨ã1é ç®è©ä¾¡ãã¦ãã ãã'); return; }
-  const timingLabel = timing === 'ã«ã¹ã¿ã ' ? customLabel || 'ã«ã¹ã¿ã ' : timing;
+  if (!vals.length) { alert('Ã¥Â°ÂÃ£ÂÂªÃ£ÂÂÃ£ÂÂ¨Ã£ÂÂ1Ã©Â ÂÃ§ÂÂ®Ã¨Â©ÂÃ¤Â¾Â¡Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂ'); return; }
+  const timingLabel = timing === 'Ã£ÂÂ«Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ ' ? customLabel || 'Ã£ÂÂ«Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂ ' : timing;
   const avg = (vals.reduce((a,b)=>a+b,0)/vals.length).toFixed(2);
   try {
-    // Supabaseã«è©ä¾¡ä¿å­
+    // SupabaseÃ£ÂÂ«Ã¨Â©ÂÃ¤Â¾Â¡Ã¤Â¿ÂÃ¥Â­Â
     const { data: newEval, error: evalErr } = await sb.from('evaluations').insert({
       staff_id: s.id,
       timing: timingLabel,
@@ -1502,10 +1503,10 @@ async function saveEval() {
     setNextTiming(s);
     renderTimeline(s);
     renderDashboard();
-    // ååã®ã¹ã³ã¢ã¯ãã®ã¾ã¾æ®ãï¼å¤åããé ç®ã ãå¤æ´ããã°OKï¼
-    alert('â ' + s.name + ' ããã®ã' + timingLabel + 'ãè©ä¾¡ãDBã«ä¿å­ãã¾ãã');
+    // Ã¥ÂÂÃ¥ÂÂÃ£ÂÂ®Ã£ÂÂ¹Ã£ÂÂ³Ã£ÂÂ¢Ã£ÂÂ¯Ã£ÂÂÃ£ÂÂ®Ã£ÂÂ¾Ã£ÂÂ¾Ã¦Â®ÂÃ£ÂÂÃ¯Â¼ÂÃ¥Â¤ÂÃ¥ÂÂÃ£ÂÂÃ£ÂÂÃ©Â ÂÃ§ÂÂ®Ã£ÂÂ Ã£ÂÂÃ¥Â¤ÂÃ¦ÂÂ´Ã£ÂÂÃ£ÂÂÃ£ÂÂ°OKÃ¯Â¼Â
+    alert('Ã¢ÂÂ ' + s.name + ' Ã£ÂÂÃ£ÂÂÃ£ÂÂ®Ã£ÂÂ' + timingLabel + 'Ã£ÂÂÃ¨Â©ÂÃ¤Â¾Â¡Ã£ÂÂDBÃ£ÂÂ«Ã¤Â¿ÂÃ¥Â­ÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ');
   } catch(err) {
-    alert('â è©ä¾¡ä¿å­ã¨ã©ã¼: ' + err.message);
+    alert('Ã¢ÂÂ Ã¨Â©ÂÃ¤Â¾Â¡Ã¤Â¿ÂÃ¥Â­ÂÃ£ÂÂ¨Ã£ÂÂ©Ã£ÂÂ¼: ' + err.message);
   }
 }
 
@@ -1518,7 +1519,7 @@ function renderTimeline(s) {
     return;
   }
   if (emptyEl) emptyEl.style.display = 'none';
-  // ã°ã©ãæç»
+  // Ã£ÂÂ°Ã£ÂÂ©Ã£ÂÂÃ¦ÂÂÃ§ÂÂ»
   if (s.evals.length >= 2) {
     document.getElementById('growth-chart-card').style.display = 'block';
     renderGrowthChart(s);
@@ -1534,11 +1535,11 @@ function renderTimeline(s) {
         <span class="tl-label">${e.timing}</span>
         <span class="tl-avg">Lv ${avg}</span>
         <div class="tl-actions">
-          <button class="btn btn-sm btn-secondary" onclick="loadEvalForView('${s.id}','${e.id}')">è©³ç´°</button>
-          <button class="btn btn-sm btn-danger" onclick="deleteEval('${s.id}','${e.id}')">åé¤</button>
+          <button class="btn btn-sm btn-secondary" onclick="loadEvalForView('${s.id}','${e.id}')">Ã¨Â©Â³Ã§Â´Â°</button>
+          <button class="btn btn-sm btn-danger" onclick="deleteEval('${s.id}','${e.id}')">Ã¥ÂÂÃ©ÂÂ¤</button>
         </div>
       </div>
-      ${e.evaluator ? `<div style="font-size:11px;color:var(--mid);">è©ä¾¡èï¼${e.evaluator}</div>` : ''}
+      ${e.evaluator ? `<div style="font-size:11px;color:var(--mid);">Ã¨Â©ÂÃ¤Â¾Â¡Ã¨ÂÂÃ¯Â¼Â${e.evaluator}</div>` : ''}
     </div>`;
   }).join('');
 }
@@ -1546,7 +1547,7 @@ function renderTimeline(s) {
 
 function renderGrowthChart(s) {
   const canvas = document.getElementById('growth-chart');
-  // æ¢å­ãã£ã¼ããç ´æ£
+  // Ã¦ÂÂ¢Ã¥Â­ÂÃ£ÂÂÃ£ÂÂ£Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ§Â Â´Ã¦Â£Â
   if (window.__growthChart) { window.__growthChart.destroy(); window.__growthChart = null; }
   if (s.evals.length < 2) return;
 
@@ -1556,7 +1557,7 @@ function renderGrowthChart(s) {
     return vals.length ? parseFloat((vals.reduce((a,b)=>a+b,0)/vals.length).toFixed(2)) : null;
   });
 
-  // æ¥­ç¨®åºæã«ãã´ãªã®ã¹ã³ã¢
+  // Ã¦Â¥Â­Ã§Â¨Â®Ã¥ÂÂºÃ¦ÂÂÃ£ÂÂ«Ã£ÂÂÃ£ÂÂ´Ã£ÂÂªÃ£ÂÂ®Ã£ÂÂ¹Ã£ÂÂ³Ã£ÂÂ¢
   const ind = SKILL_DB[s.industry];
   const catDatasets = [];
   if (ind) {
@@ -1584,7 +1585,7 @@ function renderGrowthChart(s) {
       labels: s.evals.map(e => e.timing),
       datasets: [
         {
-          label: 'ç·åå¹³å',
+          label: 'Ã§Â·ÂÃ¥ÂÂÃ¥Â¹Â³Ã¥ÂÂ',
           data: avgData,
           borderColor: '#1E3A5F',
           backgroundColor: '#1E3A5F20',
@@ -1609,7 +1610,7 @@ function renderGrowthChart(s) {
 }
 
 function deleteEval(staffId, evalId) {
-  if (!confirm('ãã®è©ä¾¡ãã¼ã¿ãåé¤ãã¾ããï¼\nåã«æ»ãã¾ããã')) return;
+  if (!confirm('Ã£ÂÂÃ£ÂÂ®Ã¨Â©ÂÃ¤Â¾Â¡Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂÃ¥ÂÂÃ©ÂÂ¤Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ¯Â¼Â\nÃ¥ÂÂÃ£ÂÂ«Ã¦ÂÂ»Ã£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂÃ£ÂÂ')) return;
   const s = state.staffList.find(x=>x.id===staffId);
   s.evals = s.evals.filter(e=>e.id!==evalId);
   saveState();
@@ -1621,7 +1622,7 @@ function loadEvalForView(staffId, evalId) {
   const s = state.staffList.find(x=>x.id===staffId);
   const e = s.evals.find(x=>x.id===evalId);
   if (!e) return;
-  // ã¹ã³ã¢ããã©ã¼ã ã«åæ 
+  // Ã£ÂÂ¹Ã£ÂÂ³Ã£ÂÂ¢Ã£ÂÂÃ£ÂÂÃ£ÂÂ©Ã£ÂÂ¼Ã£ÂÂ Ã£ÂÂ«Ã¥ÂÂÃ¦ÂÂ 
   document.getElementById('eval-timing').value = e.timing;
   document.getElementById('eval-date').value = e.date;
   document.getElementById('eval-evaluator').value = e.evaluator || '';
@@ -1636,13 +1637,13 @@ function loadEvalForView(staffId, evalId) {
   });
 }
 
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 // CERT
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 function renderCertStaffGrid() {
   const el = document.getElementById('cert-staff-grid');
   const visibleForCert = getVisibleStaff();
-  if (!visibleForCert.length) { el.innerHTML = '<div class="empty" style="grid-column:1/-1"><div class="empty-icon">ð</div><p>ã¹ã¿ãããç»é²ãã¦ãã ãã</p></div>'; return; }
+  if (!visibleForCert.length) { el.innerHTML = '<div class="empty" style="grid-column:1/-1"><div class="empty-icon">Ã°ÂÂÂ</div><p>Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ§ÂÂ»Ã©ÂÂ²Ã£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂ</p></div>'; return; }
   el.innerHTML = visibleForCert.map(s => `
     <div class="staff-card" onclick="showCert('${s.id}')">
       <div class="staff-name">${s.name}</div>
@@ -1650,19 +1651,19 @@ function renderCertStaffGrid() {
         <span class="staff-badge badge-company">${s.company}</span>
         <span class="staff-badge badge-industry">${SKILL_DB[s.industry]?.label||s.industry}</span>
       </div>
-      <div class="eval-count">è©ä¾¡${s.evals.length}å</div>
+      <div class="eval-count">Ã¨Â©ÂÃ¤Â¾Â¡${s.evals.length}Ã¥ÂÂ</div>
     </div>
   `).join('');
 }
 
 function showCert(staffId) {
   const s = state.staffList.find(x=>x.id===staffId);
-  if (!s || !s.evals.length) { alert('è©ä¾¡ãã¼ã¿ãããã¾ãã'); return; }
+  if (!s || !s.evals.length) { alert('Ã¨Â©ÂÃ¤Â¾Â¡Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ¾Ã£ÂÂÃ£ÂÂ'); return; }
   const lastEval = s.evals[s.evals.length-1];
   const ind = SKILL_DB[s.industry];
   const allSections = [...(ind?.sections||[]), ...COMMON_SECTIONS];
 
-  // ã«ãã´ãªå¥ã¹ã³ã¢
+  // Ã£ÂÂ«Ã£ÂÂÃ£ÂÂ´Ã£ÂÂªÃ¥ÂÂ¥Ã£ÂÂ¹Ã£ÂÂ³Ã£ÂÂ¢
   const catScores = allSections.map(sec => {
     const vals = sec.items.map(item => lastEval.scores[item.id]||0).filter(v=>v>0);
     return { name: sec.name, avg: vals.length ? (vals.reduce((a,b)=>a+b,0)/vals.length) : 0 };
@@ -1677,56 +1678,56 @@ function showCert(staffId) {
     <div class="cert-top">
       <div>
         <div class="cert-title-en">SKILL CERTIFICATE</div>
-        <div class="cert-title-ja">ã¹ã­ã«è¨¼ææ¸ ï¼ æ¥­ç¨®ï¼${ind?.label||s.industry}</div>
+        <div class="cert-title-ja">Ã£ÂÂ¹Ã£ÂÂ­Ã£ÂÂ«Ã¨Â¨Â¼Ã¦ÂÂÃ¦ÂÂ¸ Ã¯Â¼Â Ã¦Â¥Â­Ã§Â¨Â®Ã¯Â¼Â${ind?.label||s.industry}</div>
       </div>
       <div style="text-align:right;">
         <div style="font-size:28px;font-weight:900;color:var(--blue);">Lv ${totalAvg}</div>
-        <div style="font-size:11px;color:var(--mid);">ç·åã¹ã­ã«ã¬ãã«</div>
+        <div style="font-size:11px;color:var(--mid);">Ã§Â·ÂÃ¥ÂÂÃ£ÂÂ¹Ã£ÂÂ­Ã£ÂÂ«Ã£ÂÂ¬Ã£ÂÂÃ£ÂÂ«</div>
       </div>
     </div>
     <div class="cert-info-grid">
-      <div class="cert-field"><label>æ°å</label><p>${s.name}</p></div>
-      <div class="cert-field"><label>ROMANJI</label><p>${s.nameEn||'â'}</p></div>
-      <div class="cert-field"><label>å½ç±</label><p>${s.nationality||'â'}</p></div>
-      <div class="cert-field"><label>å¨çè³æ ¼</label><p>${s.visa}</p></div>
-      <div class="cert-field"><label>æå±ä¼æ¥­</label><p>${s.company}</p></div>
-      <div class="cert-field"><label>æ¥­ç¨®ã»è·ç¨®</label><p>${ind?.label||s.industry} ï¼ ${s.process||'â'}</p></div>
-      <div class="cert-field"><label>å¥ç¤¾æ¥</label><p>${s.joinDate||'â'}</p></div>
-      <div class="cert-field"><label>è©ä¾¡æ¥</label><p>${lastEval.date}ï¼${lastEval.timing}ï¼</p></div>
+      <div class="cert-field"><label>Ã¦Â°ÂÃ¥ÂÂ</label><p>${s.name}</p></div>
+      <div class="cert-field"><label>ROMANJI</label><p>${s.nameEn||'Ã¢ÂÂ'}</p></div>
+      <div class="cert-field"><label>Ã¥ÂÂ½Ã§Â±Â</label><p>${s.nationality||'Ã¢ÂÂ'}</p></div>
+      <div class="cert-field"><label>Ã¥ÂÂ¨Ã§ÂÂÃ¨Â³ÂÃ¦Â Â¼</label><p>${s.visa}</p></div>
+      <div class="cert-field"><label>Ã¦ÂÂÃ¥Â±ÂÃ¤Â¼ÂÃ¦Â¥Â­</label><p>${s.company}</p></div>
+      <div class="cert-field"><label>Ã¦Â¥Â­Ã§Â¨Â®Ã£ÂÂ»Ã¨ÂÂ·Ã§Â¨Â®</label><p>${ind?.label||s.industry} Ã¯Â¼Â ${s.process||'Ã¢ÂÂ'}</p></div>
+      <div class="cert-field"><label>Ã¥ÂÂ¥Ã§Â¤Â¾Ã¦ÂÂ¥</label><p>${s.joinDate||'Ã¢ÂÂ'}</p></div>
+      <div class="cert-field"><label>Ã¨Â©ÂÃ¤Â¾Â¡Ã¦ÂÂ¥</label><p>${lastEval.date}Ã¯Â¼Â${lastEval.timing}Ã¯Â¼Â</p></div>
     </div>
     <div class="cert-chart">
       ${catScores.map(c=>`
         <div class="cat-score">
-          <div class="cat-score-val">${c.avg>0?c.avg.toFixed(1):'â'}</div>
+          <div class="cat-score-val">${c.avg>0?c.avg.toFixed(1):'Ã¢ÂÂ'}</div>
           <div class="cat-score-max">/ 4.0</div>
           <div class="cat-score-label">${c.name}</div>
         </div>
       `).join('')}
     </div>
     <div style="font-size:11px;color:var(--mid);background:var(--bg);padding:10px;border-radius:8px;margin-bottom:16px;">
-      <strong>è©ä¾¡åºæºï¼</strong> Lv1 åºç¤ï¼æç¤ºãããã°ã§ããï¼ï¼ Lv2 ä¸äººç«ã¡ï¼èªåã§ã§ããï¼ï¼ Lv3 æå°å¯ï¼äººã«æããããï¼ï¼ Lv4 ã¨ã­ã¹ãã¼ãï¼æ¹åææ¡ã§ããï¼
+      <strong>Ã¨Â©ÂÃ¤Â¾Â¡Ã¥ÂÂºÃ¦ÂºÂÃ¯Â¼Â</strong> Lv1 Ã¥ÂÂºÃ§Â¤ÂÃ¯Â¼ÂÃ¦ÂÂÃ§Â¤ÂºÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂ°Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¯Â¼ÂÃ¯Â¼Â Lv2 Ã¤Â¸ÂÃ¤ÂºÂºÃ§Â«ÂÃ£ÂÂ¡Ã¯Â¼ÂÃ¨ÂÂªÃ¥ÂÂÃ£ÂÂ§Ã£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¯Â¼ÂÃ¯Â¼Â Lv3 Ã¦ÂÂÃ¥Â°ÂÃ¥ÂÂ¯Ã¯Â¼ÂÃ¤ÂºÂºÃ£ÂÂ«Ã¦ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ£ÂÂÃ¯Â¼ÂÃ¯Â¼Â Lv4 Ã£ÂÂ¨Ã£ÂÂ­Ã£ÂÂ¹Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ¯Â¼ÂÃ¦ÂÂ¹Ã¥ÂÂÃ¦ÂÂÃ¦Â¡ÂÃ£ÂÂ§Ã£ÂÂÃ£ÂÂÃ¯Â¼Â
     </div>
     <div class="cert-footer">
-      çºè¡æ¥ï¼${today} ï¼ çºè¡ï¼ãã¯ã·ã³ã°ã«ã¼ã
-      ${s.evals.length > 1 ? `ï¼ è©ä¾¡å±¥æ­´ï¼${s.evals.length}å` : ''}
+      Ã§ÂÂºÃ¨Â¡ÂÃ¦ÂÂ¥Ã¯Â¼Â${today} Ã¯Â¼Â Ã§ÂÂºÃ¨Â¡ÂÃ¯Â¼ÂÃ£ÂÂÃ£ÂÂ¯Ã£ÂÂ·Ã£ÂÂ³Ã£ÂÂ°Ã£ÂÂ«Ã£ÂÂ¼Ã£ÂÂ
+      ${s.evals.length > 1 ? `Ã¯Â¼Â Ã¨Â©ÂÃ¤Â¾Â¡Ã¥Â±Â¥Ã¦Â­Â´Ã¯Â¼Â${s.evals.length}Ã¥ÂÂ` : ''}
     </div>
   `;
   document.getElementById('cert-output').style.display = 'block';
   document.getElementById('cert-output').scrollIntoView({behavior:'smooth'});
 }
 
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 // START
-// ââââââââââââââââââââââââââââââââââââââââââ
+// Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
 init();
 </script>
 
-<!-- ââ SCROLL TOP ââ -->
+<!-- Ã¢ÂÂÃ¢ÂÂ SCROLL TOP Ã¢ÂÂÃ¢ÂÂ -->
 <button id="scroll-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})"
   style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;
   background:var(--blue);color:white;border:none;font-size:20px;cursor:pointer;
   box-shadow:0 4px 16px rgba(0,0,0,.25);display:none;z-index:200;transition:all .2s;
-  align-items:center;justify-content:center;">â</button>
+  align-items:center;justify-content:center;">Ã¢ÂÂ</button>
 <script>
 window.addEventListener('scroll', () => {
   const btn = document.getElementById('scroll-top-btn');
@@ -1734,104 +1735,104 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
-<!-- QRã³ã¼ãã¢ã¼ãã« -->
+<!-- QRÃ£ÂÂ³Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ« -->
 <div class="qr-modal" id="qr-modal" onclick="if(event.target===this)closeQR()">
   <div class="qr-box">
-    <h3>ð± ã¹ã­ã«ããã QRã³ã¼ã</h3>
-    <p>ä¼æ¥­æå½èã«ãã®QRã³ã¼ããå±æãã¦ãã ãã</p>
+    <h3>Ã°ÂÂÂ± Ã£ÂÂ¹Ã£ÂÂ­Ã£ÂÂ«Ã£ÂÂÃ£ÂÂÃ£ÂÂ QRÃ£ÂÂ³Ã£ÂÂ¼Ã£ÂÂ</h3>
+    <p>Ã¤Â¼ÂÃ¦Â¥Â­Ã¦ÂÂÃ¥Â½ÂÃ¨ÂÂÃ£ÂÂ«Ã£ÂÂÃ£ÂÂ®QRÃ£ÂÂ³Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂÃ¥ÂÂ±Ã¦ÂÂÃ£ÂÂÃ£ÂÂ¦Ã£ÂÂÃ£ÂÂ Ã£ÂÂÃ£ÂÂ</p>
     <div id="qr-canvas"></div>
     <div class="qr-url" id="qr-url-text"></div>
     <div style="display:flex;gap:10px;justify-content:center;">
-      <button class="btn btn-primary btn-sm" onclick="downloadQR()">ð¾ ä¿å­</button>
-      <button class="btn btn-secondary btn-sm" onclick="closeQR()">éãã</button>
+      <button class="btn btn-primary btn-sm" onclick="downloadQR()">Ã°ÂÂÂ¾ Ã¤Â¿ÂÃ¥Â­Â</button>
+      <button class="btn btn-secondary btn-sm" onclick="closeQR()">Ã©ÂÂÃ£ÂÂÃ£ÂÂ</button>
     </div>
   </div>
 </div>
 
 
-<!-- ä¼æ¥­å¥ã¬ãã¼ãã¢ã¼ãã« -->
+<!-- Ã¤Â¼ÂÃ¦Â¥Â­Ã¥ÂÂ¥Ã£ÂÂ¬Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂÃ£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂÃ£ÂÂ« -->
 <div class="report-modal" id="report-modal" onclick="if(event.target===this)closeReport()">
   <div class="report-box">
-    <h3>ð ä¼æ¥­å¥ã¹ã¿ããã¬ãã¼ã</h3>
+    <h3>Ã°ÂÂÂ Ã¤Â¼ÂÃ¦Â¥Â­Ã¥ÂÂ¥Ã£ÂÂ¹Ã£ÂÂ¿Ã£ÂÂÃ£ÂÂÃ£ÂÂ¬Ã£ÂÂÃ£ÂÂ¼Ã£ÂÂ</h3>
     <p class="report-sub" id="report-date"></p>
     <div style="display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap;">
-      <button class="btn btn-primary btn-sm" onclick="window.print()">ð¨ï¸ å°å·ã»PDFä¿å­</button>
-      <button class="btn btn-secondary btn-sm" onclick="closeReport()">éãã</button>
+      <button class="btn btn-primary btn-sm" onclick="window.print()">Ã°ÂÂÂ¨Ã¯Â¸Â Ã¥ÂÂ°Ã¥ÂÂ·Ã£ÂÂ»PDFÃ¤Â¿ÂÃ¥Â­Â</button>
+      <button class="btn btn-secondary btn-sm" onclick="closeReport()">Ã©ÂÂÃ£ÂÂÃ£ÂÂ</button>
     </div>
     <div id="report-content"></div>
   </div>
 </div>
 
 
-<!-- ヘルプモーダル -->
+<!-- ãã«ãã¢ã¼ãã« -->
 <div id="helpModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;justify-content:center;align-items:center;">
   <div style="background:white;border-radius:12px;padding:32px;max-width:680px;width:90%;max-height:85vh;overflow-y:auto;position:relative;">
     <button onclick="document.getElementById('helpModal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:24px;cursor:pointer;color:#666;">&#x2715;</button>
-    <h2 style="color:#1a56db;margin-bottom:4px;">&#x2753; 外国人材スキルマップ 使い方ガイド</h2>
-    <p style="color:#666;font-size:13px;margin-bottom:24px;">ご不明な点があれば担当者（羽根）までご連絡ください</p>
+    <h2 style="color:#1a56db;margin-bottom:4px;">&#x2753; å¤å½äººæã¹ã­ã«ããã ä½¿ãæ¹ã¬ã¤ã</h2>
+    <p style="color:#666;font-size:13px;margin-bottom:24px;">ãä¸æãªç¹ãããã°æå½èï¼ç¾½æ ¹ï¼ã¾ã§ãé£çµ¡ãã ãã</p>
     <div style="display:flex;gap:8px;margin-bottom:20px;border-bottom:2px solid #e5e7eb;padding-bottom:8px;">
-      <button onclick="showHelpTab('admin')" id="tabAdmin" style="padding:8px 16px;border:none;border-radius:6px 6px 0 0;cursor:pointer;background:#1a56db;color:white;font-weight:bold;">管理者向け</button>
-      <button onclick="showHelpTab('company')" id="tabCompany" style="padding:8px 16px;border:none;border-radius:6px 6px 0 0;cursor:pointer;background:#e5e7eb;color:#333;">企業担当者向け</button>
+      <button onclick="showHelpTab('admin')" id="tabAdmin" style="padding:8px 16px;border:none;border-radius:6px 6px 0 0;cursor:pointer;background:#1a56db;color:white;font-weight:bold;">ç®¡çèåã</button>
+      <button onclick="showHelpTab('company')" id="tabCompany" style="padding:8px 16px;border:none;border-radius:6px 6px 0 0;cursor:pointer;background:#e5e7eb;color:#333;">ä¼æ¥­æå½èåã</button>
     </div>
     <div id="helpAdmin">
-      <div style="background:#eff6ff;border-left:4px solid #1a56db;padding:12px 16px;border-radius:4px;margin-bottom:16px;"><strong>このアカウントでできること：</strong>全企業のスタッフ管理・評価・レポート出力・アラート確認</div>
-      <h3 style="color:#333;margin-bottom:8px;">&#x1F465; スタッフ登録</h3>
+      <div style="background:#eff6ff;border-left:4px solid #1a56db;padding:12px 16px;border-radius:4px;margin-bottom:16px;"><strong>ãã®ã¢ã«ã¦ã³ãã§ã§ãããã¨ï¼</strong>å¨ä¼æ¥­ã®ã¹ã¿ããç®¡çã»è©ä¾¡ã»ã¬ãã¼ãåºåã»ã¢ã©ã¼ãç¢ºèª</div>
+      <h3 style="color:#333;margin-bottom:8px;">&#x1F465; ã¹ã¿ããç»é²</h3>
       <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>上部メニュー「＋スタッフ登録」をクリック</li>
-        <li>氏名・国籍・在留資格・在留期限・配属企業を入力</li>
-        <li>「登録する」ボタンで保存完了</li>
+        <li>ä¸é¨ã¡ãã¥ã¼ãï¼ã¹ã¿ããç»é²ããã¯ãªãã¯</li>
+        <li>æ°åã»å½ç±ã»å¨çè³æ ¼ã»å¨çæéã»éå±ä¼æ¥­ãå¥å</li>
+        <li>ãç»é²ããããã¿ã³ã§ä¿å­å®äº</li>
       </ol>
-      <h3 style="color:#333;margin-bottom:8px;">&#x1F4CB; スキル評価</h3>
+      <h3 style="color:#333;margin-bottom:8px;">&#x1F4CB; ã¹ã­ã«è©ä¾¡</h3>
       <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>「スタッフ一覧」からスタッフを選択</li>
-        <li>「スキル評価」タブで各項目を1〜5で評価</li>
-        <li>評価は自動保存されます</li>
+        <li>ãã¹ã¿ããä¸è¦§ãããã¹ã¿ãããé¸æ</li>
+        <li>ãã¹ã­ã«è©ä¾¡ãã¿ãã§åé ç®ã1ã5ã§è©ä¾¡</li>
+        <li>è©ä¾¡ã¯èªåä¿å­ããã¾ã</li>
       </ol>
-      <h3 style="color:#333;margin-bottom:8px;">&#x1F4CA; 企業別レポート</h3>
+      <h3 style="color:#333;margin-bottom:8px;">&#x1F4CA; ä¼æ¥­å¥ã¬ãã¼ã</h3>
       <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>ダッシュボードの「企業別レポート」ボタンをクリック</li>
-        <li>企業ごとのスタッフ一覧と評価が確認できます</li>
-        <li>印刷・PDF保存も可能です</li>
+        <li>ããã·ã¥ãã¼ãã®ãä¼æ¥­å¥ã¬ãã¼ãããã¿ã³ãã¯ãªãã¯</li>
+        <li>ä¼æ¥­ãã¨ã®ã¹ã¿ããä¸è¦§ã¨è©ä¾¡ãç¢ºèªã§ãã¾ã</li>
+        <li>å°å·ã»PDFä¿å­ãå¯è½ã§ã</li>
       </ol>
-      <h3 style="color:#333;margin-bottom:8px;">&#x1F4F1; QRコード共有</h3>
+      <h3 style="color:#333;margin-bottom:8px;">&#x1F4F1; QRã³ã¼ãå±æ</h3>
       <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>ダッシュボードの「QRコード」ボタンをクリック</li>
-        <li>表示されたQRをクライアント企業に共有</li>
-        <li>スマホからもアクセス・評価が可能です</li>
+        <li>ããã·ã¥ãã¼ãã®ãQRã³ã¼ãããã¿ã³ãã¯ãªãã¯</li>
+        <li>è¡¨ç¤ºãããQRãã¯ã©ã¤ã¢ã³ãä¼æ¥­ã«å±æ</li>
+        <li>ã¹ãããããã¢ã¯ã»ã¹ã»è©ä¾¡ãå¯è½ã§ã</li>
       </ol>
-      <h3 style="color:#333;margin-bottom:8px;">&#x1F514; 在留期限アラート</h3>
+      <h3 style="color:#333;margin-bottom:8px;">&#x1F514; å¨çæéã¢ã©ã¼ã</h3>
       <ul style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>ダッシュボードに在留期限が近いスタッフが自動表示されます</li>
-        <li>「アラートメールを送信」で担当者にメール通知できます</li>
-        <li>期限90日以内が警告対象です</li>
+        <li>ããã·ã¥ãã¼ãã«å¨çæéãè¿ãã¹ã¿ãããèªåè¡¨ç¤ºããã¾ã</li>
+        <li>ãã¢ã©ã¼ãã¡ã¼ã«ãéä¿¡ãã§æå½èã«ã¡ã¼ã«éç¥ã§ãã¾ã</li>
+        <li>æé90æ¥ä»¥åãè­¦åå¯¾è±¡ã§ã</li>
       </ul>
-      <h3 style="color:#333;margin-bottom:8px;">&#x1F4BE; データ管理</h3>
+      <h3 style="color:#333;margin-bottom:8px;">&#x1F4BE; ãã¼ã¿ç®¡ç</h3>
       <ul style="padding-left:20px;color:#444;line-height:1.8;">
-        <li><strong>JSONエクスポート：</strong>全データのバックアップ</li>
-        <li><strong>JSONインポート：</strong>バックアップからの復元</li>
-        <li>データはクラウド（Supabase）に保存されています</li>
+        <li><strong>JSONã¨ã¯ã¹ãã¼ãï¼</strong>å¨ãã¼ã¿ã®ããã¯ã¢ãã</li>
+        <li><strong>JSONã¤ã³ãã¼ãï¼</strong>ããã¯ã¢ããããã®å¾©å</li>
+        <li>ãã¼ã¿ã¯ã¯ã©ã¦ãï¼Supabaseï¼ã«ä¿å­ããã¦ãã¾ã</li>
       </ul>
     </div>
     <div id="helpCompany" style="display:none;">
-      <div style="background:#f0fdf4;border-left:4px solid #16a34a;padding:12px 16px;border-radius:4px;margin-bottom:16px;"><strong>このアカウントでできること：</strong>自社スタッフの確認・スキル評価の入力</div>
-      <h3 style="color:#333;margin-bottom:8px;">&#x1F511; ログイン方法</h3>
+      <div style="background:#f0fdf4;border-left:4px solid #16a34a;padding:12px 16px;border-radius:4px;margin-bottom:16px;"><strong>ãã®ã¢ã«ã¦ã³ãã§ã§ãããã¨ï¼</strong>èªç¤¾ã¹ã¿ããã®ç¢ºèªã»ã¹ã­ã«è©ä¾¡ã®å¥å</div>
+      <h3 style="color:#333;margin-bottom:8px;">&#x1F511; ã­ã°ã¤ã³æ¹æ³</h3>
       <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>担当者（羽根）からお知らせしたメールアドレス・パスワードでログイン</li>
-        <li>ログイン後、自社のスタッフのみ表示されます</li>
+        <li>æå½èï¼ç¾½æ ¹ï¼ãããç¥ããããã¡ã¼ã«ã¢ãã¬ã¹ã»ãã¹ã¯ã¼ãã§ã­ã°ã¤ã³</li>
+        <li>ã­ã°ã¤ã³å¾ãèªç¤¾ã®ã¹ã¿ããã®ã¿è¡¨ç¤ºããã¾ã</li>
       </ol>
-      <h3 style="color:#333;margin-bottom:8px;">&#x1F4CB; スキル評価の入力</h3>
+      <h3 style="color:#333;margin-bottom:8px;">&#x1F4CB; ã¹ã­ã«è©ä¾¡ã®å¥å</h3>
       <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>「スタッフ一覧」からスタッフ名をクリック</li>
-        <li>「スキル評価」タブを開く</li>
-        <li>各項目を1（低い）〜5（高い）で評価して保存</li>
+        <li>ãã¹ã¿ããä¸è¦§ãããã¹ã¿ããåãã¯ãªãã¯</li>
+        <li>ãã¹ã­ã«è©ä¾¡ãã¿ããéã</li>
+        <li>åé ç®ã1ï¼ä½ãï¼ã5ï¼é«ãï¼ã§è©ä¾¡ãã¦ä¿å­</li>
       </ol>
-      <h3 style="color:#333;margin-bottom:8px;">&#x1F4CA; レポートの確認</h3>
+      <h3 style="color:#333;margin-bottom:8px;">&#x1F4CA; ã¬ãã¼ãã®ç¢ºèª</h3>
       <ul style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>ダッシュボードで在籍スタッフ数・評価状況が確認できます</li>
-        <li>「企業別レポート」から詳細なスキル状況を確認・印刷できます</li>
+        <li>ããã·ã¥ãã¼ãã§å¨ç±ã¹ã¿ããæ°ã»è©ä¾¡ç¶æ³ãç¢ºèªã§ãã¾ã</li>
+        <li>ãä¼æ¥­å¥ã¬ãã¼ããããè©³ç´°ãªã¹ã­ã«ç¶æ³ãç¢ºèªã»å°å·ã§ãã¾ã</li>
       </ul>
-      <h3 style="color:#333;margin-bottom:8px;">&#x2753; 困ったときは</h3>
-      <div style="background:#fef9c3;padding:12px 16px;border-radius:8px;">ログインできない・操作がわからない場合は、担当の羽根（トクシングループ）までご連絡ください。</div>
+      <h3 style="color:#333;margin-bottom:8px;">&#x2753; å°ã£ãã¨ãã¯</h3>
+      <div style="background:#fef9c3;padding:12px 16px;border-radius:8px;">ã­ã°ã¤ã³ã§ããªãã»æä½ãããããªãå ´åã¯ãæå½ã®ç¾½æ ¹ï¼ãã¯ã·ã³ã°ã«ã¼ãï¼ã¾ã§ãé£çµ¡ãã ããã</div>
     </div>
   </div>
 </div>
@@ -1846,6 +1847,101 @@ function showHelpTab(tab) {
 }
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape') document.getElementById('helpModal').style.display = 'none'; });
 document.getElementById('helpModal').addEventListener('click', function(e) { if (e.target === this) this.style.display = 'none'; });
+</script>
+
+<!-- ヘルプモーダル -->
+<div id="helpModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;justify-content:center;align-items:center;">
+  <div style="background:white;border-radius:12px;padding:32px;max-width:680px;width:90%;max-height:85vh;overflow-y:auto;position:relative;">
+    <button onclick="document.getElementById('helpModal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:24px;cursor:pointer;color:#666;">&times;</button>
+    <h2 style="color:#1a56db;margin-bottom:4px;">&#10067; &#22806;&#22269;&#20154;&#26448;&#12473;&#12461;&#12523;&#12510;&#12483;&#12503; &#20351;&#12356;&#26041;&#12460;&#12452;&#12489;</h2>
+    <p style="color:#666;font-size:13px;margin-bottom:24px;">&#12372;&#19981;&#26126;&#12394;&#28857;&#12364;&#12354;&#12428;&#12400;&#25285;&#24403;&#32773;&#65288;&#32705;&#26681;&#65289;&#12414;&#12391;&#12372;&#36899;&#32097;&#12367;&#12384;&#12373;&#12356;</p>
+    <div style="display:flex;gap:8px;margin-bottom:20px;border-bottom:2px solid #e5e7eb;padding-bottom:8px;">
+      <button onclick="showHelpTab('admin')" id="tabAdmin" style="padding:8px 16px;border:none;border-radius:6px 6px 0 0;cursor:pointer;background:#1a56db;color:white;font-weight:bold;">&#31649;&#29702;&#32773;&#21521;&#12369;</button>
+      <button onclick="showHelpTab('company')" id="tabCompany" style="padding:8px 16px;border:none;border-radius:6px 6px 0 0;cursor:pointer;background:#e5e7eb;color:#333;">&#20225;&#26989;&#25285;&#24403;&#32773;&#21521;&#12369;</button>
+    </div>
+    <div id="helpAdmin">
+      <div style="background:#eff6ff;border-left:4px solid #1a56db;padding:12px 16px;border-radius:4px;margin-bottom:16px;">
+        <strong>&#12371;&#12398;&#12450;&#12459;&#12454;&#12531;&#12488;&#12391;&#12391;&#12365;&#12427;&#12371;&#12392;&#65306;</strong>&#20840;&#20225;&#26989;&#12398;&#12473;&#12479;&#12483;&#12501;&#31649;&#29702;&#12539;&#35413;&#20065;&#12539;&#12524;&#12509;&#12540;&#12488;&#20986;&#21147;&#12539;&#12450;&#12521;&#12540;&#12488;&#30906;&#35469;
+      </div>
+      <h3 style="color:#333;margin-bottom:8px;">&#128101; &#12473;&#12479;&#12483;&#12501;&#30331;&#37682;</h3>
+      <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
+        <li>&#19978;&#37096;&#12513;&#12491;&#12517;&#12540;&#12300;&#65291;&#12473;&#12479;&#12483;&#12501;&#30331;&#37682;&#12301;&#12434;&#12463;&#12522;&#12483;&#12463;</li>
+        <li>&#27663;&#21517;&#12539;&#22269;&#31584;&#12539;&#22312;&#30041;&#36039;&#26684;&#12539;&#22312;&#30041;&#26399;&#38480;&#12539;&#37197;&#23646;&#20225;&#26989;&#12434;&#20837;&#21147;</li>
+        <li>&#12300;&#30331;&#37682;&#12377;&#12427;&#12301;&#12508;&#12479;&#12531;&#12391;&#20445;&#23384;&#23436;&#20102;</li>
+      </ol>
+      <h3 style="color:#333;margin-bottom:8px;">&#128203; &#12473;&#12461;&#12523;&#35413;&#20065;</h3>
+      <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
+        <li>&#12300;&#12473;&#12479;&#12483;&#12501;&#19968;&#35239;&#12301;&#12363;&#12425;&#12473;&#12479;&#12483;&#12501;&#12434;&#36984;&#25246;</li>
+        <li>&#12300;&#12473;&#12461;&#12523;&#35413;&#20065;&#12301;&#12479;&#12502;&#12391;&#21508;&#39178;&#30446;&#12434;1&#65374;5&#12391;&#35413;&#20065;</li>
+        <li>&#35413;&#20065;&#12399;&#33258;&#21205;&#20445;&#23384;&#12373;&#12428;&#12414;&#12377;</li>
+      </ol>
+      <h3 style="color:#333;margin-bottom:8px;">&#128202; &#20225;&#26989;&#21029;&#12524;&#12509;&#12540;&#12488;</h3>
+      <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
+        <li>&#12480;&#12483;&#12471;&#12517;&#12508;&#12540;&#12489;&#12398;&#12300;&#20225;&#26989;&#21029;&#12524;&#12509;&#12540;&#12488;&#12301;&#12508;&#12479;&#12531;&#12434;&#12463;&#12522;&#12483;&#12463;</li>
+        <li>&#20225;&#26989;&#12372;&#12392;&#12398;&#12473;&#12479;&#12483;&#12501;&#19968;&#35239;&#12392;&#35413;&#20065;&#12364;&#30906;&#35469;&#12391;&#12365;&#12414;&#12377;</li>
+        <li>&#21360;&#21029;&#12539;PDF&#20445;&#23384;&#12418;&#21487;&#33021;&#12391;&#12377;</li>
+      </ol>
+      <h3 style="color:#333;margin-bottom:8px;">&#128241; QR&#12467;&#12540;&#12489;&#20849;&#26377;</h3>
+      <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
+        <li>&#12480;&#12483;&#12471;&#12517;&#12508;&#12540;&#12489;&#12398;&#12300;QR&#12467;&#12540;&#12489;&#12301;&#12508;&#12479;&#12531;&#12434;&#12463;&#12522;&#12483;&#12463;</li>
+        <li>&#34920;&#31034;&#12373;&#12428;&#12383;QR&#12434;&#12463;&#12521;&#12452;&#12450;&#12531;&#12488;&#20225;&#26989;&#12395;&#20849;&#26377;</li>
+        <li>&#12473;&#12510;&#12507;&#12363;&#12425;&#12418;&#12450;&#12463;&#12475;&#12473;&#12539;&#35413;&#20065;&#12364;&#21487;&#33021;&#12391;&#12377;</li>
+      </ol>
+      <h3 style="color:#333;margin-bottom:8px;">&#128276; &#22312;&#30041;&#26399;&#38480;&#12450;&#12521;&#12540;&#12488;</h3>
+      <ul style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
+        <li>&#12480;&#12483;&#12471;&#12517;&#12508;&#12540;&#12489;&#12395;&#22312;&#30041;&#26399;&#38480;&#12364;&#36275;&#12365;&#12427;&#12473;&#12479;&#12483;&#12501;&#12364;&#33258;&#21205;&#34920;&#31034;&#12373;&#12428;&#12414;&#12377;</li>
+        <li>&#12300;&#12450;&#12521;&#12540;&#12488;&#12513;&#12540;&#12523;&#12434;&#36865;&#20449;&#12301;&#12391;&#25285;&#24403;&#32773;&#12395;&#12513;&#12540;&#12523;&#36890;&#30693;&#12391;&#12365;&#12414;&#12377;</li>
+        <li>&#26399;&#38480;90&#26085;&#20197;&#20869;&#12364;&#35686;&#21578;&#23550;&#35937;&#12391;&#12377;</li>
+      </ul>
+      <h3 style="color:#333;margin-bottom:8px;">&#128190; &#12487;&#12540;&#12479;&#31649;&#29702;</h3>
+      <ul style="padding-left:20px;color:#444;line-height:1.8;">
+        <li><strong>JSON&#12456;&#12463;&#12473;&#12509;&#12540;&#12488;&#65306;</strong>&#20840;&#12487;&#12540;&#12479;&#12398;&#12496;&#12483;&#12463;&#12450;&#12483;&#12503;</li>
+        <li><strong>JSON&#12452;&#12531;&#12509;&#12540;&#12488;&#65306;</strong>&#12496;&#12483;&#12463;&#12450;&#12483;&#12503;&#12363;&#12425;&#12398;&#24489;&#20803;</li>
+        <li>&#12487;&#12540;&#12479;&#12399;&#12463;&#12521;&#12454;&#12489;&#65288;Supabase&#65289;&#12395;&#20445;&#23384;&#12373;&#12428;&#12390;&#12356;&#12414;&#12377;</li>
+      </ul>
+    </div>
+    <div id="helpCompany" style="display:none;">
+      <div style="background:#f0fdf4;border-left:4px solid #16a34a;padding:12px 16px;border-radius:4px;margin-bottom:16px;">
+        <strong>&#12371;&#12398;&#12450;&#12459;&#12454;&#12531;&#12488;&#12391;&#12391;&#12365;&#12427;&#12371;&#12392;&#65306;</strong>&#33258;&#31038;&#12473;&#12479;&#12483;&#12501;&#12398;&#30906;&#35469;&#12539;&#12473;&#12461;&#12523;&#35413;&#20065;&#12398;&#20837;&#21147;
+      </div>
+      <h3 style="color:#333;margin-bottom:8px;">&#128273; &#12525;&#12464;&#12452;&#12531;&#26041;&#27861;</h3>
+      <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
+        <li>&#25285;&#24403;&#32773;&#65288;&#32705;&#26681;&#65289;&#12363;&#12425;&#12362;&#30693;&#12425;&#12379;&#12375;&#12383;&#12513;&#12540;&#12523;&#12450;&#12489;&#12524;&#12473;&#12539;&#12497;&#12473;&#12527;&#12540;&#12489;&#12391;&#12525;&#12464;&#12452;&#12531;</li>
+        <li>&#12525;&#12464;&#12452;&#12531;&#24460;&#12289;&#33258;&#31038;&#12398;&#12473;&#12479;&#12483;&#12501;&#12398;&#12415;&#34920;&#31034;&#12373;&#12428;&#12414;&#12377;</li>
+      </ol>
+      <h3 style="color:#333;margin-bottom:8px;">&#128203; &#12473;&#12461;&#12523;&#35413;&#20065;&#12398;&#20837;&#21147;</h3>
+      <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
+        <li>&#12300;&#12473;&#12479;&#12483;&#12501;&#19968;&#35239;&#12301;&#12363;&#12425;&#12473;&#12479;&#12483;&#12501;&#21517;&#12434;&#12463;&#12522;&#12483;&#12463;</li>
+        <li>&#12300;&#12473;&#12461;&#12523;&#35413;&#20065;&#12301;&#12479;&#12502;&#12434;&#38283;&#12367;</li>
+        <li>&#21508;&#39178;&#30446;&#12434;1&#65288;&#20302;&#12356;&#65289;&#12288;&#65374;&#12288;5&#65288;&#39640;&#12356;&#65289;&#12391;&#35413;&#20065;&#12375;&#12390;&#20445;&#23384;</li>
+      </ol>
+      <h3 style="color:#333;margin-bottom:8px;">&#128202; &#12524;&#12509;&#12540;&#12488;&#12398;&#30906;&#35469;</h3>
+      <ul style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
+        <li>&#12480;&#12483;&#12471;&#12517;&#12508;&#12540;&#12489;&#12391;&#22312;&#31807;&#12473;&#12479;&#12483;&#12501;&#25968;&#12539;&#35413;&#20065;&#29366;&#27841;&#12364;&#30906;&#35469;&#12391;&#12365;&#12414;&#12377;</li>
+        <li>&#12300;&#20225;&#26989;&#21029;&#12524;&#12509;&#12540;&#12488;&#12301;&#12363;&#12425;&#35443;&#32048;&#12394;&#12473;&#12461;&#12523;&#29366;&#27841;&#12434;&#30906;&#35469;&#12539;&#21360;&#21029;&#12391;&#12365;&#12414;&#12377;</li>
+      </ul>
+      <h3 style="color:#333;margin-bottom:8px;">&#10067; &#22506;&#12387;&#12383;&#12392;&#12365;&#12399;</h3>
+      <div style="background:#fef9c3;padding:12px 16px;border-radius:8px;">
+        &#12525;&#12464;&#12452;&#12531;&#12391;&#12365;&#12394;&#12356;&#12539;&#25805;&#20316;&#12364;&#12431;&#12363;&#12425;&#12394;&#12356;&#22580;&#21512;&#12399;&#12289;&#25285;&#24403;&#12398;&#32705;&#26681;&#65288;&#12488;&#12463;&#12471;&#12531;&#12464;&#12523;&#12540;&#12503;&#65289;&#12414;&#12391;&#12372;&#36899;&#32097;&#12367;&#12384;&#12373;&#12356;&#12290;
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+function showHelpTab(tab) {
+  document.getElementById('helpAdmin').style.display = tab === 'admin' ? 'block' : 'none';
+  document.getElementById('helpCompany').style.display = tab === 'company' ? 'block' : 'none';
+  document.getElementById('tabAdmin').style.background = tab === 'admin' ? '#1a56db' : '#e5e7eb';
+  document.getElementById('tabAdmin').style.color = tab === 'admin' ? 'white' : '#333';
+  document.getElementById('tabCompany').style.background = tab === 'company' ? '#1a56db' : '#e5e7eb';
+  document.getElementById('tabCompany').style.color = tab === 'company' ? 'white' : '#333';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') document.getElementById('helpModal').style.display = 'none';
+});
+document.getElementById('helpModal').addEventListener('click', function(e) {
+  if (e.target === this) this.style.display = 'none';
+});
 </script>
 </body>
 </html>
