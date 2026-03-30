@@ -793,14 +793,22 @@ async function onLogin(user) {
 }
 
 function applyRoleUI() {
-  // viewerは評価入力ボタンを非表示
-  const isViewer = state.userRole === 'viewer';
   const isAdmin = state.userRole === 'admin';
-  // ヘッダーのモード切替ボタン
-  document.getElementById('btn-admin').style.display = isAdmin ? '' : 'none';
-  document.getElementById('btn-client').style.display = isAdmin ? '' : 'none';
+  const isCompanyAdmin = state.userRole === 'company_admin';
+  const isViewer = state.userRole === 'viewer';
+
+  // adminはモード切替ボタンを非表示（常に管理者モード）
+  document.getElementById('btn-admin').style.display = 'none';
+  document.getElementById('btn-client').style.display = 'none';
+
   // 登録タブはadminのみ
   document.getElementById('tab-register').style.display = isAdmin ? '' : 'none';
+
+  // adminは自動で管理者モードに
+  if (isAdmin) {
+    state.mode = 'admin';
+    document.getElementById('btn-admin').classList.add('active');
+  }
 }
 
 
@@ -918,7 +926,12 @@ function requireAdmin(tab) {
 }
 
 function requireAdminMode() {
-  if (state.mode === 'admin') return; // 既に管理者モードなら何もしない
+  if (state.mode === 'admin') return;
+  // Supabaseログイン済みのadminはパスワード不要
+  if (state.userRole === 'admin') {
+    setMode('admin');
+    return;
+  }
   if (checkAdminPassword()) setMode('admin');
 }
 function setMode(m) {
