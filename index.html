@@ -169,8 +169,37 @@ main{max-width:1100px;margin:0 auto;padding:28px 20px;}
 .login-error{color:var(--red);font-size:12px;margin-top:8px;min-height:18px;}
 .login-footer{text-align:center;font-size:11px;color:var(--light);margin-top:20px;}
 
+
+/* ══ QR MODAL ══ */
+.qr-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:200;align-items:center;justify-content:center;}
+.qr-modal.active{display:flex;}
+.qr-box{background:var(--card);border-radius:16px;padding:32px;text-align:center;max-width:360px;width:90%;}
+.qr-box h3{font-size:16px;font-weight:700;margin-bottom:8px;color:var(--dark);}
+.qr-box p{font-size:12px;color:var(--mid);margin-bottom:20px;}
+#qr-canvas{margin:0 auto 20px;}
+.qr-url{font-size:11px;color:var(--light);word-break:break-all;margin-bottom:16px;padding:8px;background:var(--bg);border-radius:6px;}
+
+
+/* ══ REPORT ══ */
+.report-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:200;align-items:center;justify-content:center;}
+.report-modal.active{display:flex;}
+.report-box{background:var(--card);border-radius:16px;padding:32px;max-width:700px;width:95%;max-height:85vh;overflow-y:auto;}
+.report-box h3{font-size:18px;font-weight:900;color:var(--blue);margin-bottom:4px;}
+.report-sub{font-size:12px;color:var(--mid);margin-bottom:24px;}
+.report-company{font-size:14px;font-weight:700;color:var(--dark);padding:12px 0;border-bottom:2px solid var(--border);margin-bottom:16px;}
+.report-staff-row{display:grid;grid-template-columns:1fr auto auto;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);gap:12px;}
+.report-staff-name{font-size:13px;font-weight:700;}
+.report-staff-meta{font-size:11px;color:var(--mid);}
+.report-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;}
+@media print{.report-modal{position:static;background:none;}.report-box{max-height:none;box-shadow:none;}.btn{display:none!important;}}
+
+
+/* ══ ALERT EMAIL ══ */
+.alert-email-btn{margin-top:12px;}
+
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 const SUPABASE_URL = 'https://ujpgjhbsafhtbubrktrm.supabase.co';
@@ -255,6 +284,9 @@ const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   <div class="card">
     <div class="card-title">在留期限アラート</div>
     <div id="alert-list"><div class="empty"><div class="empty-icon">✅</div><p>期限が近いスタッフはいません</p></div></div>
+    <div class="alert-email-btn">
+      <button class="btn btn-secondary btn-sm" onclick="sendAlertEmail()">📧 アラートメールを送信</button>
+    </div>
   </div>
   <div class="card">
     <div class="card-title">最近の評価</div>
@@ -987,6 +1019,114 @@ async function deleteStaff(id) {
   }
 }
 
+
+
+
+// ══ 在留期限アラートメール送信 ══
+function sendAlertEmail() {
+  const today = new Date();
+  const alerts = state.staffList.filter(s => {
+    const expire = s.expire || s.expireDate;
+    if (!expire) return false;
+    const days = Math.ceil((new Date(expire) - today) / 86400000);
+    return days <= 90;
+  }).sort((a,b) => {
+    const da = new Date(a.expire||a.expireDate);
+    const db = new Date(b.expire||b.expireDate);
+    return da - db;
+  });
+  
+  if (!alerts.length) { alert('90日以内に期限が来るスタッフはいません'); return; }
+  
+  let body = '在留期限アラート\n\n';
+  body += '確認日：' + today.getFullYear() + '年' + (today.getMonth()+1) + '月' + today.getDate() + '日\n\n';
+  
+  alerts.forEach(s => {
+    const expire = s.expire || s.expireDate;
+    const days = Math.ceil((new Date(expire) - today) / 86400000);
+    const mark = days <= 30 ? '🔴' : days <= 60 ? '🟠' : '🟡';
+    body += mark + ' ' + s.name + ' (' + (s.company||'') + ')\n';
+    body += '   在留資格：' + (s.visa||'') + '\n';
+    body += '   期限：' + expire + '（残り' + days + '日）\n\n';
+  });
+  
+  body += '--\nトクシングループ スキルマップシステム';
+  
+  const subject = '【在留期限アラート】' + alerts.length + '名の確認が必要です';
+  const mailto = 'mailto:?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  window.open(mailto);
+}
+
+// ══ 企業別レポート ══
+function showReport() {
+  if (!state.staffList.length) { alert('スタッフが登録されていません'); return; }
+  
+  // 企業別にグループ化
+  const companies = {};
+  state.staffList.forEach(s => {
+    const co = s.company || s.companyId || '未設定';
+    if (!companies[co]) companies[co] = [];
+    companies[co].push(s);
+  });
+  
+  const today = new Date();
+  document.getElementById('report-date').textContent = today.getFullYear() + '年' + (today.getMonth()+1) + '月' + today.getDate() + '日 作成　/ 登録スタッフ' + state.staffList.length + '名';
+  
+  let html = '';
+  Object.entries(companies).forEach(([co, staffs]) => {
+    html += '<div class="report-company">🏢 ' + co + '（' + staffs.length + '名）</div>';
+    staffs.forEach(s => {
+      const expire = s.expire || s.expireDate || '';
+      const days = expire ? Math.ceil((new Date(expire) - today) / 86400000) : null;
+      const alertClass = days !== null ? (days <= 30 ? 'alert-red' : days <= 90 ? 'alert-orange' : 'alert-green') : '';
+      const evalCount = (s.evals || []).length;
+      const avgLv = evalCount > 0 ? (s.evals.reduce((a,e) => a + parseFloat(e.avg || 0), 0) / evalCount).toFixed(1) : '-';
+      html += '<div class="report-staff-row">' +
+        '<div><div class="report-staff-name">' + s.name + (s.nameEn ? ' / ' + s.nameEn : '') + '</div>' +
+        '<div class="report-staff-meta">' + (s.nationality||'') + ' / ' + (s.visa||'') + ' / ' + (s.industry||'') + '</div></div>' +
+        '<div style="text-align:center"><div style="font-size:11px;color:var(--mid)">在留期限</div>' +
+        '<div class="report-badge ' + alertClass + '">' + (expire || '未設定') + '</div></div>' +
+        '<div style="text-align:center"><div style="font-size:11px;color:var(--mid)">評価</div>' +
+        '<div style="font-size:13px;font-weight:700;color:var(--teal)">' + evalCount + '回 / Lv' + avgLv + '</div></div>' +
+        '</div>';
+    });
+    html += '<br>';
+  });
+  
+  document.getElementById('report-content').innerHTML = html;
+  document.getElementById('report-modal').classList.add('active');
+}
+function closeReport() {
+  document.getElementById('report-modal').classList.remove('active');
+}
+
+// ══ QRコード ══
+function showQR() {
+  const modal = document.getElementById('qr-modal');
+  const canvas = document.getElementById('qr-canvas');
+  const urlText = document.getElementById('qr-url-text');
+  canvas.innerHTML = '';
+  const url = 'https://tokusin-hane.github.io/skillmap/';
+  urlText.textContent = url;
+  new QRCode(canvas, {
+    text: url, width: 200, height: 200,
+    colorDark: '#1E3A5F', colorLight: '#ffffff',
+    correctLevel: QRCode.CorrectLevel.H
+  });
+  modal.classList.add('active');
+}
+function closeQR() {
+  document.getElementById('qr-modal').classList.remove('active');
+}
+function downloadQR() {
+  const canvas = document.querySelector('#qr-canvas canvas');
+  if (!canvas) return;
+  const a = document.createElement('a');
+  a.download = 'skillmap-qrcode.png';
+  a.href = canvas.toDataURL();
+  a.click();
+}
+
 // ══ エクスポート・インポート ══
 function exportData() {
   if (!state.staffList.length) { alert('エクスポートするデータがありません'); return; }
@@ -1590,5 +1730,34 @@ window.addEventListener('scroll', () => {
   btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
 });
 </script>
+
+<!-- QRコードモーダル -->
+<div class="qr-modal" id="qr-modal" onclick="if(event.target===this)closeQR()">
+  <div class="qr-box">
+    <h3>📱 スキルマップ QRコード</h3>
+    <p>企業担当者にこのQRコードを共有してください</p>
+    <div id="qr-canvas"></div>
+    <div class="qr-url" id="qr-url-text"></div>
+    <div style="display:flex;gap:10px;justify-content:center;">
+      <button class="btn btn-primary btn-sm" onclick="downloadQR()">💾 保存</button>
+      <button class="btn btn-secondary btn-sm" onclick="closeQR()">閉じる</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- 企業別レポートモーダル -->
+<div class="report-modal" id="report-modal" onclick="if(event.target===this)closeReport()">
+  <div class="report-box">
+    <h3>📊 企業別スタッフレポート</h3>
+    <p class="report-sub" id="report-date"></p>
+    <div style="display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap;">
+      <button class="btn btn-primary btn-sm" onclick="window.print()">🖨️ 印刷・PDF保存</button>
+      <button class="btn btn-secondary btn-sm" onclick="closeReport()">閉じる</button>
+    </div>
+    <div id="report-content"></div>
+  </div>
+</div>
+
 </body>
 </html>
