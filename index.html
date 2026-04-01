@@ -248,8 +248,7 @@ const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   <div class="mode-toggle">
     <button class="mode-btn active" onclick="requireAdminMode()" id="btn-admin">Ã°ÂÂÂ Ã§Â®Â¡Ã§ÂÂÃ¨ÂÂÃ£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂ</button>
     <button class="mode-btn" onclick="setMode('client')" id="btn-client">Ã°ÂÂÂ¢ Ã¤Â¼ÂÃ¦Â¥Â­Ã£ÂÂ¢Ã£ÂÂ¼Ã£ÂÂ</button>
-    <button class="mode-btn" onclick="document.getElementById('helpModal').style.display='flex'" style="margin-left:8px;background:#6c757d;">â ãã«ã</button>
-  <button class="mode-btn" onclick="document.getElementById('helpModal').style.display='flex'" style="background:#6c757d;margin-right:8px;">&#10067; &#12504;&#12523;&#12503;</button>
+    <button class="mode-btn" onclick="document.getElementById('helpModal').style.display='flex'" style="background:#6c757d;margin-right:8px;">❓ ヘルプ</button>
     <button class="mode-btn" onclick="doLogout()" style="margin-left:8px;">Ã°ÂÂÂª Ã£ÂÂ­Ã£ÂÂ°Ã£ÂÂ¢Ã£ÂÂ¦Ã£ÂÂ</button>
   </div>
 </header>
@@ -1765,164 +1764,80 @@ window.addEventListener('scroll', () => {
 
 
 <!-- ãã«ãã¢ã¼ãã« -->
-<div id="helpModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;justify-content:center;align-items:center;">
-  <div style="background:white;border-radius:12px;padding:32px;max-width:680px;width:90%;max-height:85vh;overflow-y:auto;position:relative;">
-    <button onclick="document.getElementById('helpModal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:24px;cursor:pointer;color:#666;">&#x2715;</button>
-    <h2 style="color:#1a56db;margin-bottom:4px;">&#x2753; å¤å½äººæã¹ã­ã«ããã ä½¿ãæ¹ã¬ã¤ã</h2>
-    <p style="color:#666;font-size:13px;margin-bottom:24px;">ãä¸æãªç¹ãããã°æå½èï¼ç¾½æ ¹ï¼ã¾ã§ãé£çµ¡ãã ãã</p>
-    <div style="display:flex;gap:8px;margin-bottom:20px;border-bottom:2px solid #e5e7eb;padding-bottom:8px;">
-      <button onclick="showHelpTab('admin')" id="tabAdmin" style="padding:8px 16px;border:none;border-radius:6px 6px 0 0;cursor:pointer;background:#1a56db;color:white;font-weight:bold;">ç®¡çèåã</button>
-      <button onclick="showHelpTab('company')" id="tabCompany" style="padding:8px 16px;border:none;border-radius:6px 6px 0 0;cursor:pointer;background:#e5e7eb;color:#333;">ä¼æ¥­æå½èåã</button>
-    </div>
-    <div id="helpAdmin">
-      <div style="background:#eff6ff;border-left:4px solid #1a56db;padding:12px 16px;border-radius:4px;margin-bottom:16px;"><strong>ãã®ã¢ã«ã¦ã³ãã§ã§ãããã¨ï¼</strong>å¨ä¼æ¥­ã®ã¹ã¿ããç®¡çã»è©ä¾¡ã»ã¬ãã¼ãåºåã»ã¢ã©ã¼ãç¢ºèª</div>
-      <h3 style="color:#333;margin-bottom:8px;">&#x1F465; ã¹ã¿ããç»é²</h3>
-      <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>ä¸é¨ã¡ãã¥ã¼ãï¼ã¹ã¿ããç»é²ããã¯ãªãã¯</li>
-        <li>æ°åã»å½ç±ã»å¨çè³æ ¼ã»å¨çæéã»éå±ä¼æ¥­ãå¥å</li>
-        <li>ãç»é²ããããã¿ã³ã§ä¿å­å®äº</li>
-      </ol>
-      <h3 style="color:#333;margin-bottom:8px;">&#x1F4CB; ã¹ã­ã«è©ä¾¡</h3>
-      <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>ãã¹ã¿ããä¸è¦§ãããã¹ã¿ãããé¸æ</li>
-        <li>ãã¹ã­ã«è©ä¾¡ãã¿ãã§åé ç®ã1ã5ã§è©ä¾¡</li>
-        <li>è©ä¾¡ã¯èªåä¿å­ããã¾ã</li>
-      </ol>
-      <h3 style="color:#333;margin-bottom:8px;">&#x1F4CA; ä¼æ¥­å¥ã¬ãã¼ã</h3>
-      <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>ããã·ã¥ãã¼ãã®ãä¼æ¥­å¥ã¬ãã¼ãããã¿ã³ãã¯ãªãã¯</li>
-        <li>ä¼æ¥­ãã¨ã®ã¹ã¿ããä¸è¦§ã¨è©ä¾¡ãç¢ºèªã§ãã¾ã</li>
-        <li>å°å·ã»PDFä¿å­ãå¯è½ã§ã</li>
-      </ol>
-      <h3 style="color:#333;margin-bottom:8px;">&#x1F4F1; QRã³ã¼ãå±æ</h3>
-      <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>ããã·ã¥ãã¼ãã®ãQRã³ã¼ãããã¿ã³ãã¯ãªãã¯</li>
-        <li>è¡¨ç¤ºãããQRãã¯ã©ã¤ã¢ã³ãä¼æ¥­ã«å±æ</li>
-        <li>ã¹ãããããã¢ã¯ã»ã¹ã»è©ä¾¡ãå¯è½ã§ã</li>
-      </ol>
-      <h3 style="color:#333;margin-bottom:8px;">&#x1F514; å¨çæéã¢ã©ã¼ã</h3>
-      <ul style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>ããã·ã¥ãã¼ãã«å¨çæéãè¿ãã¹ã¿ãããèªåè¡¨ç¤ºããã¾ã</li>
-        <li>ãã¢ã©ã¼ãã¡ã¼ã«ãéä¿¡ãã§æå½èã«ã¡ã¼ã«éç¥ã§ãã¾ã</li>
-        <li>æé90æ¥ä»¥åãè­¦åå¯¾è±¡ã§ã</li>
-      </ul>
-      <h3 style="color:#333;margin-bottom:8px;">&#x1F4BE; ãã¼ã¿ç®¡ç</h3>
-      <ul style="padding-left:20px;color:#444;line-height:1.8;">
-        <li><strong>JSONã¨ã¯ã¹ãã¼ãï¼</strong>å¨ãã¼ã¿ã®ããã¯ã¢ãã</li>
-        <li><strong>JSONã¤ã³ãã¼ãï¼</strong>ããã¯ã¢ããããã®å¾©å</li>
-        <li>ãã¼ã¿ã¯ã¯ã©ã¦ãï¼Supabaseï¼ã«ä¿å­ããã¦ãã¾ã</li>
-      </ul>
-    </div>
-    <div id="helpCompany" style="display:none;">
-      <div style="background:#f0fdf4;border-left:4px solid #16a34a;padding:12px 16px;border-radius:4px;margin-bottom:16px;"><strong>ãã®ã¢ã«ã¦ã³ãã§ã§ãããã¨ï¼</strong>èªç¤¾ã¹ã¿ããã®ç¢ºèªã»ã¹ã­ã«è©ä¾¡ã®å¥å</div>
-      <h3 style="color:#333;margin-bottom:8px;">&#x1F511; ã­ã°ã¤ã³æ¹æ³</h3>
-      <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>æå½èï¼ç¾½æ ¹ï¼ãããç¥ããããã¡ã¼ã«ã¢ãã¬ã¹ã»ãã¹ã¯ã¼ãã§ã­ã°ã¤ã³</li>
-        <li>ã­ã°ã¤ã³å¾ãèªç¤¾ã®ã¹ã¿ããã®ã¿è¡¨ç¤ºããã¾ã</li>
-      </ol>
-      <h3 style="color:#333;margin-bottom:8px;">&#x1F4CB; ã¹ã­ã«è©ä¾¡ã®å¥å</h3>
-      <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>ãã¹ã¿ããä¸è¦§ãããã¹ã¿ããåãã¯ãªãã¯</li>
-        <li>ãã¹ã­ã«è©ä¾¡ãã¿ããéã</li>
-        <li>åé ç®ã1ï¼ä½ãï¼ã5ï¼é«ãï¼ã§è©ä¾¡ãã¦ä¿å­</li>
-      </ol>
-      <h3 style="color:#333;margin-bottom:8px;">&#x1F4CA; ã¬ãã¼ãã®ç¢ºèª</h3>
-      <ul style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>ããã·ã¥ãã¼ãã§å¨ç±ã¹ã¿ããæ°ã»è©ä¾¡ç¶æ³ãç¢ºèªã§ãã¾ã</li>
-        <li>ãä¼æ¥­å¥ã¬ãã¼ããããè©³ç´°ãªã¹ã­ã«ç¶æ³ãç¢ºèªã»å°å·ã§ãã¾ã</li>
-      </ul>
-      <h3 style="color:#333;margin-bottom:8px;">&#x2753; å°ã£ãã¨ãã¯</h3>
-      <div style="background:#fef9c3;padding:12px 16px;border-radius:8px;">ã­ã°ã¤ã³ã§ããªãã»æä½ãããããªãå ´åã¯ãæå½ã®ç¾½æ ¹ï¼ãã¯ã·ã³ã°ã«ã¼ãï¼ã¾ã§ãé£çµ¡ãã ããã</div>
-    </div>
-  </div>
-</div>
-<script>
-function showHelpTab(tab) {
-  document.getElementById('helpAdmin').style.display = tab === 'admin' ? 'block' : 'none';
-  document.getElementById('helpCompany').style.display = tab === 'company' ? 'block' : 'none';
-  document.getElementById('tabAdmin').style.background = tab === 'admin' ? '#1a56db' : '#e5e7eb';
-  document.getElementById('tabAdmin').style.color = tab === 'admin' ? 'white' : '#333';
-  document.getElementById('tabCompany').style.background = tab === 'company' ? '#1a56db' : '#e5e7eb';
-  document.getElementById('tabCompany').style.color = tab === 'company' ? 'white' : '#333';
-}
-document.addEventListener('keydown', function(e) { if (e.key === 'Escape') document.getElementById('helpModal').style.display = 'none'; });
-document.getElementById('helpModal').addEventListener('click', function(e) { if (e.target === this) this.style.display = 'none'; });
-</script>
 
-<!-- ヘルプモーダル -->
 <div id="helpModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;justify-content:center;align-items:center;">
   <div style="background:white;border-radius:12px;padding:32px;max-width:680px;width:90%;max-height:85vh;overflow-y:auto;position:relative;">
     <button onclick="document.getElementById('helpModal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:24px;cursor:pointer;color:#666;">&times;</button>
-    <h2 style="color:#1a56db;margin-bottom:4px;">&#10067; &#22806;&#22269;&#20154;&#26448;&#12473;&#12461;&#12523;&#12510;&#12483;&#12503; &#20351;&#12356;&#26041;&#12460;&#12452;&#12489;</h2>
-    <p style="color:#666;font-size:13px;margin-bottom:24px;">&#12372;&#19981;&#26126;&#12394;&#28857;&#12364;&#12354;&#12428;&#12400;&#25285;&#24403;&#32773;&#65288;&#32705;&#26681;&#65289;&#12414;&#12391;&#12372;&#36899;&#32097;&#12367;&#12384;&#12373;&#12356;</p>
+    <h2 style="color:#1a56db;margin-bottom:4px;">❓ 外国人材スキルマップ 使い方ガイド</h2>
+    <p style="color:#666;font-size:13px;margin-bottom:24px;">ご不明な点があれば担当者（羽根）までご連絡ください</p>
     <div style="display:flex;gap:8px;margin-bottom:20px;border-bottom:2px solid #e5e7eb;padding-bottom:8px;">
-      <button onclick="showHelpTab('admin')" id="tabAdmin" style="padding:8px 16px;border:none;border-radius:6px 6px 0 0;cursor:pointer;background:#1a56db;color:white;font-weight:bold;">&#31649;&#29702;&#32773;&#21521;&#12369;</button>
-      <button onclick="showHelpTab('company')" id="tabCompany" style="padding:8px 16px;border:none;border-radius:6px 6px 0 0;cursor:pointer;background:#e5e7eb;color:#333;">&#20225;&#26989;&#25285;&#24403;&#32773;&#21521;&#12369;</button>
+      <button onclick="showHelpTab('admin')" id="tabAdmin" style="padding:8px 16px;border:none;border-radius:6px 6px 0 0;cursor:pointer;background:#1a56db;color:white;font-weight:bold;">管理者向け</button>
+      <button onclick="showHelpTab('company')" id="tabCompany" style="padding:8px 16px;border:none;border-radius:6px 6px 0 0;cursor:pointer;background:#e5e7eb;color:#333;">企業担当者向け</button>
     </div>
     <div id="helpAdmin">
       <div style="background:#eff6ff;border-left:4px solid #1a56db;padding:12px 16px;border-radius:4px;margin-bottom:16px;">
-        <strong>&#12371;&#12398;&#12450;&#12459;&#12454;&#12531;&#12488;&#12391;&#12391;&#12365;&#12427;&#12371;&#12392;&#65306;</strong>&#20840;&#20225;&#26989;&#12398;&#12473;&#12479;&#12483;&#12501;&#31649;&#29702;&#12539;&#35413;&#20065;&#12539;&#12524;&#12509;&#12540;&#12488;&#20986;&#21147;&#12539;&#12450;&#12521;&#12540;&#12488;&#30906;&#35469;
+        <strong>このアカウントでできること：</strong>全企業のスタッフ管理・評価・レポート出力・アラート確認
       </div>
-      <h3 style="color:#333;margin-bottom:8px;">&#128101; &#12473;&#12479;&#12483;&#12501;&#30331;&#37682;</h3>
+      <h3 style="color:#333;margin-bottom:8px;">👥 スタッフ登録</h3>
       <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>&#19978;&#37096;&#12513;&#12491;&#12517;&#12540;&#12300;&#65291;&#12473;&#12479;&#12483;&#12501;&#30331;&#37682;&#12301;&#12434;&#12463;&#12522;&#12483;&#12463;</li>
-        <li>&#27663;&#21517;&#12539;&#22269;&#31584;&#12539;&#22312;&#30041;&#36039;&#26684;&#12539;&#22312;&#30041;&#26399;&#38480;&#12539;&#37197;&#23646;&#20225;&#26989;&#12434;&#20837;&#21147;</li>
-        <li>&#12300;&#30331;&#37682;&#12377;&#12427;&#12301;&#12508;&#12479;&#12531;&#12391;&#20445;&#23384;&#23436;&#20102;</li>
+        <li>上部メニュー「＋スタッフ登録」をクリック</li>
+        <li>氏名・国籍・在留資格・在留期限・配属企業を入力</li>
+        <li>「登録する」ボタンで保存完了</li>
       </ol>
-      <h3 style="color:#333;margin-bottom:8px;">&#128203; &#12473;&#12461;&#12523;&#35413;&#20065;</h3>
+      <h3 style="color:#333;margin-bottom:8px;">📋 スキル評価</h3>
       <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>&#12300;&#12473;&#12479;&#12483;&#12501;&#19968;&#35239;&#12301;&#12363;&#12425;&#12473;&#12479;&#12483;&#12501;&#12434;&#36984;&#25246;</li>
-        <li>&#12300;&#12473;&#12461;&#12523;&#35413;&#20065;&#12301;&#12479;&#12502;&#12391;&#21508;&#39178;&#30446;&#12434;1&#65374;5&#12391;&#35413;&#20065;</li>
-        <li>&#35413;&#20065;&#12399;&#33258;&#21205;&#20445;&#23384;&#12373;&#12428;&#12414;&#12377;</li>
+        <li>「スタッフ一覧」からスタッフを選択</li>
+        <li>「スキル評価」タブで各項目を1～5で評価</li>
+        <li>評価は自動保存されます</li>
       </ol>
-      <h3 style="color:#333;margin-bottom:8px;">&#128202; &#20225;&#26989;&#21029;&#12524;&#12509;&#12540;&#12488;</h3>
+      <h3 style="color:#333;margin-bottom:8px;">📊 企業別レポート</h3>
       <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>&#12480;&#12483;&#12471;&#12517;&#12508;&#12540;&#12489;&#12398;&#12300;&#20225;&#26989;&#21029;&#12524;&#12509;&#12540;&#12488;&#12301;&#12508;&#12479;&#12531;&#12434;&#12463;&#12522;&#12483;&#12463;</li>
-        <li>&#20225;&#26989;&#12372;&#12392;&#12398;&#12473;&#12479;&#12483;&#12501;&#19968;&#35239;&#12392;&#35413;&#20065;&#12364;&#30906;&#35469;&#12391;&#12365;&#12414;&#12377;</li>
-        <li>&#21360;&#21029;&#12539;PDF&#20445;&#23384;&#12418;&#21487;&#33021;&#12391;&#12377;</li>
+        <li>ダッシュボードの「企業別レポート」ボタンをクリック</li>
+        <li>企業ごとのスタッフ一覧と評価が確認できます</li>
+        <li>印刷・PDF保存も可能です</li>
       </ol>
-      <h3 style="color:#333;margin-bottom:8px;">&#128241; QR&#12467;&#12540;&#12489;&#20849;&#26377;</h3>
+      <h3 style="color:#333;margin-bottom:8px;">📱 QRコード共有</h3>
       <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>&#12480;&#12483;&#12471;&#12517;&#12508;&#12540;&#12489;&#12398;&#12300;QR&#12467;&#12540;&#12489;&#12301;&#12508;&#12479;&#12531;&#12434;&#12463;&#12522;&#12483;&#12463;</li>
-        <li>&#34920;&#31034;&#12373;&#12428;&#12383;QR&#12434;&#12463;&#12521;&#12452;&#12450;&#12531;&#12488;&#20225;&#26989;&#12395;&#20849;&#26377;</li>
-        <li>&#12473;&#12510;&#12507;&#12363;&#12425;&#12418;&#12450;&#12463;&#12475;&#12473;&#12539;&#35413;&#20065;&#12364;&#21487;&#33021;&#12391;&#12377;</li>
+        <li>ダッシュボードの「QRコード」ボタンをクリック</li>
+        <li>表示されたQRをクライアント企業に共有</li>
+        <li>スマホからもアクセス・評価が可能です</li>
       </ol>
-      <h3 style="color:#333;margin-bottom:8px;">&#128276; &#22312;&#30041;&#26399;&#38480;&#12450;&#12521;&#12540;&#12488;</h3>
+      <h3 style="color:#333;margin-bottom:8px;">🔔 在留期限アラート</h3>
       <ul style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>&#12480;&#12483;&#12471;&#12517;&#12508;&#12540;&#12489;&#12395;&#22312;&#30041;&#26399;&#38480;&#12364;&#36275;&#12365;&#12427;&#12473;&#12479;&#12483;&#12501;&#12364;&#33258;&#21205;&#34920;&#31034;&#12373;&#12428;&#12414;&#12377;</li>
-        <li>&#12300;&#12450;&#12521;&#12540;&#12488;&#12513;&#12540;&#12523;&#12434;&#36865;&#20449;&#12301;&#12391;&#25285;&#24403;&#32773;&#12395;&#12513;&#12540;&#12523;&#36890;&#30693;&#12391;&#12365;&#12414;&#12377;</li>
-        <li>&#26399;&#38480;90&#26085;&#20197;&#20869;&#12364;&#35686;&#21578;&#23550;&#35937;&#12391;&#12377;</li>
+        <li>ダッシュボードに在留期限が近いスタッフが自動表示されます</li>
+        <li>「アラートメールを送信」で担当者にメール通知できます</li>
+        <li>期限90日以内が警告対象です</li>
       </ul>
-      <h3 style="color:#333;margin-bottom:8px;">&#128190; &#12487;&#12540;&#12479;&#31649;&#29702;</h3>
+      <h3 style="color:#333;margin-bottom:8px;">💾 データ管理</h3>
       <ul style="padding-left:20px;color:#444;line-height:1.8;">
-        <li><strong>JSON&#12456;&#12463;&#12473;&#12509;&#12540;&#12488;&#65306;</strong>&#20840;&#12487;&#12540;&#12479;&#12398;&#12496;&#12483;&#12463;&#12450;&#12483;&#12503;</li>
-        <li><strong>JSON&#12452;&#12531;&#12509;&#12540;&#12488;&#65306;</strong>&#12496;&#12483;&#12463;&#12450;&#12483;&#12503;&#12363;&#12425;&#12398;&#24489;&#20803;</li>
-        <li>&#12487;&#12540;&#12479;&#12399;&#12463;&#12521;&#12454;&#12489;&#65288;Supabase&#65289;&#12395;&#20445;&#23384;&#12373;&#12428;&#12390;&#12356;&#12414;&#12377;</li>
+        <li><strong>JSONエクスポート：</strong>全データのバックアップ</li>
+        <li><strong>JSONインポート：</strong>バックアップからの復元</li>
+        <li>データはクラウド（Supabase）に保存されています</li>
       </ul>
     </div>
     <div id="helpCompany" style="display:none;">
       <div style="background:#f0fdf4;border-left:4px solid #16a34a;padding:12px 16px;border-radius:4px;margin-bottom:16px;">
-        <strong>&#12371;&#12398;&#12450;&#12459;&#12454;&#12531;&#12488;&#12391;&#12391;&#12365;&#12427;&#12371;&#12392;&#65306;</strong>&#33258;&#31038;&#12473;&#12479;&#12483;&#12501;&#12398;&#30906;&#35469;&#12539;&#12473;&#12461;&#12523;&#35413;&#20065;&#12398;&#20837;&#21147;
+        <strong>このアカウントでできること：</strong>自社スタッフの確認・スキル評価の入力
       </div>
-      <h3 style="color:#333;margin-bottom:8px;">&#128273; &#12525;&#12464;&#12452;&#12531;&#26041;&#27861;</h3>
+      <h3 style="color:#333;margin-bottom:8px;">🔑 ログイン方法</h3>
       <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>&#25285;&#24403;&#32773;&#65288;&#32705;&#26681;&#65289;&#12363;&#12425;&#12362;&#30693;&#12425;&#12379;&#12375;&#12383;&#12513;&#12540;&#12523;&#12450;&#12489;&#12524;&#12473;&#12539;&#12497;&#12473;&#12527;&#12540;&#12489;&#12391;&#12525;&#12464;&#12452;&#12531;</li>
-        <li>&#12525;&#12464;&#12452;&#12531;&#24460;&#12289;&#33258;&#31038;&#12398;&#12473;&#12479;&#12483;&#12501;&#12398;&#12415;&#34920;&#31034;&#12373;&#12428;&#12414;&#12377;</li>
+        <li>担当者（羽根）からお知らせしたメールアドレス・パスワードでログイン</li>
+        <li>ログイン後、自社のスタッフのみ表示されます</li>
       </ol>
-      <h3 style="color:#333;margin-bottom:8px;">&#128203; &#12473;&#12461;&#12523;&#35413;&#20065;&#12398;&#20837;&#21147;</h3>
+      <h3 style="color:#333;margin-bottom:8px;">📋 スキル評価の入力</h3>
       <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>&#12300;&#12473;&#12479;&#12483;&#12501;&#19968;&#35239;&#12301;&#12363;&#12425;&#12473;&#12479;&#12483;&#12501;&#21517;&#12434;&#12463;&#12522;&#12483;&#12463;</li>
-        <li>&#12300;&#12473;&#12461;&#12523;&#35413;&#20065;&#12301;&#12479;&#12502;&#12434;&#38283;&#12367;</li>
-        <li>&#21508;&#39178;&#30446;&#12434;1&#65288;&#20302;&#12356;&#65289;&#12288;&#65374;&#12288;5&#65288;&#39640;&#12356;&#65289;&#12391;&#35413;&#20065;&#12375;&#12390;&#20445;&#23384;</li>
+        <li>「スタッフ一覧」からスタッフ名をクリック</li>
+        <li>「スキル評価」タブを開く</li>
+        <li>各項目を1（低い）～5（高い）で評価して保存</li>
       </ol>
-      <h3 style="color:#333;margin-bottom:8px;">&#128202; &#12524;&#12509;&#12540;&#12488;&#12398;&#30906;&#35469;</h3>
+      <h3 style="color:#333;margin-bottom:8px;">📊 レポートの確認</h3>
       <ul style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>&#12480;&#12483;&#12471;&#12517;&#12508;&#12540;&#12489;&#12391;&#22312;&#31807;&#12473;&#12479;&#12483;&#12501;&#25968;&#12539;&#35413;&#20065;&#29366;&#27841;&#12364;&#30906;&#35469;&#12391;&#12365;&#12414;&#12377;</li>
-        <li>&#12300;&#20225;&#26989;&#21029;&#12524;&#12509;&#12540;&#12488;&#12301;&#12363;&#12425;&#35443;&#32048;&#12394;&#12473;&#12461;&#12523;&#29366;&#27841;&#12434;&#30906;&#35469;&#12539;&#21360;&#21029;&#12391;&#12365;&#12414;&#12377;</li>
+        <li>ダッシュボードで在籍スタッフ数・評価状況が確認できます</li>
+        <li>「企業別レポート」から詳細なスキル状況を確認・印刷できます</li>
       </ul>
-      <h3 style="color:#333;margin-bottom:8px;">&#10067; &#22506;&#12387;&#12383;&#12392;&#12365;&#12399;</h3>
+      <h3 style="color:#333;margin-bottom:8px;">❓ 困ったときは</h3>
       <div style="background:#fef9c3;padding:12px 16px;border-radius:8px;">
-        &#12525;&#12464;&#12452;&#12531;&#12391;&#12365;&#12394;&#12356;&#12539;&#25805;&#20316;&#12364;&#12431;&#12363;&#12425;&#12394;&#12356;&#22580;&#21512;&#12399;&#12289;&#25285;&#24403;&#12398;&#32705;&#26681;&#65288;&#12488;&#12463;&#12471;&#12531;&#12464;&#12523;&#12540;&#12503;&#65289;&#12414;&#12391;&#12372;&#36899;&#32097;&#12367;&#12384;&#12373;&#12356;&#12290;
+        ログインできない・操作がわからない場合は、担当の羽根（トクシングループ）までご連絡ください。
       </div>
     </div>
   </div>
