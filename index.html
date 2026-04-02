@@ -248,7 +248,6 @@ const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   <div class="mode-toggle">
     <button class="mode-btn active" onclick="requireAdminMode()" id="btn-admin">🔐 管理者モード</button>
     <button class="mode-btn" onclick="setMode('client')" id="btn-client">🏢 企業モード</button>
-    <button class="mode-btn" onclick="document.getElementById('helpModal').style.display='flex'" style="background:#6c757d;margin-right:8px;">❓ ヘルプ</button>
     <button class="mode-btn" onclick="doLogout()" style="margin-left:8px;">🚪 ログアウト</button>
   </div>
 </header>
@@ -453,7 +452,7 @@ const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 <script>
 
 // ══ 管理者パスワード ══
-const ADMIN_PASSWORD = 'tokusin2026'; // ← ここを変更してください
+const ADMIN_PASSWORD = 'tokushin2026'; // ← ここを変更してください
 let adminUnlocked = false;
 
 function checkAdminPassword() {
@@ -1762,90 +1761,5 @@ window.addEventListener('scroll', () => {
   </div>
 </div>
 
-
-<!-- help modal -->
-<div id="helpModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;justify-content:center;align-items:center;">
-  <div style="background:white;border-radius:12px;padding:32px;max-width:680px;width:90%;max-height:85vh;overflow-y:auto;position:relative;">
-    <button onclick="document.getElementById('helpModal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:24px;cursor:pointer;color:#666;">&times;</button>
-    <h2 style="color:#1a56db;margin-bottom:4px;">❓ 外国人材スキルマップ 使い方ガイド</h2>
-    <p style="color:#666;font-size:13px;margin-bottom:24px;">ご不明な点があれば担当者（羽根）までご連絡ください</p>
-    <div style="display:flex;gap:8px;margin-bottom:20px;border-bottom:2px solid #e5e7eb;padding-bottom:8px;">
-      <button onclick="showHelpTab('admin')" id="tabAdmin" style="padding:8px 16px;border:none;border-radius:6px 6px 0 0;cursor:pointer;background:#1a56db;color:white;font-weight:bold;">管理者向け</button>
-      <button onclick="showHelpTab('company')" id="tabCompany" style="padding:8px 16px;border:none;border-radius:6px 6px 0 0;cursor:pointer;background:#e5e7eb;color:#333;">企業担当者様へ</button>
-    </div>
-    <div id="helpAdmin">
-      <div style="background:#eff6ff;border-left:4px solid #1a56db;padding:12px 16px;border-radius:4px;margin-bottom:16px;"><strong>このアカウントでできること：</strong>全企業のスタッフ管理・評価・レポート出力・アラート確認</div>
-      <h3 style="color:#333;margin-bottom:8px;">👥 スタッフ登録</h3>
-      <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>上部メニュー「＋スタッフ登録」をクリック</li>
-        <li>氏名・国籍・在留資格・在留期限・配属企業を入力</li>
-        <li>「登録する」ボタンで保存完了</li>
-      </ol>
-      <h3 style="color:#333;margin-bottom:8px;">📋 スキル評価</h3>
-      <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>「スタッフ一覧」からスタッフを選択</li>
-        <li>「スキル評価」タブで各項目を1〜5で評価</li>
-        <li>評価は自動保存されます</li>
-      </ol>
-      <h3 style="color:#333;margin-bottom:8px;">📊 企業別レポート</h3>
-      <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>ダッシュボードの「企業別レポート」ボタンをクリック</li>
-        <li>企業ごとのスタッフ一覧と評価が確認できます</li>
-        <li>印刷・PDF保存も可能です</li>
-      </ol>
-      <h3 style="color:#333;margin-bottom:8px;">📱 QRコード共有</h3>
-      <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>ダッシュボードの「QRコード」ボタンをクリック</li>
-        <li>表示されたQRをクライアント企業に共有</li>
-        <li>スマホからもアクセス・評価が可能です</li>
-      </ol>
-      <h3 style="color:#333;margin-bottom:8px;">🔔 在留期限アラート</h3>
-      <ul style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>ダッシュボードに在留期限が近いスタッフが自動表示されます</li>
-        <li>「アラートメールを送信」で担当者にメール通知できます</li>
-        <li>期限90日以内が警告対象です</li>
-      </ul>
-      <h3 style="color:#333;margin-bottom:8px;">💾 データ管理</h3>
-      <ul style="padding-left:20px;color:#444;line-height:1.8;">
-        <li><strong>JSONエクスポート：</strong>全データのバックアップ</li>
-        <li><strong>JSONインポート：</strong>バックアップからの復元</li>
-        <li>データはクラウド（Supabase）に保存されています</li>
-      </ul>
-    </div>
-    <div id="helpCompany" style="display:none;">
-      <div style="background:#f0fdf4;border-left:4px solid #16a34a;padding:12px 16px;border-radius:4px;margin-bottom:16px;"><strong>このアカウントでできること：</strong>自社スタッフの確認・スキル評価の入力</div>
-      <h3 style="color:#333;margin-bottom:8px;">🔑 ログイン方法</h3>
-      <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>担当者（羽根）からお知らせしたメールアドレス・パスワードでログイン</li>
-        <li>ログイン後、自社のスタッフのみ表示されます</li>
-      </ol>
-      <h3 style="color:#333;margin-bottom:8px;">📋 スキル評価の入力</h3>
-      <ol style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>「スタッフ一覧」からスタッフ名をクリック</li>
-        <li>「スキル評価」タブを開く</li>
-        <li>各項目を1（低い）〜5（高い）で評価して保存</li>
-      </ol>
-      <h3 style="color:#333;margin-bottom:8px;">📊 レポートの確認</h3>
-      <ul style="padding-left:20px;color:#444;line-height:1.8;margin-bottom:16px;">
-        <li>ダッシュボードで在籍スタッフ数・評価状況が確認できます</li>
-        <li>「企業別レポート」から詳細なスキル状況を確認・印刷できます</li>
-      </ul>
-      <h3 style="color:#333;margin-bottom:8px;">❓ 困ったときは</h3>
-      <div style="background:#fef9c3;padding:12px 16px;border-radius:8px;">ログインできない・操作がわからない場合は、担当の羽根（トクシングループ）までご連絡ください。</div>
-    </div>
-  </div>
-</div>
-<script>
-function showHelpTab(tab) {
-  document.getElementById('helpAdmin').style.display = tab==='admin'?'block':'none';
-  document.getElementById('helpCompany').style.display = tab==='company'?'block':'none';
-  document.getElementById('tabAdmin').style.background = tab==='admin'?'#1a56db':'#e5e7eb';
-  document.getElementById('tabAdmin').style.color = tab==='admin'?'white':'#333';
-  document.getElementById('tabCompany').style.background = tab==='company'?'#1a56db':'#e5e7eb';
-  document.getElementById('tabCompany').style.color = tab==='company'?'white':'#333';
-}
-document.addEventListener('keydown',function(e){if(e.key==='Escape')document.getElementById('helpModal').style.display='none';});
-document.getElementById('helpModal').addEventListener('click',function(e){if(e.target===this)this.style.display='none';});
-</script>
 </body>
 </html>
